@@ -1,0 +1,36 @@
+﻿@*Define model*@
+@model List<DvdTitle>
+@*Define ViewData*@
+@{
+    ViewData["Title"] = "List of Dvd Title";
+}
+@*Write code*@
+
+
+<table class="table table-hover">
+    <thead>
+    <tr>
+        <th>S.No</th>
+        <th>Date Released</th>
+        <th>Standard Charge</th>
+        <th>Penalty Charge</th>
+    </tr>
+            
+    </thead> 
+    <tbody>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>1</td>
+            <td>@Html.DisplayFor(modelItem=> item.DateReleased) </td>
+            <td>@Html.DisplayFor(modelItem=> item.StandardCharge) </td>
+            <td>@Html.DisplayFor(modelItem=> item.PenaltyCharge) </td>
+            <td>
+                <a class="btn btn-outline-primary"><i class="bi bi-pencil-square"></i>Edit</a> |
+                <a class="btn btn-outline-danger"><i class="bi bi-trash"></i>Delete</a>
+            </td>
+        </tr>
+    }
+
+    </tbody>
+</table>

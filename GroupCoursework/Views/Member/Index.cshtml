@@ -1,0 +1,38 @@
+﻿@*Define model*@
+@model List<Member>
+@*Define ViewData*@
+@{
+    ViewData["Title"] = "List of Member";
+}
+@*Write code*@
+
+
+<table class="table table-hover">
+    <thead>
+    <tr>
+        <th>S.No</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Date of Birth</th>
+        <th>Address</th>
+    </tr>
+            
+    </thead> 
+    <tbody>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>1</td>
+            <td>@Html.DisplayFor(modelItem=> item.MemberFirstName) </td>
+            <td>@Html.DisplayFor(modelItem=> item.MemberLastName) </td>
+            <td>@Html.DisplayFor(modelItem=> item.MemberDob) </td>
+            <td>@Html.DisplayFor(modelItem=> item.MemberAddress) </td>
+            <td>
+                <a class="btn btn-outline-primary"><i class="bi bi-pencil-square"></i>Edit</a> |
+                <a class="btn btn-outline-danger"><i class="bi bi-trash"></i>Delete</a>
+            </td>
+        </tr>
+    }
+
+    </tbody>
+</table>

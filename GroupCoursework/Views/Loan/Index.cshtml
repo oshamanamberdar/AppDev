@@ -1,0 +1,36 @@
+﻿@*Define model*@
+@model List<Loan>
+@*Define ViewData*@
+@{
+    ViewData["Title"] = "List of Loan";
+}
+@*Write code*@
+
+
+<table class="table table-hover">
+    <thead>
+    <tr>
+        <th>S.No</th>
+        <th>Date Out</th>
+        <th>Date Due</th>
+        <th>Date Returned</th>
+    </tr>
+            
+    </thead> 
+    <tbody>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>1</td>
+            <td>@Html.DisplayFor(modelItem=> item.DateOut) </td>
+            <td>@Html.DisplayFor(modelItem=> item.DateDue) </td>
+            <td>@Html.DisplayFor(modelItem=> item.DateReturned) </td>
+            <td>
+                <a class="btn btn-outline-primary"><i class="bi bi-pencil-square"></i>Edit</a> |
+                <a class="btn btn-outline-danger"><i class="bi bi-trash"></i>Delete</a>
+            </td>
+        </tr>
+    }
+
+    </tbody>
+</table>

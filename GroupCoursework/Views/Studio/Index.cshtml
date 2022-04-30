@@ -1,0 +1,32 @@
+﻿@*Define model*@
+@model List<Studio>
+@*Define ViewData*@
+@{
+    ViewData["Title"] = "List of Studio";
+}
+@*Write code*@
+
+
+<table class="table table-hover">
+    <thead>
+    <tr>
+        <th>S.No</th>
+        <th>Studio Name</th>
+    </tr>
+            
+    </thead> 
+    <tbody>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>1</td>
+            <td>@Html.DisplayFor(modelItem=> item.StudioName) </td>
+            <td>
+                <a class="btn btn-outline-primary"><i class="bi bi-pencil-square"></i>Edit</a> |
+                <a class="btn btn-outline-danger"><i class="bi bi-trash"></i>Delete</a>
+            </td>
+        </tr>
+    }
+
+    </tbody>
+</table>
