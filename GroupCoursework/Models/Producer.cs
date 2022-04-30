@@ -12,6 +12,6 @@ public class Producer
     
     // Relationship
     
-    public List<Producer> Producers { get; set; }
+    public List<DvdTitle> DvdTitles { get; set; }
 
 }

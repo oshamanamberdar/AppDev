@@ -39,9 +39,4 @@ public class ApplicationDbContext: Microsoft.EntityFrameworkCore.DbContext
     public DbSet<DvdCategory> DvdCategories { get; set; }
     public DbSet<CastMember> CastMembers { get; set; }
     public DbSet<Actor> Actors { get; set; }
-   
-    
-    
-
-    
 }

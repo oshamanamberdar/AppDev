@@ -8,23 +8,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b9f322f9-0743-4820-bead-cbd53c8f1444" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.GroupCoursework/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.GroupCoursework/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.GroupCoursework/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.GroupCoursework/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GroupCoursework/DbContext/ApplicationDbContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GroupCoursework/Models/Actor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GroupCoursework/Models/CastMember.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GroupCoursework/Models/DvdCategory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GroupCoursework/Models/DvdCopy.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GroupCoursework/Models/DvdTitle.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GroupCoursework/Models/Loan.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GroupCoursework/Models/LoanType.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GroupCoursework/Models/Member.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GroupCoursework/Models/MembershipCategory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GroupCoursework/Models/Producer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GroupCoursework/Models/Studio.cs" afterDir="false" />
+    <list default="true" id="b9f322f9-0743-4820-bead-cbd53c8f1444" name="Changes" comment="commit 2">
+      <change afterPath="$PROJECT_DIR$/.vs/GroupCoursework/DesignTimeBuild/.dtbcache.v2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.vs/GroupCoursework/v16/.suo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.vs/GroupCoursework/v17/.suo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.vs/VSWorkspaceState.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.vs/slnx.sqlite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GroupCoursework/.vs/GroupCoursework/v16/.suo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GroupCoursework/.vs/GroupCoursework/v17/.suo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GroupCoursework/.vs/VSWorkspaceState.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GroupCoursework/.vs/slnx.sqlite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GroupCoursework/DbContext/AppDbInitializer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GroupCoursework/Migrations/20220430070541_InitialCreate.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GroupCoursework/Migrations/20220430070541_InitialCreate.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GroupCoursework/Migrations/ApplicationDbContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.GroupCoursework/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GroupCoursework/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroupCoursework/DbContext/ApplicationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/DbContext/ApplicationDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroupCoursework/GroupCoursework.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/GroupCoursework.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroupCoursework/Models/Actor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Models/Actor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroupCoursework/Models/DvdCategory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Models/DvdCategory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroupCoursework/Models/Loan.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Models/Loan.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroupCoursework/Models/Producer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Models/Producer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroupCoursework/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroupCoursework/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/appsettings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,20 +45,28 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/GroupCoursework/DbContext/ApplicationDbContext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/GroupCoursework/GroupCoursework/Models/Actor.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="280EqchreA23DRO0WagtGc9Vvi6" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="sqlserver" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -104,8 +118,16 @@
       <updated>1650345298340</updated>
       <workItem from="1650345323195" duration="9254000" />
       <workItem from="1651285855606" duration="4000" />
-      <workItem from="1651286044305" duration="5567000" />
+      <workItem from="1651286044305" duration="17168000" />
     </task>
+    <task id="LOCAL-00001" summary="commit 2">
+      <created>1651291978314</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1651291978314</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,6 +148,10 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_NEW_TODO" value="false" />
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="commit 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit 2" />
   </component>
 </project>

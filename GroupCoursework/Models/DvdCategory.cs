@@ -15,5 +15,5 @@ public class DvdCategory
     // Relationship
     public List<DvdTitle> DvdTitles { get; set; }
     
-    public List<CastMember> CastMembers { get; set; }
+    
 }

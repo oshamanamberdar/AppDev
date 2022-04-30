@@ -1,0 +1,1241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="app_dev_db@localhost">
+  <database-model serializer="dbm" dbms="MSSQL" family-id="MSSQL" format-version="4.32">
+    <root id="1">
+      <Grants>2|||2|connect|G
+3|||2|connect|G
+4|||2|connect|G
+5|||2|connect|G
+0|root||264|alter any availability group|G
+0|root||265|alter any event session|G
+0|root||102|authenticate server|G
+0|root||103|authenticate server|G
+0|root||265|connect any database|G
+0|root||1|connect sql|G
+0|root||256|connect sql|G
+0|root||257|connect sql|G
+0|root||258|connect sql|G
+0|root||259|connect sql|G
+0|root||260|connect sql|G
+0|root||261|connect sql|G
+0|root||262|connect sql|G
+0|root||263|connect sql|G
+0|root||264|connect sql|G
+0|root||265|connect sql|G
+0|root||105|control server|G
+0|root||2|view any database|G
+0|root||101|view any definition|G
+0|root||102|view any definition|G
+0|root||105|view any definition|G
+0|root||106|view any definition|G
+0|root||257|view any definition|G
+0|root||265|view any definition|G
+0|root||102|view server state|G
+0|root||257|view server state|G
+0|root||264|view server state|G
+0|root||265|view server state|G</Grants>
+      <PermissionsCheckSum>43840693215</PermissionsCheckSum>
+      <ServerVersion>15.0.2000</ServerVersion>
+    </root>
+    <database id="2" parent="1" name="Employee">
+      <Collation>SQL_Latin1_General_CP1_CI_AS</Collation>
+      <ObjectId>5</ObjectId>
+    </database>
+    <database id="3" parent="1" name="GroupCourseworkDB">
+      <Collation>SQL_Latin1_General_CP1_CI_AS</Collation>
+      <ObjectId>22</ObjectId>
+    </database>
+    <database id="4" parent="1" name="MdsTailor">
+      <Collation>SQL_Latin1_General_CP1_CI_AS</Collation>
+      <ObjectId>10</ObjectId>
+    </database>
+    <database id="5" parent="1" name="Tailoring">
+      <Collation>SQL_Latin1_General_CP1_CI_AS</Collation>
+      <ObjectId>8</ObjectId>
+    </database>
+    <database id="6" parent="1" name="appDev2">
+      <Collation>SQL_Latin1_General_CP1_CI_AS</Collation>
+      <ObjectId>20</ObjectId>
+    </database>
+    <database id="7" parent="1" name="app_dev_db">
+      <Collation>SQL_Latin1_General_CP1_CI_AS</Collation>
+      <Current>1</Current>
+      <Fingerprint>24.44679/68357B3C-6D27-406D-9B99-E9B9A64A030F@DESKTOP-MCP0EJR</Fingerprint>
+      <Grants>24|database||1|connect|G
+24|database||0|view any column encryption key definition|G
+24|database||0|view any column master key definition|G</Grants>
+      <ObjectId>24</ObjectId>
+      <PermissionsCheckSum>3196235284</PermissionsCheckSum>
+    </database>
+    <database id="8" parent="1" name="appdevtest">
+      <Collation>SQL_Latin1_General_CP1_CI_AS</Collation>
+      <ObjectId>19</ObjectId>
+    </database>
+    <database id="9" parent="1" name="chiya_chautara">
+      <Collation>SQL_Latin1_General_CP1_CI_AS</Collation>
+      <ObjectId>7</ObjectId>
+    </database>
+    <database id="10" parent="1" name="collectionDB">
+      <Collation>SQL_Latin1_General_CP1_CI_AS</Collation>
+      <ObjectId>23</ObjectId>
+    </database>
+    <database id="11" parent="1" name="courseworkdb">
+      <Collation>SQL_Latin1_General_CP1_CI_AS</Collation>
+      <ObjectId>21</ObjectId>
+    </database>
+    <database id="12" parent="1" name="database_project">
+      <Collation>SQL_Latin1_General_CP1_CI_AS</Collation>
+      <ObjectId>11</ObjectId>
+    </database>
+    <database id="13" parent="1" name="jasper">
+      <Collation>SQL_Latin1_General_CP1_CI_AS</Collation>
+      <ObjectId>15</ObjectId>
+    </database>
+    <database id="14" parent="1" name="jwt">
+      <Collation>SQL_Latin1_General_CP1_CI_AS</Collation>
+      <ObjectId>9</ObjectId>
+    </database>
+    <database id="15" parent="1" name="master">
+      <Collation>SQL_Latin1_General_CP1_CI_AS</Collation>
+      <ObjectId>1</ObjectId>
+    </database>
+    <database id="16" parent="1" name="maw_test">
+      <Collation>SQL_Latin1_General_CP1_CI_AS</Collation>
+      <ObjectId>6</ObjectId>
+    </database>
+    <database id="17" parent="1" name="model">
+      <Collation>SQL_Latin1_General_CP1_CI_AS</Collation>
+      <ObjectId>3</ObjectId>
+    </database>
+    <database id="18" parent="1" name="msdb">
+      <Collation>SQL_Latin1_General_CP1_CI_AS</Collation>
+      <ObjectId>4</ObjectId>
+    </database>
+    <database id="19" parent="1" name="sanikDatabaseproject">
+      <Collation>SQL_Latin1_General_CP1_CI_AS</Collation>
+      <ObjectId>12</ObjectId>
+    </database>
+    <database id="20" parent="1" name="springDemoApp">
+      <Collation>SQL_Latin1_General_CP1_CI_AS</Collation>
+      <ObjectId>18</ObjectId>
+    </database>
+    <database id="21" parent="1" name="srdb_test">
+      <Collation>SQL_Latin1_General_CP1_CI_AS</Collation>
+      <ObjectId>16</ObjectId>
+    </database>
+    <database id="22" parent="1" name="tempdb">
+      <Collation>SQL_Latin1_General_CP1_CI_AS</Collation>
+      <ObjectId>2</ObjectId>
+    </database>
+    <database id="23" parent="1" name="test_for_database">
+      <Collation>SQL_Latin1_General_CP1_CI_AS</Collation>
+      <ObjectId>17</ObjectId>
+    </database>
+    <database id="24" parent="1" name="test_uab">
+      <Collation>SQL_Latin1_General_CP1_CI_AS</Collation>
+      <ObjectId>14</ObjectId>
+    </database>
+    <database id="25" parent="1" name="testsanik">
+      <Collation>SQL_Latin1_General_CP1_CI_AS</Collation>
+      <ObjectId>13</ObjectId>
+    </database>
+    <linked-server id="26" parent="1" name="DESKTOP-MCP0EJR">
+      <DataSource>DESKTOP-MCP0EJR</DataSource>
+      <Product>SQL Server</Product>
+      <ProviderName>SQLNCLI</ProviderName>
+    </linked-server>
+    <login id="27" parent="1" name="sa">
+      <DefaultDatabase>master</DefaultDatabase>
+      <Enabled>1</Enabled>
+      <ObjectId>1</ObjectId>
+    </login>
+    <login id="28" parent="1" name="public">
+      <Enabled>1</Enabled>
+      <ObjectId>2</ObjectId>
+      <Type>server-role</Type>
+    </login>
+    <login id="29" parent="1" name="sysadmin">
+      <Enabled>1</Enabled>
+      <ObjectId>3</ObjectId>
+      <Type>server-role</Type>
+    </login>
+    <login id="30" parent="1" name="securityadmin">
+      <Enabled>1</Enabled>
+      <ObjectId>4</ObjectId>
+      <Type>server-role</Type>
+    </login>
+    <login id="31" parent="1" name="serveradmin">
+      <Enabled>1</Enabled>
+      <ObjectId>5</ObjectId>
+      <Type>server-role</Type>
+    </login>
+    <login id="32" parent="1" name="setupadmin">
+      <Enabled>1</Enabled>
+      <ObjectId>6</ObjectId>
+      <Type>server-role</Type>
+    </login>
+    <login id="33" parent="1" name="processadmin">
+      <Enabled>1</Enabled>
+      <ObjectId>7</ObjectId>
+      <Type>server-role</Type>
+    </login>
+    <login id="34" parent="1" name="diskadmin">
+      <Enabled>1</Enabled>
+      <ObjectId>8</ObjectId>
+      <Type>server-role</Type>
+    </login>
+    <login id="35" parent="1" name="dbcreator">
+      <Enabled>1</Enabled>
+      <ObjectId>9</ObjectId>
+      <Type>server-role</Type>
+    </login>
+    <login id="36" parent="1" name="bulkadmin">
+      <Enabled>1</Enabled>
+      <ObjectId>10</ObjectId>
+      <Type>server-role</Type>
+    </login>
+    <login id="37" parent="1" name="##MS_SQLResourceSigningCertificate##">
+      <DefaultDatabase>master</DefaultDatabase>
+      <Enabled>1</Enabled>
+      <ObjectId>101</ObjectId>
+      <Type>certificate-mapped-login</Type>
+    </login>
+    <login id="38" parent="1" name="##MS_SQLReplicationSigningCertificate##">
+      <DefaultDatabase>master</DefaultDatabase>
+      <Enabled>1</Enabled>
+      <ObjectId>102</ObjectId>
+      <Type>certificate-mapped-login</Type>
+    </login>
+    <login id="39" parent="1" name="##MS_SQLAuthenticatorCertificate##">
+      <DefaultDatabase>master</DefaultDatabase>
+      <Enabled>1</Enabled>
+      <ObjectId>103</ObjectId>
+      <Type>certificate-mapped-login</Type>
+    </login>
+    <login id="40" parent="1" name="##MS_PolicySigningCertificate##">
+      <DefaultDatabase>master</DefaultDatabase>
+      <Enabled>1</Enabled>
+      <ObjectId>105</ObjectId>
+      <Type>certificate-mapped-login</Type>
+    </login>
+    <login id="41" parent="1" name="##MS_SmoExtendedSigningCertificate##">
+      <DefaultDatabase>master</DefaultDatabase>
+      <Enabled>1</Enabled>
+      <ObjectId>106</ObjectId>
+      <Type>certificate-mapped-login</Type>
+    </login>
+    <login id="42" parent="1" name="##MS_PolicyEventProcessingLogin##">
+      <DefaultDatabase>master</DefaultDatabase>
+      <ObjectId>256</ObjectId>
+    </login>
+    <login id="43" parent="1" name="##MS_PolicyTsqlExecutionLogin##">
+      <DefaultDatabase>master</DefaultDatabase>
+      <ObjectId>257</ObjectId>
+    </login>
+    <login id="44" parent="1" name="##MS_AgentSigningCertificate##">
+      <DefaultDatabase>master</DefaultDatabase>
+      <Enabled>1</Enabled>
+      <ObjectId>258</ObjectId>
+      <Type>certificate-mapped-login</Type>
+    </login>
+    <login id="45" parent="1" name="DESKTOP-MCP0EJR\Dell">
+      <DefaultDatabase>master</DefaultDatabase>
+      <Enabled>1</Enabled>
+      <ObjectId>259</ObjectId>
+      <Type>windows-login</Type>
+    </login>
+    <login id="46" parent="1" name="NT SERVICE\SQLWriter">
+      <DefaultDatabase>master</DefaultDatabase>
+      <Enabled>1</Enabled>
+      <ObjectId>260</ObjectId>
+      <Type>windows-login</Type>
+    </login>
+    <login id="47" parent="1" name="NT SERVICE\Winmgmt">
+      <DefaultDatabase>master</DefaultDatabase>
+      <Enabled>1</Enabled>
+      <ObjectId>261</ObjectId>
+      <Type>windows-login</Type>
+    </login>
+    <login id="48" parent="1" name="NT Service\MSSQLSERVER">
+      <DefaultDatabase>master</DefaultDatabase>
+      <Enabled>1</Enabled>
+      <ObjectId>262</ObjectId>
+      <Type>windows-login</Type>
+    </login>
+    <login id="49" parent="1" name="BUILTIN\Users">
+      <DefaultDatabase>master</DefaultDatabase>
+      <Enabled>1</Enabled>
+      <ObjectId>263</ObjectId>
+      <Type>windows-group</Type>
+    </login>
+    <login id="50" parent="1" name="NT AUTHORITY\SYSTEM">
+      <DefaultDatabase>master</DefaultDatabase>
+      <Enabled>1</Enabled>
+      <ObjectId>264</ObjectId>
+      <Type>windows-login</Type>
+    </login>
+    <login id="51" parent="1" name="NT SERVICE\SQLTELEMETRY">
+      <DefaultDatabase>master</DefaultDatabase>
+      <Enabled>1</Enabled>
+      <ObjectId>265</ObjectId>
+      <Type>windows-login</Type>
+    </login>
+    <role id="52" parent="7" name="public">
+      <AuthType>none</AuthType>
+      <ObjectId>0</ObjectId>
+      <Type>database-role</Type>
+      <OwnerId>1</OwnerId>
+    </role>
+    <role id="53" parent="7" name="dbo">
+      <AuthType>instance</AuthType>
+      <DefaultSchema>dbo</DefaultSchema>
+      <ObjectId>1</ObjectId>
+    </role>
+    <role id="54" parent="7" name="guest">
+      <AuthType>none</AuthType>
+      <DefaultSchema>guest</DefaultSchema>
+      <ObjectId>2</ObjectId>
+    </role>
+    <role id="55" parent="7" name="INFORMATION_SCHEMA">
+      <AuthType>none</AuthType>
+      <ObjectId>3</ObjectId>
+    </role>
+    <role id="56" parent="7" name="sys">
+      <AuthType>none</AuthType>
+      <ObjectId>4</ObjectId>
+    </role>
+    <role id="57" parent="7" name="db_owner">
+      <AuthType>none</AuthType>
+      <ObjectId>16384</ObjectId>
+      <Type>database-role</Type>
+      <OwnerId>1</OwnerId>
+    </role>
+    <role id="58" parent="7" name="db_accessadmin">
+      <AuthType>none</AuthType>
+      <ObjectId>16385</ObjectId>
+      <Type>database-role</Type>
+      <OwnerId>1</OwnerId>
+    </role>
+    <role id="59" parent="7" name="db_securityadmin">
+      <AuthType>none</AuthType>
+      <ObjectId>16386</ObjectId>
+      <Type>database-role</Type>
+      <OwnerId>1</OwnerId>
+    </role>
+    <role id="60" parent="7" name="db_ddladmin">
+      <AuthType>none</AuthType>
+      <ObjectId>16387</ObjectId>
+      <Type>database-role</Type>
+      <OwnerId>1</OwnerId>
+    </role>
+    <role id="61" parent="7" name="db_backupoperator">
+      <AuthType>none</AuthType>
+      <ObjectId>16389</ObjectId>
+      <Type>database-role</Type>
+      <OwnerId>1</OwnerId>
+    </role>
+    <role id="62" parent="7" name="db_datareader">
+      <AuthType>none</AuthType>
+      <ObjectId>16390</ObjectId>
+      <Type>database-role</Type>
+      <OwnerId>1</OwnerId>
+    </role>
+    <role id="63" parent="7" name="db_datawriter">
+      <AuthType>none</AuthType>
+      <ObjectId>16391</ObjectId>
+      <Type>database-role</Type>
+      <OwnerId>1</OwnerId>
+    </role>
+    <role id="64" parent="7" name="db_denydatareader">
+      <AuthType>none</AuthType>
+      <ObjectId>16392</ObjectId>
+      <Type>database-role</Type>
+      <OwnerId>1</OwnerId>
+    </role>
+    <role id="65" parent="7" name="db_denydatawriter">
+      <AuthType>none</AuthType>
+      <ObjectId>16393</ObjectId>
+      <Type>database-role</Type>
+      <OwnerId>1</OwnerId>
+    </role>
+    <schema id="66" parent="7" name="INFORMATION_SCHEMA">
+      <ObjectId>3</ObjectId>
+    </schema>
+    <schema id="67" parent="7" name="db_accessadmin">
+      <ObjectId>16385</ObjectId>
+    </schema>
+    <schema id="68" parent="7" name="db_backupoperator">
+      <ObjectId>16389</ObjectId>
+    </schema>
+    <schema id="69" parent="7" name="db_datareader">
+      <ObjectId>16390</ObjectId>
+    </schema>
+    <schema id="70" parent="7" name="db_datawriter">
+      <ObjectId>16391</ObjectId>
+    </schema>
+    <schema id="71" parent="7" name="db_ddladmin">
+      <ObjectId>16387</ObjectId>
+    </schema>
+    <schema id="72" parent="7" name="db_denydatareader">
+      <ObjectId>16392</ObjectId>
+    </schema>
+    <schema id="73" parent="7" name="db_denydatawriter">
+      <ObjectId>16393</ObjectId>
+    </schema>
+    <schema id="74" parent="7" name="db_owner">
+      <ObjectId>16384</ObjectId>
+    </schema>
+    <schema id="75" parent="7" name="db_securityadmin">
+      <ObjectId>16386</ObjectId>
+    </schema>
+    <schema id="76" parent="7" name="dbo">
+      <Current>1</Current>
+      <DescriptionsCheckSum>12050813203</DescriptionsCheckSum>
+      <Grants>645577338|||0|execute|G
+645577338|||2|execute|D
+661577395|||0|execute|G
+661577395|||2|execute|D
+677577452|||0|execute|G
+677577452|||2|execute|D
+693577509|||0|execute|G
+693577509|||2|execute|D
+709577566|||0|execute|G
+709577566|||2|execute|D
+725577623|||0|execute|G
+725577623|||2|execute|D
+741577680|||0|execute|G
+741577680|||2|execute|D</Grants>
+      <IntrospectionTimestamp>2022-04-30.19:09:55.550</IntrospectionTimestamp>
+      <ObjectId>1</ObjectId>
+      <PermissionsCheckSum>11573558719</PermissionsCheckSum>
+    </schema>
+    <schema id="77" parent="7" name="guest">
+      <ObjectId>2</ObjectId>
+    </schema>
+    <schema id="78" parent="7" name="sys">
+      <ObjectId>4</ObjectId>
+    </schema>
+    <routine id="79" parent="76" name="fn_diagramobjects">
+      <CreatedTimestamp>2022-04-30.17:54:03.560</CreatedTimestamp>
+      <ExtendedProperties>microsoft_database_tools_support
+1
+int</ExtendedProperties>
+      <ModifiedTimestamp>2022-04-30.17:54:03.560</ModifiedTimestamp>
+      <ObjectId>741577680</ObjectId>
+      <RoutineType>scalar-fun</RoutineType>
+      <SourceTextLength>1647</SourceTextLength>
+    </routine>
+    <routine id="80" parent="76" name="sp_alterdiagram">
+      <CreatedTimestamp>2022-04-30.17:54:03.553</CreatedTimestamp>
+      <ExtendedProperties>microsoft_database_tools_support
+1
+int</ExtendedProperties>
+      <ModifiedTimestamp>2022-04-30.17:54:03.553</ModifiedTimestamp>
+      <ObjectId>709577566</ObjectId>
+      <RoutineType>proc</RoutineType>
+      <SourceTextLength>1501</SourceTextLength>
+    </routine>
+    <routine id="81" parent="76" name="sp_creatediagram">
+      <CreatedTimestamp>2022-04-30.17:54:03.543</CreatedTimestamp>
+      <ExtendedProperties>microsoft_database_tools_support
+1
+int</ExtendedProperties>
+      <ModifiedTimestamp>2022-04-30.17:54:03.543</ModifiedTimestamp>
+      <ObjectId>677577452</ObjectId>
+      <RoutineType>proc</RoutineType>
+      <SourceTextLength>1223</SourceTextLength>
+    </routine>
+    <routine id="82" parent="76" name="sp_dropdiagram">
+      <CreatedTimestamp>2022-04-30.17:54:03.557</CreatedTimestamp>
+      <ExtendedProperties>microsoft_database_tools_support
+1
+int</ExtendedProperties>
+      <ModifiedTimestamp>2022-04-30.17:54:03.557</ModifiedTimestamp>
+      <ObjectId>725577623</ObjectId>
+      <RoutineType>proc</RoutineType>
+      <SourceTextLength>896</SourceTextLength>
+    </routine>
+    <routine id="83" parent="76" name="sp_helpdiagramdefinition">
+      <CreatedTimestamp>2022-04-30.17:54:03.543</CreatedTimestamp>
+      <ExtendedProperties>microsoft_database_tools_support
+1
+int</ExtendedProperties>
+      <ModifiedTimestamp>2022-04-30.17:54:03.543</ModifiedTimestamp>
+      <ObjectId>661577395</ObjectId>
+      <RoutineType>proc</RoutineType>
+      <SourceTextLength>921</SourceTextLength>
+    </routine>
+    <routine id="84" parent="76" name="sp_helpdiagrams">
+      <CreatedTimestamp>2022-04-30.17:54:03.537</CreatedTimestamp>
+      <ExtendedProperties>microsoft_database_tools_support
+1
+int</ExtendedProperties>
+      <ModifiedTimestamp>2022-04-30.17:54:03.537</ModifiedTimestamp>
+      <ObjectId>645577338</ObjectId>
+      <RoutineType>proc</RoutineType>
+      <SourceTextLength>658</SourceTextLength>
+    </routine>
+    <routine id="85" parent="76" name="sp_renamediagram">
+      <CreatedTimestamp>2022-04-30.17:54:03.550</CreatedTimestamp>
+      <ExtendedProperties>microsoft_database_tools_support
+1
+int</ExtendedProperties>
+      <ModifiedTimestamp>2022-04-30.17:54:03.550</ModifiedTimestamp>
+      <ObjectId>693577509</ObjectId>
+      <RoutineType>proc</RoutineType>
+      <SourceTextLength>1721</SourceTextLength>
+    </routine>
+    <routine id="86" parent="76" name="sp_upgraddiagrams">
+      <CreatedTimestamp>2022-04-30.17:54:03.527</CreatedTimestamp>
+      <ExtendedProperties>microsoft_database_tools_support
+1
+int</ExtendedProperties>
+      <ModifiedTimestamp>2022-04-30.17:54:03.527</ModifiedTimestamp>
+      <ObjectId>581577110</ObjectId>
+      <RoutineType>proc</RoutineType>
+      <SourceTextLength>1463</SourceTextLength>
+    </routine>
+    <table id="87" parent="76" name="Actors">
+      <CreatedTimestamp>2022-04-30.18:35:55.570</CreatedTimestamp>
+      <ModifiedTimestamp>2022-04-30.18:35:55.600</ModifiedTimestamp>
+      <ObjectId>1365579903</ObjectId>
+    </table>
+    <table id="88" parent="76" name="CastMembers">
+      <CreatedTimestamp>2022-04-30.18:35:55.597</CreatedTimestamp>
+      <ModifiedTimestamp>2022-04-30.18:35:55.607</ModifiedTimestamp>
+      <ObjectId>1685581043</ObjectId>
+    </table>
+    <table id="89" parent="76" name="DvdCategories">
+      <CreatedTimestamp>2022-04-30.18:35:55.573</CreatedTimestamp>
+      <ModifiedTimestamp>2022-04-30.18:35:55.593</ModifiedTimestamp>
+      <ObjectId>1397580017</ObjectId>
+    </table>
+    <table id="90" parent="76" name="DvdCopies">
+      <CreatedTimestamp>2022-04-30.18:35:55.600</CreatedTimestamp>
+      <ModifiedTimestamp>2022-04-30.18:35:55.610</ModifiedTimestamp>
+      <ObjectId>1749581271</ObjectId>
+    </table>
+    <table id="91" parent="76" name="DvdTitles">
+      <CreatedTimestamp>2022-04-30.18:35:55.590</CreatedTimestamp>
+      <ModifiedTimestamp>2022-04-30.18:35:55.617</ModifiedTimestamp>
+      <ObjectId>1605580758</ObjectId>
+    </table>
+    <table id="92" parent="76" name="LoanTypes">
+      <CreatedTimestamp>2022-04-30.18:35:55.577</CreatedTimestamp>
+      <ModifiedTimestamp>2022-04-30.18:35:55.607</ModifiedTimestamp>
+      <ObjectId>1429580131</ObjectId>
+    </table>
+    <table id="93" parent="76" name="Loans">
+      <CreatedTimestamp>2022-04-30.18:35:55.603</CreatedTimestamp>
+      <ModifiedTimestamp>2022-04-30.18:35:55.620</ModifiedTimestamp>
+      <ObjectId>1797581442</ObjectId>
+    </table>
+    <table id="94" parent="76" name="Members">
+      <CreatedTimestamp>2022-04-30.18:35:55.590</CreatedTimestamp>
+      <ModifiedTimestamp>2022-04-30.18:35:55.613</ModifiedTimestamp>
+      <ObjectId>1557580587</ObjectId>
+    </table>
+    <table id="95" parent="76" name="MembershipCategories">
+      <CreatedTimestamp>2022-04-30.18:35:55.580</CreatedTimestamp>
+      <ModifiedTimestamp>2022-04-30.18:35:55.590</ModifiedTimestamp>
+      <ObjectId>1461580245</ObjectId>
+    </table>
+    <table id="96" parent="76" name="Producers">
+      <CreatedTimestamp>2022-04-30.18:35:55.580</CreatedTimestamp>
+      <ModifiedTimestamp>2022-04-30.18:35:55.597</ModifiedTimestamp>
+      <ObjectId>1493580359</ObjectId>
+    </table>
+    <table id="97" parent="76" name="Studios">
+      <CreatedTimestamp>2022-04-30.18:35:55.583</CreatedTimestamp>
+      <ModifiedTimestamp>2022-04-30.18:35:55.597</ModifiedTimestamp>
+      <ObjectId>1525580473</ObjectId>
+    </table>
+    <table id="98" parent="76" name="__EFMigrationsHistory">
+      <CreatedTimestamp>2022-04-30.18:35:55.410</CreatedTimestamp>
+      <ModifiedTimestamp>2022-04-30.18:35:55.410</ModifiedTimestamp>
+      <ObjectId>1333579789</ObjectId>
+    </table>
+    <table id="99" parent="76" name="sysdiagrams">
+      <CreatedTimestamp>2022-04-30.18:36:27.460</CreatedTimestamp>
+      <ExtendedProperties>microsoft_database_tools_support
+1
+int</ExtendedProperties>
+      <ModifiedTimestamp>2022-04-30.18:36:27.460</ModifiedTimestamp>
+      <ObjectId>1877581727</ObjectId>
+    </table>
+    <argument id="100" parent="79">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>int|0s</DataType>
+    </argument>
+    <argument id="101" parent="80" name="@diagramname">
+      <DataType>sysname|0s</DataType>
+      <Position>1</Position>
+    </argument>
+    <argument id="102" parent="80" name="@owner_id">
+      <DataType>int|0s</DataType>
+      <DefaultExpression>null</DefaultExpression>
+      <Position>2</Position>
+    </argument>
+    <argument id="103" parent="80" name="@version">
+      <DataType>int|0s</DataType>
+      <Position>3</Position>
+    </argument>
+    <argument id="104" parent="80" name="@definition">
+      <DataType>varbinary(max)|0s</DataType>
+      <Position>4</Position>
+    </argument>
+    <argument id="105" parent="81" name="@diagramname">
+      <DataType>sysname|0s</DataType>
+      <Position>1</Position>
+    </argument>
+    <argument id="106" parent="81" name="@owner_id">
+      <DataType>int|0s</DataType>
+      <DefaultExpression>null</DefaultExpression>
+      <Position>2</Position>
+    </argument>
+    <argument id="107" parent="81" name="@version">
+      <DataType>int|0s</DataType>
+      <Position>3</Position>
+    </argument>
+    <argument id="108" parent="81" name="@definition">
+      <DataType>varbinary(max)|0s</DataType>
+      <Position>4</Position>
+    </argument>
+    <argument id="109" parent="82" name="@diagramname">
+      <DataType>sysname|0s</DataType>
+      <Position>1</Position>
+    </argument>
+    <argument id="110" parent="82" name="@owner_id">
+      <DataType>int|0s</DataType>
+      <DefaultExpression>null</DefaultExpression>
+      <Position>2</Position>
+    </argument>
+    <argument id="111" parent="83" name="@diagramname">
+      <DataType>sysname|0s</DataType>
+      <Position>1</Position>
+    </argument>
+    <argument id="112" parent="83" name="@owner_id">
+      <DataType>int|0s</DataType>
+      <DefaultExpression>null</DefaultExpression>
+      <Position>2</Position>
+    </argument>
+    <argument id="113" parent="84" name="@diagramname">
+      <DataType>sysname|0s</DataType>
+      <DefaultExpression>NULL</DefaultExpression>
+      <Position>1</Position>
+    </argument>
+    <argument id="114" parent="84" name="@owner_id">
+      <DataType>int|0s</DataType>
+      <DefaultExpression>NULL</DefaultExpression>
+      <Position>2</Position>
+    </argument>
+    <argument id="115" parent="85" name="@diagramname">
+      <DataType>sysname|0s</DataType>
+      <Position>1</Position>
+    </argument>
+    <argument id="116" parent="85" name="@owner_id">
+      <DataType>int|0s</DataType>
+      <DefaultExpression>null</DefaultExpression>
+      <Position>2</Position>
+    </argument>
+    <argument id="117" parent="85" name="@new_diagramname">
+      <DataType>sysname|0s</DataType>
+      <Position>3</Position>
+    </argument>
+    <column id="118" parent="87" name="ActorNumber">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="119" parent="87" name="ActorSurname">
+      <DataType>nvarchar(max)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="120" parent="87" name="ActorFirstName">
+      <DataType>nvarchar(max)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <index id="121" parent="87" name="PK_Actors">
+      <Clustering>1</Clustering>
+      <ColNames>ActorNumber</ColNames>
+      <Position>1</Position>
+      <Unique>1</Unique>
+    </index>
+    <key id="122" parent="87" name="PK_Actors">
+      <ColNames>ActorNumber</ColNames>
+      <CreatedTimestamp>2022-04-30.18:35:55.573</CreatedTimestamp>
+      <ModifiedTimestamp>2022-04-30.18:35:55.573</ModifiedTimestamp>
+      <ObjectId>1381579960</ObjectId>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PK_Actors</UnderlyingIndexName>
+    </key>
+    <column id="123" parent="88" name="ActorNumber">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="124" parent="88" name="DVDNumber">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <foreign-key id="125" parent="88" name="FK_CastMembers_Actors_ActorNumber">
+      <ColNames>ActorNumber</ColNames>
+      <CreatedTimestamp>2022-04-30.18:35:55.600</CreatedTimestamp>
+      <ModifiedTimestamp>2022-04-30.18:35:55.600</ModifiedTimestamp>
+      <ObjectId>1717581157</ObjectId>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>ActorNumber</RefColNames>
+      <RefKeyName>PK_Actors</RefKeyName>
+      <RefTableId>1365579903</RefTableId>
+      <RefTableName>Actors</RefTableName>
+    </foreign-key>
+    <foreign-key id="126" parent="88" name="FK_CastMembers_DvdTitles_DVDNumber">
+      <ColNames>DVDNumber</ColNames>
+      <CreatedTimestamp>2022-04-30.18:35:55.600</CreatedTimestamp>
+      <ModifiedTimestamp>2022-04-30.18:35:55.600</ModifiedTimestamp>
+      <ObjectId>1733581214</ObjectId>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>DVDNumber</RefColNames>
+      <RefKeyName>PK_DvdTitles</RefKeyName>
+      <RefTableId>1605580758</RefTableId>
+      <RefTableName>DvdTitles</RefTableName>
+    </foreign-key>
+    <index id="127" parent="88" name="PK_CastMembers">
+      <Clustering>1</Clustering>
+      <ColNames>ActorNumber
+DVDNumber</ColNames>
+      <Position>1</Position>
+      <Unique>1</Unique>
+    </index>
+    <index id="128" parent="88" name="IX_CastMembers_DVDNumber">
+      <ColNames>DVDNumber</ColNames>
+      <Position>2</Position>
+    </index>
+    <key id="129" parent="88" name="PK_CastMembers">
+      <ColNames>ActorNumber
+DVDNumber</ColNames>
+      <CreatedTimestamp>2022-04-30.18:35:55.597</CreatedTimestamp>
+      <ModifiedTimestamp>2022-04-30.18:35:55.597</ModifiedTimestamp>
+      <ObjectId>1701581100</ObjectId>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PK_CastMembers</UnderlyingIndexName>
+    </key>
+    <column id="130" parent="89" name="CategoryNumber">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="131" parent="89" name="CategoryDescription">
+      <DataType>nvarchar(max)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="132" parent="89" name="AgeRestricted">
+      <DataType>nvarchar(max)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <index id="133" parent="89" name="PK_DvdCategories">
+      <Clustering>1</Clustering>
+      <ColNames>CategoryNumber</ColNames>
+      <Position>1</Position>
+      <Unique>1</Unique>
+    </index>
+    <key id="134" parent="89" name="PK_DvdCategories">
+      <ColNames>CategoryNumber</ColNames>
+      <CreatedTimestamp>2022-04-30.18:35:55.577</CreatedTimestamp>
+      <ModifiedTimestamp>2022-04-30.18:35:55.577</ModifiedTimestamp>
+      <ObjectId>1413580074</ObjectId>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PK_DvdCategories</UnderlyingIndexName>
+    </key>
+    <column id="135" parent="90" name="CopyNumber">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="136" parent="90" name="DatePurchased">
+      <DataType>datetime2|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="137" parent="90" name="DvdNumber">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <foreign-key id="138" parent="90" name="FK_DvdCopies_DvdTitles_DvdNumber">
+      <ColNames>DvdNumber</ColNames>
+      <CreatedTimestamp>2022-04-30.18:35:55.600</CreatedTimestamp>
+      <ModifiedTimestamp>2022-04-30.18:35:55.600</ModifiedTimestamp>
+      <ObjectId>1781581385</ObjectId>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>DVDNumber</RefColNames>
+      <RefKeyName>PK_DvdTitles</RefKeyName>
+      <RefTableId>1605580758</RefTableId>
+      <RefTableName>DvdTitles</RefTableName>
+    </foreign-key>
+    <index id="139" parent="90" name="PK_DvdCopies">
+      <Clustering>1</Clustering>
+      <ColNames>CopyNumber</ColNames>
+      <Position>1</Position>
+      <Unique>1</Unique>
+    </index>
+    <index id="140" parent="90" name="IX_DvdCopies_DvdNumber">
+      <ColNames>DvdNumber</ColNames>
+      <Position>2</Position>
+    </index>
+    <key id="141" parent="90" name="PK_DvdCopies">
+      <ColNames>CopyNumber</ColNames>
+      <CreatedTimestamp>2022-04-30.18:35:55.600</CreatedTimestamp>
+      <ModifiedTimestamp>2022-04-30.18:35:55.600</ModifiedTimestamp>
+      <ObjectId>1765581328</ObjectId>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PK_DvdCopies</UnderlyingIndexName>
+    </key>
+    <column id="142" parent="91" name="DVDNumber">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="143" parent="91" name="DateReleased">
+      <DataType>datetime2|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="144" parent="91" name="StandardCharge">
+      <DataType>money|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="145" parent="91" name="PenaltyCharge">
+      <DataType>money|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="146" parent="91" name="ProducerNumber">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <column id="147" parent="91" name="StudioNumber">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+    </column>
+    <column id="148" parent="91" name="CategoryNumber">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+    </column>
+    <foreign-key id="149" parent="91" name="FK_DvdTitles_Producers_ProducerNumber">
+      <ColNames>ProducerNumber</ColNames>
+      <CreatedTimestamp>2022-04-30.18:35:55.593</CreatedTimestamp>
+      <ModifiedTimestamp>2022-04-30.18:35:55.593</ModifiedTimestamp>
+      <ObjectId>1653580929</ObjectId>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>ProducerNumber</RefColNames>
+      <RefKeyName>PK_Producers</RefKeyName>
+      <RefTableId>1493580359</RefTableId>
+      <RefTableName>Producers</RefTableName>
+    </foreign-key>
+    <foreign-key id="150" parent="91" name="FK_DvdTitles_Studios_StudioNumber">
+      <ColNames>StudioNumber</ColNames>
+      <CreatedTimestamp>2022-04-30.18:35:55.597</CreatedTimestamp>
+      <ModifiedTimestamp>2022-04-30.18:35:55.597</ModifiedTimestamp>
+      <ObjectId>1669580986</ObjectId>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>StudioNumber</RefColNames>
+      <RefKeyName>PK_Studios</RefKeyName>
+      <RefTableId>1525580473</RefTableId>
+      <RefTableName>Studios</RefTableName>
+    </foreign-key>
+    <foreign-key id="151" parent="91" name="FK_DvdTitles_DvdCategories_CategoryNumber">
+      <ColNames>CategoryNumber</ColNames>
+      <CreatedTimestamp>2022-04-30.18:35:55.593</CreatedTimestamp>
+      <ModifiedTimestamp>2022-04-30.18:35:55.593</ModifiedTimestamp>
+      <ObjectId>1637580872</ObjectId>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>CategoryNumber</RefColNames>
+      <RefKeyName>PK_DvdCategories</RefKeyName>
+      <RefTableId>1397580017</RefTableId>
+      <RefTableName>DvdCategories</RefTableName>
+    </foreign-key>
+    <index id="152" parent="91" name="PK_DvdTitles">
+      <Clustering>1</Clustering>
+      <ColNames>DVDNumber</ColNames>
+      <Position>1</Position>
+      <Unique>1</Unique>
+    </index>
+    <index id="153" parent="91" name="IX_DvdTitles_CategoryNumber">
+      <ColNames>CategoryNumber</ColNames>
+      <Position>2</Position>
+    </index>
+    <index id="154" parent="91" name="IX_DvdTitles_ProducerNumber">
+      <ColNames>ProducerNumber</ColNames>
+      <Position>3</Position>
+    </index>
+    <index id="155" parent="91" name="IX_DvdTitles_StudioNumber">
+      <ColNames>StudioNumber</ColNames>
+      <Position>4</Position>
+    </index>
+    <key id="156" parent="91" name="PK_DvdTitles">
+      <ColNames>DVDNumber</ColNames>
+      <CreatedTimestamp>2022-04-30.18:35:55.593</CreatedTimestamp>
+      <ModifiedTimestamp>2022-04-30.18:35:55.593</ModifiedTimestamp>
+      <ObjectId>1621580815</ObjectId>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PK_DvdTitles</UnderlyingIndexName>
+    </key>
+    <column id="157" parent="92" name="LoanTypeNumber">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="158" parent="92" name="LoanTypes">
+      <DataType>nvarchar(max)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="159" parent="92" name="LoanDurantion">
+      <DataType>nvarchar(max)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <index id="160" parent="92" name="PK_LoanTypes">
+      <Clustering>1</Clustering>
+      <ColNames>LoanTypeNumber</ColNames>
+      <Position>1</Position>
+      <Unique>1</Unique>
+    </index>
+    <key id="161" parent="92" name="PK_LoanTypes">
+      <ColNames>LoanTypeNumber</ColNames>
+      <CreatedTimestamp>2022-04-30.18:35:55.577</CreatedTimestamp>
+      <ModifiedTimestamp>2022-04-30.18:35:55.577</ModifiedTimestamp>
+      <ObjectId>1445580188</ObjectId>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PK_LoanTypes</UnderlyingIndexName>
+    </key>
+    <column id="162" parent="93" name="LoanNumber">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="163" parent="93" name="DateOut">
+      <DataType>datetime2|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="164" parent="93" name="DateDue">
+      <DataType>datetime2|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="165" parent="93" name="DateReturned">
+      <DataType>datetime2|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="166" parent="93" name="MemberNumber">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <column id="167" parent="93" name="LoanTypeNumber">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+    </column>
+    <column id="168" parent="93" name="CopyNumber">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+    </column>
+    <foreign-key id="169" parent="93" name="FK_Loans_Members_MemberNumber">
+      <ColNames>MemberNumber</ColNames>
+      <CreatedTimestamp>2022-04-30.18:35:55.607</CreatedTimestamp>
+      <ModifiedTimestamp>2022-04-30.18:35:55.607</ModifiedTimestamp>
+      <ObjectId>1861581670</ObjectId>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>MemberNumber</RefColNames>
+      <RefKeyName>PK_Members</RefKeyName>
+      <RefTableId>1557580587</RefTableId>
+      <RefTableName>Members</RefTableName>
+    </foreign-key>
+    <foreign-key id="170" parent="93" name="FK_Loans_LoanTypes_LoanTypeNumber">
+      <ColNames>LoanTypeNumber</ColNames>
+      <CreatedTimestamp>2022-04-30.18:35:55.603</CreatedTimestamp>
+      <ModifiedTimestamp>2022-04-30.18:35:55.603</ModifiedTimestamp>
+      <ObjectId>1845581613</ObjectId>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>LoanTypeNumber</RefColNames>
+      <RefKeyName>PK_LoanTypes</RefKeyName>
+      <RefTableId>1429580131</RefTableId>
+      <RefTableName>LoanTypes</RefTableName>
+    </foreign-key>
+    <foreign-key id="171" parent="93" name="FK_Loans_DvdCopies_CopyNumber">
+      <ColNames>CopyNumber</ColNames>
+      <CreatedTimestamp>2022-04-30.18:35:55.603</CreatedTimestamp>
+      <ModifiedTimestamp>2022-04-30.18:35:55.603</ModifiedTimestamp>
+      <ObjectId>1829581556</ObjectId>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>CopyNumber</RefColNames>
+      <RefKeyName>PK_DvdCopies</RefKeyName>
+      <RefTableId>1749581271</RefTableId>
+      <RefTableName>DvdCopies</RefTableName>
+    </foreign-key>
+    <index id="172" parent="93" name="PK_Loans">
+      <Clustering>1</Clustering>
+      <ColNames>LoanNumber</ColNames>
+      <Position>1</Position>
+      <Unique>1</Unique>
+    </index>
+    <index id="173" parent="93" name="IX_Loans_CopyNumber">
+      <ColNames>CopyNumber</ColNames>
+      <Position>2</Position>
+    </index>
+    <index id="174" parent="93" name="IX_Loans_LoanTypeNumber">
+      <ColNames>LoanTypeNumber</ColNames>
+      <Position>3</Position>
+    </index>
+    <index id="175" parent="93" name="IX_Loans_MemberNumber">
+      <ColNames>MemberNumber</ColNames>
+      <Position>4</Position>
+    </index>
+    <key id="176" parent="93" name="PK_Loans">
+      <ColNames>LoanNumber</ColNames>
+      <CreatedTimestamp>2022-04-30.18:35:55.603</CreatedTimestamp>
+      <ModifiedTimestamp>2022-04-30.18:35:55.603</ModifiedTimestamp>
+      <ObjectId>1813581499</ObjectId>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PK_Loans</UnderlyingIndexName>
+    </key>
+    <column id="177" parent="94" name="MemberNumber">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="178" parent="94" name="MemberFirstName">
+      <DataType>nvarchar(max)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="179" parent="94" name="MemberLastName">
+      <DataType>nvarchar(max)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="180" parent="94" name="MemberAddress">
+      <DataType>nvarchar(max)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="181" parent="94" name="MemberDob">
+      <DataType>datetime2|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <column id="182" parent="94" name="MembershipCategoryNumber">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+    </column>
+    <foreign-key id="183" parent="94" name="FK_Members_MembershipCategories_MembershipCategoryNumber">
+      <ColNames>MembershipCategoryNumber</ColNames>
+      <CreatedTimestamp>2022-04-30.18:35:55.590</CreatedTimestamp>
+      <ModifiedTimestamp>2022-04-30.18:35:55.590</ModifiedTimestamp>
+      <ObjectId>1589580701</ObjectId>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>MembershipCategoryNumber</RefColNames>
+      <RefKeyName>PK_MembershipCategories</RefKeyName>
+      <RefTableId>1461580245</RefTableId>
+      <RefTableName>MembershipCategories</RefTableName>
+    </foreign-key>
+    <index id="184" parent="94" name="PK_Members">
+      <Clustering>1</Clustering>
+      <ColNames>MemberNumber</ColNames>
+      <Position>1</Position>
+      <Unique>1</Unique>
+    </index>
+    <index id="185" parent="94" name="IX_Members_MembershipCategoryNumber">
+      <ColNames>MembershipCategoryNumber</ColNames>
+      <Position>2</Position>
+    </index>
+    <key id="186" parent="94" name="PK_Members">
+      <ColNames>MemberNumber</ColNames>
+      <CreatedTimestamp>2022-04-30.18:35:55.590</CreatedTimestamp>
+      <ModifiedTimestamp>2022-04-30.18:35:55.590</ModifiedTimestamp>
+      <ObjectId>1573580644</ObjectId>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PK_Members</UnderlyingIndexName>
+    </key>
+    <column id="187" parent="95" name="MembershipCategoryNumber">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="188" parent="95" name="MembershipCategoryDescription">
+      <DataType>nvarchar(max)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="189" parent="95" name="MembershipCategoryTotalLoans">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <index id="190" parent="95" name="PK_MembershipCategories">
+      <Clustering>1</Clustering>
+      <ColNames>MembershipCategoryNumber</ColNames>
+      <Position>1</Position>
+      <Unique>1</Unique>
+    </index>
+    <key id="191" parent="95" name="PK_MembershipCategories">
+      <ColNames>MembershipCategoryNumber</ColNames>
+      <CreatedTimestamp>2022-04-30.18:35:55.580</CreatedTimestamp>
+      <ModifiedTimestamp>2022-04-30.18:35:55.580</ModifiedTimestamp>
+      <ObjectId>1477580302</ObjectId>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PK_MembershipCategories</UnderlyingIndexName>
+    </key>
+    <column id="192" parent="96" name="ProducerNumber">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="193" parent="96" name="ProducerName">
+      <DataType>nvarchar(max)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <index id="194" parent="96" name="PK_Producers">
+      <Clustering>1</Clustering>
+      <ColNames>ProducerNumber</ColNames>
+      <Position>1</Position>
+      <Unique>1</Unique>
+    </index>
+    <key id="195" parent="96" name="PK_Producers">
+      <ColNames>ProducerNumber</ColNames>
+      <CreatedTimestamp>2022-04-30.18:35:55.583</CreatedTimestamp>
+      <ModifiedTimestamp>2022-04-30.18:35:55.583</ModifiedTimestamp>
+      <ObjectId>1509580416</ObjectId>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PK_Producers</UnderlyingIndexName>
+    </key>
+    <column id="196" parent="97" name="StudioNumber">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="197" parent="97" name="StudioName">
+      <DataType>nvarchar(max)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <index id="198" parent="97" name="PK_Studios">
+      <Clustering>1</Clustering>
+      <ColNames>StudioNumber</ColNames>
+      <Position>1</Position>
+      <Unique>1</Unique>
+    </index>
+    <key id="199" parent="97" name="PK_Studios">
+      <ColNames>StudioNumber</ColNames>
+      <CreatedTimestamp>2022-04-30.18:35:55.587</CreatedTimestamp>
+      <ModifiedTimestamp>2022-04-30.18:35:55.587</ModifiedTimestamp>
+      <ObjectId>1541580530</ObjectId>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PK_Studios</UnderlyingIndexName>
+    </key>
+    <column id="200" parent="98" name="MigrationId">
+      <DataType>nvarchar(150 char)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="201" parent="98" name="ProductVersion">
+      <DataType>nvarchar(32 char)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <index id="202" parent="98" name="PK___EFMigrationsHistory">
+      <Clustering>1</Clustering>
+      <ColNames>MigrationId</ColNames>
+      <Position>1</Position>
+      <Unique>1</Unique>
+    </index>
+    <key id="203" parent="98" name="PK___EFMigrationsHistory">
+      <ColNames>MigrationId</ColNames>
+      <CreatedTimestamp>2022-04-30.18:35:55.450</CreatedTimestamp>
+      <ModifiedTimestamp>2022-04-30.18:35:55.450</ModifiedTimestamp>
+      <ObjectId>1349579846</ObjectId>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PK___EFMigrationsHistory</UnderlyingIndexName>
+    </key>
+    <column id="204" parent="99" name="name">
+      <DataType>sysname|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="205" parent="99" name="principal_id">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="206" parent="99" name="diagram_id">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="207" parent="99" name="version">
+      <DataType>int|0s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="208" parent="99" name="definition">
+      <DataType>varbinary(max)|0s</DataType>
+      <Position>5</Position>
+    </column>
+    <index id="209" parent="99" name="PK__sysdiagr__C2B05B6163837A17">
+      <Clustering>1</Clustering>
+      <ColNames>diagram_id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Position>1</Position>
+      <Unique>1</Unique>
+    </index>
+    <index id="210" parent="99" name="UK_principal_name">
+      <ColNames>principal_id
+name</ColNames>
+      <Position>2</Position>
+      <Unique>1</Unique>
+    </index>
+    <key id="211" parent="99" name="PK__sysdiagr__C2B05B6163837A17">
+      <ColNames>diagram_id</ColNames>
+      <CreatedTimestamp>2022-04-30.18:36:27.463</CreatedTimestamp>
+      <ModifiedTimestamp>2022-04-30.18:36:27.463</ModifiedTimestamp>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>1893581784</ObjectId>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PK__sysdiagr__C2B05B6163837A17</UnderlyingIndexName>
+    </key>
+    <key id="212" parent="99" name="UK_principal_name">
+      <ColNames>principal_id
+name</ColNames>
+      <CreatedTimestamp>2022-04-30.18:36:27.463</CreatedTimestamp>
+      <ModifiedTimestamp>2022-04-30.18:36:27.463</ModifiedTimestamp>
+      <ObjectId>1909581841</ObjectId>
+      <UnderlyingIndexName>UK_principal_name</UnderlyingIndexName>
+    </key>
+  </database-model>
+</dataSource>

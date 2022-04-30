@@ -11,7 +11,6 @@ public class Actor
     
     public string ActorFirstName { get; set; }
     
-    // public ICollection<CastMember> CastMembers { get; set; }
     
     //Relationship
     public List<CastMember> CastMembers { get; set; }

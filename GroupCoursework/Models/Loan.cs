@@ -5,6 +5,7 @@ namespace GroupCoursework.Models;
 
 public class Loan
 {
+    [Key]
     public int  LoanNumber { get; set; }
     
     [DataType(DataType.Date)]
