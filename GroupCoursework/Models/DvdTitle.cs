@@ -8,6 +8,8 @@ public class DvdTitle
     [Key]
     public int  DVDNumber { get; set; }
     
+    [DataType(DataType.Date)]
+    [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
     public DateTime DateReleased { get; set; }
     
     [DataType(DataType.Currency)]

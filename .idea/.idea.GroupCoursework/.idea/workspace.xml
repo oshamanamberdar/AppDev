@@ -11,31 +11,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b9f322f9-0743-4820-bead-cbd53c8f1444" name="Changes" comment="commit after seeding and migration">
-      <change afterPath="$PROJECT_DIR$/GroupCoursework/Controllers/ActorController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GroupCoursework/Controllers/DvdCategoryController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GroupCoursework/Controllers/DvdCopyController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GroupCoursework/Controllers/DvdTitleController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GroupCoursework/Controllers/LoanController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GroupCoursework/Controllers/LoanTypeController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GroupCoursework/Controllers/MemberController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GroupCoursework/Controllers/MembershipCategoryController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GroupCoursework/Controllers/ProducerController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GroupCoursework/Controllers/StudioController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GroupCoursework/Views/Actor/Index.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GroupCoursework/Views/DvdCategory/Index.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GroupCoursework/Views/DvdCopy/Index.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GroupCoursework/Views/DvdTitle/Index.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GroupCoursework/Views/Loan/Index.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GroupCoursework/Views/LoanType/Index.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GroupCoursework/Views/Member/Index.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GroupCoursework/Views/MembershipCategory/Index.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GroupCoursework/Views/Producer/Index.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GroupCoursework/Views/Studio/Index.cshtml" afterDir="false" />
+    <list default="true" id="b9f322f9-0743-4820-bead-cbd53c8f1444" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/GroupCoursework/Base/EntityBaseRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GroupCoursework/Base/IEntityBase.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GroupCoursework/Base/IEntityBaseRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GroupCoursework/Services/IMembershipCategoryService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GroupCoursework/Services/MembershipCategoryService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GroupCoursework/Views/MembershipCategory/Create.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GroupCoursework/Views/MembershipCategory/Details.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GroupCoursework/Views/MembershipCategory/Edit.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GroupCoursework/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GroupCoursework/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/GroupCoursework/DesignTimeBuild/.dtbcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/GroupCoursework/DesignTimeBuild/.dtbcache.v2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/slnx.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/slnx.sqlite" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroupCoursework/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Views/Shared/_Layout.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroupCoursework/Controllers/MembershipCategoryController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Controllers/MembershipCategoryController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroupCoursework/Models/DvdTitle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Models/DvdTitle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroupCoursework/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroupCoursework/Views/MembershipCategory/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Views/MembershipCategory/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroupCoursework/wwwroot/css/site.css" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/wwwroot/css/site.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +42,6 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/GroupCoursework/DbContext/ApplicationDbContext.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/GroupCoursework/GroupCoursework/Models/Actor.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -73,6 +62,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="XThreadsFramesViewSplitterKey" value="0.24074075" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -123,7 +113,9 @@
       <updated>1650345298340</updated>
       <workItem from="1650345323195" duration="9254000" />
       <workItem from="1651285855606" duration="4000" />
-      <workItem from="1651286044305" duration="25533000" />
+      <workItem from="1651286044305" duration="26359000" />
+      <workItem from="1651331971184" duration="3801000" />
+      <workItem from="1651379790391" duration="16555000" />
     </task>
     <task id="LOCAL-00001" summary="commit 2">
       <created>1651291978314</created>
@@ -139,7 +131,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651304550995</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="View Created for every controller">
+      <created>1651322418832</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1651322418832</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -165,6 +164,52 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="commit 2" />
     <MESSAGE value="commit after seeding and migration" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit after seeding and migration" />
+    <MESSAGE value="View Created for every controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="View Created for every controller" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/GroupCoursework/Controllers/MembershipCategoryController.cs</url>
+          <line>64</line>
+          <properties documentPath="D:\GroupCoursework\GroupCoursework\Controllers\MembershipCategoryController.cs" initialLine="56" containingFunctionPresentation="method 'Edit'">
+            <startOffsets>
+              <option value="1701" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1752" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/GroupCoursework/Controllers/MembershipCategoryController.cs</url>
+          <line>65</line>
+          <properties documentPath="D:\GroupCoursework\GroupCoursework\Controllers\MembershipCategoryController.cs" initialLine="57" containingFunctionPresentation="method 'Edit'">
+            <startOffsets>
+              <option value="1761" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1800" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/GroupCoursework/Controllers/MembershipCategoryController.cs</url>
+          <line>33</line>
+          <properties documentPath="D:\GroupCoursework\GroupCoursework\Controllers\MembershipCategoryController.cs" initialLine="33" containingFunctionPresentation="method 'Create'">
+            <startOffsets>
+              <option value="819" />
+            </startOffsets>
+            <endOffsets>
+              <option value="842" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

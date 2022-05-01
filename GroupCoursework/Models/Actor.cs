@@ -1,11 +1,13 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using GroupCoursework.Base;
 
 namespace GroupCoursework.Models;
 
-public class Actor
+public class Actor:IEntityBase
 {
+    
     [Key]
-    public int ActorNumber { get; set; }
+    public int Id { get; set; }
     
     public string ActorSurname { get; set; }
     
@@ -15,4 +17,5 @@ public class Actor
     //Relationship
     public List<CastMember> CastMembers { get; set; }
 
+   
 }

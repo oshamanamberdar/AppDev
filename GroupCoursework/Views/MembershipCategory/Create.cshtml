@@ -1,0 +1,43 @@
+﻿@model MembershipCategory
+
+@{
+    ViewData["Title"] = "Add a new MembershipCategory";
+
+}
+<div class="row-text">
+    <div class="col-md-8 offset-2">
+        <p>
+            <h1>Add Membership Category</h1>
+        </p>
+        <div class="row">
+            <div class="col-md-8 offset-2">
+                <form asp-action="Create">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div col-md-4>
+                        <div class="form-group">
+                            <label asp-for="MembershipCategoryTotalLoans">Total Loan</label>
+                            <input asp-for="MembershipCategoryTotalLoans" class="form-control"/>
+                            <span asp-validation-for="MembershipCategoryTotalLoans" class="text-danger"></span>
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="MembershipCategoryDescription">Description</label>
+                        <input rows="3" asp-for="MembershipCategoryDescription" class="form-control">
+                        <span asp-validation-for="MembershipCategoryDescription" class="text-danger"></span>
+                    </div>
+                    <hr/>
+                    <div class="form-group">
+                        <div class="col-4">
+                            <input type="submit" value="Create" class="btn btn-outline-success float-right"/>
+                            <a class="btn btn-outline-secondary" asp-action="Index"> Show All</a>
+                        </div>
+                    </div>
+
+                </form>
+
+
+            </div>
+        </div>
+    </div>
+</div>
