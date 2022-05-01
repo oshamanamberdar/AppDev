@@ -1,12 +1,13 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using GroupCoursework.Base;
 
 namespace GroupCoursework.Models;
 
-public class Member
+public class Member: IEntityBase
 {
     [Key]
-    public int MemberNumber { get; set; }
+    public int Id { get; set; }
     public string MemberFirstName { get; set; }
     public string MemberLastName { get; set; }
     public string MemberAddress { get; set; }

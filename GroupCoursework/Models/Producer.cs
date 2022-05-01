@@ -1,11 +1,12 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using GroupCoursework.Base;
 
 namespace GroupCoursework.Models;
 
-public class Producer
+public class Producer: IEntityBase
 {
     [Key]
-    public int ProducerNumber { get; set; }
+    public int Id { get; set; }
     
     public string ProducerName { get; set; }
     

@@ -1,11 +1,12 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using GroupCoursework.Base;
 
 namespace GroupCoursework.Models;
 
-public class MembershipCategory
+public class MembershipCategory : IEntityBase
 {
     [Key]
-    public int MembershipCategoryNumber { get; set; }
+    public int Id { get; set; }
     public string MembershipCategoryDescription { get; set; }
     public int MembershipCategoryTotalLoans { get; set; }
     
@@ -14,4 +15,5 @@ public class MembershipCategory
 
     public List<Member> Members { get; set; }
 
+   
 }

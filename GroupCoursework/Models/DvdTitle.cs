@@ -1,12 +1,13 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using GroupCoursework.Base;
 
 namespace GroupCoursework.Models;
 
-public class DvdTitle
+public class DvdTitle: IEntityBase
 {
     [Key]
-    public int  DVDNumber { get; set; }
+    public int  Id { get; set; }
     
     [DataType(DataType.Date)]
     [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]

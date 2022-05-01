@@ -1,12 +1,13 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using GroupCoursework.Base;
 
 namespace GroupCoursework.Models;
 
-public class Loan
+public class Loan: IEntityBase
 {
     [Key]
-    public int  LoanNumber { get; set; }
+    public int  Id { get; set; }
     
     [DataType(DataType.Date)]
     [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]

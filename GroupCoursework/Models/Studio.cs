@@ -1,11 +1,12 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using GroupCoursework.Base;
 
 namespace GroupCoursework.Models;
 
-public class Studio
+public class Studio: IEntityBase
 {
     [Key]
-    public int StudioNumber { get; set; }
+    public int Id { get; set; }
     
     public string StudioName { get; set; }
     

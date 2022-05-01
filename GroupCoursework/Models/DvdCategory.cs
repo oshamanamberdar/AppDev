@@ -1,11 +1,12 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using GroupCoursework.Base;
 
 namespace GroupCoursework.Models;
 
-public class DvdCategory
+public class DvdCategory: IEntityBase
 {
     [Key]
-    public int CategoryNumber { get; set; }
+    public int Id { get; set; }
     
     public string CategoryDescription { get; set; }
     
