@@ -11,21 +11,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b9f322f9-0743-4820-bead-cbd53c8f1444" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/GroupCoursework/Base/EntityBaseRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GroupCoursework/Base/IEntityBase.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GroupCoursework/Base/IEntityBaseRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GroupCoursework/Services/IMembershipCategoryService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GroupCoursework/Services/MembershipCategoryService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GroupCoursework/Views/MembershipCategory/Create.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GroupCoursework/Views/MembershipCategory/Details.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GroupCoursework/Views/MembershipCategory/Edit.cshtml" afterDir="false" />
+    <list default="true" id="b9f322f9-0743-4820-bead-cbd53c8f1444" name="Changes" comment="commit for view">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GroupCoursework/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GroupCoursework/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroupCoursework/Controllers/MembershipCategoryController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Controllers/MembershipCategoryController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroupCoursework/Models/DvdTitle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Models/DvdTitle.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroupCoursework/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroupCoursework/Views/MembershipCategory/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Views/MembershipCategory/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroupCoursework/wwwroot/css/site.css" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/wwwroot/css/site.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +102,7 @@
       <workItem from="1651285855606" duration="4000" />
       <workItem from="1651286044305" duration="26359000" />
       <workItem from="1651331971184" duration="3801000" />
-      <workItem from="1651379790391" duration="16555000" />
+      <workItem from="1651379790391" duration="17753000" />
     </task>
     <task id="LOCAL-00001" summary="commit 2">
       <created>1651291978314</created>
@@ -138,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651322418832</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="commit for view">
+      <created>1651397910011</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1651397910011</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -165,7 +159,8 @@
     <MESSAGE value="commit 2" />
     <MESSAGE value="commit after seeding and migration" />
     <MESSAGE value="View Created for every controller" />
-    <option name="LAST_COMMIT_MESSAGE" value="View Created for every controller" />
+    <MESSAGE value="commit for view" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit for view" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
