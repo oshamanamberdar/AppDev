@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GroupCoursework.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220430070541_InitialCreate")]
+    [Migration("20220501123244_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -26,11 +26,11 @@ namespace GroupCoursework.Migrations
 
             modelBuilder.Entity("GroupCoursework.Models.Actor", b =>
                 {
-                    b.Property<int>("ActorNumber")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ActorNumber"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("ActorFirstName")
                         .IsRequired()
@@ -40,33 +40,33 @@ namespace GroupCoursework.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("ActorNumber");
+                    b.HasKey("Id");
 
                     b.ToTable("Actors");
                 });
 
             modelBuilder.Entity("GroupCoursework.Models.CastMember", b =>
                 {
-                    b.Property<int>("ActorNumber")
+                    b.Property<int>("ActorId")
                         .HasColumnType("int");
 
-                    b.Property<int>("DVDNumber")
+                    b.Property<int>("DvdId")
                         .HasColumnType("int");
 
-                    b.HasKey("ActorNumber", "DVDNumber");
+                    b.HasKey("ActorId", "DvdId");
 
-                    b.HasIndex("DVDNumber");
+                    b.HasIndex("DvdId");
 
                     b.ToTable("CastMembers");
                 });
 
             modelBuilder.Entity("GroupCoursework.Models.DvdCategory", b =>
                 {
-                    b.Property<int>("CategoryNumber")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CategoryNumber"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("AgeRestricted")
                         .IsRequired()
@@ -76,18 +76,18 @@ namespace GroupCoursework.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("CategoryNumber");
+                    b.HasKey("Id");
 
                     b.ToTable("DvdCategories");
                 });
 
             modelBuilder.Entity("GroupCoursework.Models.DvdCopy", b =>
                 {
-                    b.Property<int>("CopyNumber")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CopyNumber"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<DateTime>("DatePurchased")
                         .HasColumnType("datetime2");
@@ -95,7 +95,7 @@ namespace GroupCoursework.Migrations
                     b.Property<int>("DvdNumber")
                         .HasColumnType("int");
 
-                    b.HasKey("CopyNumber");
+                    b.HasKey("Id");
 
                     b.HasIndex("DvdNumber");
 
@@ -104,11 +104,11 @@ namespace GroupCoursework.Migrations
 
             modelBuilder.Entity("GroupCoursework.Models.DvdTitle", b =>
                 {
-                    b.Property<int>("DVDNumber")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("DVDNumber"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<int>("CategoryNumber")
                         .HasColumnType("int");
@@ -128,7 +128,7 @@ namespace GroupCoursework.Migrations
                     b.Property<int>("StudioNumber")
                         .HasColumnType("int");
 
-                    b.HasKey("DVDNumber");
+                    b.HasKey("Id");
 
                     b.HasIndex("CategoryNumber");
 
@@ -141,11 +141,11 @@ namespace GroupCoursework.Migrations
 
             modelBuilder.Entity("GroupCoursework.Models.Loan", b =>
                 {
-                    b.Property<int>("LoanNumber")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("LoanNumber"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<int>("CopyNumber")
                         .HasColumnType("int");
@@ -165,7 +165,7 @@ namespace GroupCoursework.Migrations
                     b.Property<int>("MemberNumber")
                         .HasColumnType("int");
 
-                    b.HasKey("LoanNumber");
+                    b.HasKey("Id");
 
                     b.HasIndex("CopyNumber");
 
@@ -178,11 +178,11 @@ namespace GroupCoursework.Migrations
 
             modelBuilder.Entity("GroupCoursework.Models.LoanType", b =>
                 {
-                    b.Property<int>("LoanTypeNumber")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("LoanTypeNumber"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("LoanDurantion")
                         .IsRequired()
@@ -192,18 +192,18 @@ namespace GroupCoursework.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("LoanTypeNumber");
+                    b.HasKey("Id");
 
                     b.ToTable("LoanTypes");
                 });
 
             modelBuilder.Entity("GroupCoursework.Models.Member", b =>
                 {
-                    b.Property<int>("MemberNumber")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MemberNumber"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("MemberAddress")
                         .IsRequired()
@@ -223,7 +223,7 @@ namespace GroupCoursework.Migrations
                     b.Property<int>("MembershipCategoryNumber")
                         .HasColumnType("int");
 
-                    b.HasKey("MemberNumber");
+                    b.HasKey("Id");
 
                     b.HasIndex("MembershipCategoryNumber");
 
@@ -232,11 +232,11 @@ namespace GroupCoursework.Migrations
 
             modelBuilder.Entity("GroupCoursework.Models.MembershipCategory", b =>
                 {
-                    b.Property<int>("MembershipCategoryNumber")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MembershipCategoryNumber"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("MembershipCategoryDescription")
                         .IsRequired()
@@ -245,41 +245,41 @@ namespace GroupCoursework.Migrations
                     b.Property<int>("MembershipCategoryTotalLoans")
                         .HasColumnType("int");
 
-                    b.HasKey("MembershipCategoryNumber");
+                    b.HasKey("Id");
 
                     b.ToTable("MembershipCategories");
                 });
 
             modelBuilder.Entity("GroupCoursework.Models.Producer", b =>
                 {
-                    b.Property<int>("ProducerNumber")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ProducerNumber"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("ProducerName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("ProducerNumber");
+                    b.HasKey("Id");
 
                     b.ToTable("Producers");
                 });
 
             modelBuilder.Entity("GroupCoursework.Models.Studio", b =>
                 {
-                    b.Property<int>("StudioNumber")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("StudioNumber"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("StudioName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("StudioNumber");
+                    b.HasKey("Id");
 
                     b.ToTable("Studios");
                 });
@@ -288,13 +288,13 @@ namespace GroupCoursework.Migrations
                 {
                     b.HasOne("GroupCoursework.Models.Actor", "Actor")
                         .WithMany("CastMembers")
-                        .HasForeignKey("ActorNumber")
+                        .HasForeignKey("ActorId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("GroupCoursework.Models.DvdTitle", "DvdTitle")
                         .WithMany("CastMembers")
-                        .HasForeignKey("DVDNumber")
+                        .HasForeignKey("DvdId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

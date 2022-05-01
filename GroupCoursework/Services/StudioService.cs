@@ -1,6 +1,10 @@
-﻿namespace GroupCoursework.Services;
+﻿using GroupCoursework.Base;
+using GroupCoursework.DbContext;
+using GroupCoursework.Models;
 
-public class StudioService
+namespace GroupCoursework.Services;
+
+public class StudioService:  EntityBaseRepository<Studio>, IStudioService
 {
-    
+    public StudioService(ApplicationDbContext context) : base(context) { }
 }

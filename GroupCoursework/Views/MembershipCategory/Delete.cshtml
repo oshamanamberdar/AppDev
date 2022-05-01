@@ -1,0 +1,45 @@
+﻿@model MembershipCategory
+
+@{
+    ViewData["Title"] = "Delete Membership Category";
+
+}
+<div class="row-text">
+    <div class="col-md-8 offset-2">
+        <p>
+            <h1>Delete Confiramation for @Model.Id</h1>
+        </p>
+        <div class="row">
+            <div class="col-md-8 offset-2">
+               
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div col-md-4>
+                    <div class="form-group">
+                        <label asp-for="MembershipCategoryTotalLoans">Total Loan</label>
+                        <input asp-for="MembershipCategoryTotalLoans" readonly class="form-control"/>
+                        <span asp-validation-for="MembershipCategoryTotalLoans"  class="text-danger"></span>
+                    </div>
+
+                </div>
+                <div class="form-group">
+                    <label asp-for="MembershipCategoryDescription">Description</label>
+                    <input rows="3" asp-for="MembershipCategoryDescription" readonly class="form-control">
+                    <span asp-validation-for="MembershipCategoryDescription" class="text-danger"></span>
+                </div>
+                <hr/>
+                <div class="form-group">
+                    <form asp-action="Delete">
+                        <input type="hidden" asp-for="Id" />
+                        <input type="submit" value="Confirm" class="btn btn-danger float-right" />
+                    </form>
+                    <a class="btn btn-outline-secondary" asp-action="Index">Show All</a>
+                </div>
+                
+
+             
+
+
+            </div>
+        </div>
+    </div>
+</div>

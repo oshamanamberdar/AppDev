@@ -16,10 +16,10 @@ public class MembershipCategoryController : Controller
 
    
     // GET
-    public IActionResult Index()
+    public  async Task<IActionResult> Index()
     {
-        var data = _service.GetAllAsync();
-        return  View(null);
+        var data = await _service.GetAllAsync();
+        return  View(data);
     }
     //Get: MembershipCategory/Create
 
@@ -29,40 +29,69 @@ public class MembershipCategoryController : Controller
     }
 
     [HttpPost]
-    public async Task<IActionResult> Create([Bind( "MembershipCategoryTotalLoans", "MembershipCategoryDescription")]MembershipCategory membershipCategory)
+    public async Task<IActionResult> Create([Bind("MembershipCategoryTotalLoans,MembershipCategoryDescription")]MembershipCategory membershipCategory)
     {
-        if (ModelState.IsValid)
+        if (!ModelState.IsValid)
         {
             await _service.AddAsync(membershipCategory);
             return RedirectToAction(nameof(Index));
         }
         else
         {
-            return View("Error");
+            return View(membershipCategory);
         }
-
     }
     
-    //Get: MembershipCategory/Details/1
+    //Get: MembershipCategory/Details/id
 
     public async Task<IActionResult> Details(int id)
     {
         var membershipCategoryDetails = await _service.GetByIdAsync(id);
+        if (membershipCategoryDetails == null) return View("Error");
         return View(membershipCategoryDetails);
         
       
     }
     
+    
+    
+    //Get: MembershipCategory/Edit/id
     public async  Task<IActionResult> Edit(int id)
     {
         var membershipCategoryDetails = await _service.GetByIdAsync(id);
+        if (membershipCategoryDetails == null) return View("Error");
         return View(membershipCategoryDetails);
     }
 
     [HttpPost]
-    public async Task<IActionResult> Edit(int id, [Bind( "MembershipCategoryNumber","MembershipCategoryTotalLoans", "MembershipCategoryDescription")]MembershipCategory membershipCategory)
+    public async Task<IActionResult> Edit(int id, [Bind( "MembershipCategoryNumber,MembershipCategoryTotalLoans", "MembershipCategoryDescription")]MembershipCategory membershipCategory)
     {
-        await _service.UpdateAsync(id, membershipCategory);
+        if (!ModelState.IsValid)
+        {
+            return View(membershipCategory);
+        }
+        else
+        {
+            await _service.UpdateAsync(id,membershipCategory);
+            return RedirectToAction(nameof(Index));
+        }
+    }
+    
+    //Get: MembershipCategory/Delete/id
+    public async Task<IActionResult> Delete(int id)
+    {
+        var membershipCategoryDetails = await _service.GetByIdAsync(id);
+        if (membershipCategoryDetails == null) return View("Error");
+        return View(membershipCategoryDetails);
+    }
+
+    [HttpPost, ActionName("Delete")]
+    public async Task<IActionResult> DeleteConfirmed(int id)
+    {
+        var membershipCategoryDetails = await _service.GetByIdAsync(id);
+        if (membershipCategoryDetails == null) return View("Error");
+
+        await _service.DeleteAsync(id);
         return RedirectToAction(nameof(Index));
     }
     

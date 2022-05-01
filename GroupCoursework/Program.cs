@@ -11,6 +11,16 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 builder.Services.AddScoped<IMembershipCategoryService, MembershipCategoryService>();
+builder.Services.AddScoped<IDvdCategoryService, DvdCategoryService>();
+builder.Services.AddScoped<IDvdCopyService, DvdCopyService>();
+builder.Services.AddScoped<IDvdTitleService, DvdTitleService>();
+builder.Services.AddScoped<ILoanService, LoanService>();
+builder.Services.AddScoped<ILoanTypeService, LoanTypeService>();
+builder.Services.AddScoped<IMemberService, MemberService>();
+builder.Services.AddScoped<IProducerService, ProducerService>();
+builder.Services.AddScoped<IStudioService, StudioService>();
+builder.Services.AddControllersWithViews();
+
 
 var app = builder.Build();
 

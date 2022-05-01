@@ -13,89 +13,89 @@ namespace GroupCoursework.Migrations
                 name: "Actors",
                 columns: table => new
                 {
-                    ActorNumber = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     ActorSurname = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ActorFirstName = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Actors", x => x.ActorNumber);
+                    table.PrimaryKey("PK_Actors", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
                 name: "DvdCategories",
                 columns: table => new
                 {
-                    CategoryNumber = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     CategoryDescription = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     AgeRestricted = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_DvdCategories", x => x.CategoryNumber);
+                    table.PrimaryKey("PK_DvdCategories", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
                 name: "LoanTypes",
                 columns: table => new
                 {
-                    LoanTypeNumber = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     LoanTypes = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     LoanDurantion = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_LoanTypes", x => x.LoanTypeNumber);
+                    table.PrimaryKey("PK_LoanTypes", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
                 name: "MembershipCategories",
                 columns: table => new
                 {
-                    MembershipCategoryNumber = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     MembershipCategoryDescription = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     MembershipCategoryTotalLoans = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_MembershipCategories", x => x.MembershipCategoryNumber);
+                    table.PrimaryKey("PK_MembershipCategories", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
                 name: "Producers",
                 columns: table => new
                 {
-                    ProducerNumber = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     ProducerName = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Producers", x => x.ProducerNumber);
+                    table.PrimaryKey("PK_Producers", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
                 name: "Studios",
                 columns: table => new
                 {
-                    StudioNumber = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     StudioName = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Studios", x => x.StudioNumber);
+                    table.PrimaryKey("PK_Studios", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
                 name: "Members",
                 columns: table => new
                 {
-                    MemberNumber = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     MemberFirstName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     MemberLastName = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -105,12 +105,12 @@ namespace GroupCoursework.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Members", x => x.MemberNumber);
+                    table.PrimaryKey("PK_Members", x => x.Id);
                     table.ForeignKey(
                         name: "FK_Members_MembershipCategories_MembershipCategoryNumber",
                         column: x => x.MembershipCategoryNumber,
                         principalTable: "MembershipCategories",
-                        principalColumn: "MembershipCategoryNumber",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -118,7 +118,7 @@ namespace GroupCoursework.Migrations
                 name: "DvdTitles",
                 columns: table => new
                 {
-                    DVDNumber = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     DateReleased = table.Column<DateTime>(type: "datetime2", nullable: false),
                     StandardCharge = table.Column<decimal>(type: "money", nullable: false),
@@ -129,24 +129,24 @@ namespace GroupCoursework.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_DvdTitles", x => x.DVDNumber);
+                    table.PrimaryKey("PK_DvdTitles", x => x.Id);
                     table.ForeignKey(
                         name: "FK_DvdTitles_DvdCategories_CategoryNumber",
                         column: x => x.CategoryNumber,
                         principalTable: "DvdCategories",
-                        principalColumn: "CategoryNumber",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_DvdTitles_Producers_ProducerNumber",
                         column: x => x.ProducerNumber,
                         principalTable: "Producers",
-                        principalColumn: "ProducerNumber",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_DvdTitles_Studios_StudioNumber",
                         column: x => x.StudioNumber,
                         principalTable: "Studios",
-                        principalColumn: "StudioNumber",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -154,23 +154,23 @@ namespace GroupCoursework.Migrations
                 name: "CastMembers",
                 columns: table => new
                 {
-                    ActorNumber = table.Column<int>(type: "int", nullable: false),
-                    DVDNumber = table.Column<int>(type: "int", nullable: false)
+                    ActorId = table.Column<int>(type: "int", nullable: false),
+                    DvdId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_CastMembers", x => new { x.ActorNumber, x.DVDNumber });
+                    table.PrimaryKey("PK_CastMembers", x => new { x.ActorId, x.DvdId });
                     table.ForeignKey(
-                        name: "FK_CastMembers_Actors_ActorNumber",
-                        column: x => x.ActorNumber,
+                        name: "FK_CastMembers_Actors_ActorId",
+                        column: x => x.ActorId,
                         principalTable: "Actors",
-                        principalColumn: "ActorNumber",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_CastMembers_DvdTitles_DVDNumber",
-                        column: x => x.DVDNumber,
+                        name: "FK_CastMembers_DvdTitles_DvdId",
+                        column: x => x.DvdId,
                         principalTable: "DvdTitles",
-                        principalColumn: "DVDNumber",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -178,19 +178,19 @@ namespace GroupCoursework.Migrations
                 name: "DvdCopies",
                 columns: table => new
                 {
-                    CopyNumber = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     DatePurchased = table.Column<DateTime>(type: "datetime2", nullable: false),
                     DvdNumber = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_DvdCopies", x => x.CopyNumber);
+                    table.PrimaryKey("PK_DvdCopies", x => x.Id);
                     table.ForeignKey(
                         name: "FK_DvdCopies_DvdTitles_DvdNumber",
                         column: x => x.DvdNumber,
                         principalTable: "DvdTitles",
-                        principalColumn: "DVDNumber",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -198,7 +198,7 @@ namespace GroupCoursework.Migrations
                 name: "Loans",
                 columns: table => new
                 {
-                    LoanNumber = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     DateOut = table.Column<DateTime>(type: "datetime2", nullable: false),
                     DateDue = table.Column<DateTime>(type: "datetime2", nullable: false),
@@ -209,31 +209,31 @@ namespace GroupCoursework.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Loans", x => x.LoanNumber);
+                    table.PrimaryKey("PK_Loans", x => x.Id);
                     table.ForeignKey(
                         name: "FK_Loans_DvdCopies_CopyNumber",
                         column: x => x.CopyNumber,
                         principalTable: "DvdCopies",
-                        principalColumn: "CopyNumber",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Loans_LoanTypes_LoanTypeNumber",
                         column: x => x.LoanTypeNumber,
                         principalTable: "LoanTypes",
-                        principalColumn: "LoanTypeNumber",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Loans_Members_MemberNumber",
                         column: x => x.MemberNumber,
                         principalTable: "Members",
-                        principalColumn: "MemberNumber",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_CastMembers_DVDNumber",
+                name: "IX_CastMembers_DvdId",
                 table: "CastMembers",
-                column: "DVDNumber");
+                column: "DvdId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_DvdCopies_DvdNumber",

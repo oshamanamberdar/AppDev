@@ -1,6 +1,10 @@
-﻿namespace GroupCoursework.Services;
+﻿using GroupCoursework.Base;
+using GroupCoursework.DbContext;
+using GroupCoursework.Models;
 
-public class ProducerService
+namespace GroupCoursework.Services;
+
+public class ProducerService:  EntityBaseRepository<Producer>, IProducerService
 {
-    
+    public ProducerService(ApplicationDbContext context) : base(context) { }
 }

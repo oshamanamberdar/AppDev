@@ -9,7 +9,7 @@ public class Actor:IEntityBase
     [Key]
     public int Id { get; set; }
 
-    [Display(Name = "Sur Name")]
+    [Display(Name = "Last Name")]
     [Required(ErrorMessage = "Actor Surname is Required")]
     public string ActorSurname { get; set; }
 

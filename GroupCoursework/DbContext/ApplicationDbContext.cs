@@ -17,14 +17,14 @@ public class ApplicationDbContext: Microsoft.EntityFrameworkCore.DbContext
     {
         modelBuilder.Entity<CastMember>().HasKey(cm => new
         {
-            cm.ActorNumber,
-            cm.DVDNumber
+            cm.ActorId,
+            cm.DvdId
         });
         modelBuilder.Entity<CastMember>().HasOne(a => a.Actor).WithMany(am => am.CastMembers)
-            .HasForeignKey(a => a.ActorNumber);
+            .HasForeignKey(a => a.ActorId);
         
         modelBuilder.Entity<CastMember>().HasOne(a => a.DvdTitle).WithMany(am => am.CastMembers)
-            .HasForeignKey(a => a.DVDNumber);
+            .HasForeignKey(a => a.DvdId);
         base.OnModelCreating(modelBuilder);
     }
     
