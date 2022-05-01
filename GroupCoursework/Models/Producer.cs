@@ -7,7 +7,10 @@ public class Producer: IEntityBase
 {
     [Key]
     public int Id { get; set; }
-    
+
+
+    [Display(Name = "Name")]
+    [Required(ErrorMessage = "Producer Name is Required")]
     public string ProducerName { get; set; }
     
     

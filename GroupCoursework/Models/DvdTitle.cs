@@ -8,15 +8,23 @@ public class DvdTitle: IEntityBase
 {
     [Key]
     public int  Id { get; set; }
-    
+
+    [Display(Name = "Date Released")]
+    [Required(ErrorMessage ="Date Relaeased is Required")]
     [DataType(DataType.Date)]
     [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
     public DateTime DateReleased { get; set; }
-    
+
+
+    [Display(Name = "Standard Charge")]
+    [Required(ErrorMessage = "Standard Charge is Required")]
     [DataType(DataType.Currency)]
     [Column(TypeName = "money")]
     public decimal StandardCharge { get; set; }
-    
+
+
+    [Display(Name = "Penalty Charge")]
+    [Required(ErrorMessage = "Penalty Charge is Required")]
     [DataType(DataType.Currency)]
     [Column(TypeName = "money")]
     public decimal PenaltyCharge { get; set; }
