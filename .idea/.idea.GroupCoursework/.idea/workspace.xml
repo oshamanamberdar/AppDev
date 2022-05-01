@@ -11,19 +11,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b9f322f9-0743-4820-bead-cbd53c8f1444" name="Changes" comment="commit for view">
+    <list default="true" id="b9f322f9-0743-4820-bead-cbd53c8f1444" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/GroupCoursework/Services/DvdCategoryService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GroupCoursework/Services/DvdCopyService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GroupCoursework/Services/DvdTitleService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GroupCoursework/Services/IDvdCategoryService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GroupCoursework/Services/IDvdCopyService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GroupCoursework/Services/IDvdTitleService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GroupCoursework/Services/ILoanService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GroupCoursework/Services/ILoanTypeService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GroupCoursework/Services/IMemberService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GroupCoursework/Services/IProducerService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GroupCoursework/Services/IStudioService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GroupCoursework/Services/LoanService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GroupCoursework/Services/LoanTypeService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GroupCoursework/Services/MemberService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GroupCoursework/Services/ProducerService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GroupCoursework/Services/StudioService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GroupCoursework/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GroupCoursework/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroupCoursework/Models/Actor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Models/Actor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroupCoursework/Models/CastMember.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Models/CastMember.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroupCoursework/Models/DvdCategory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Models/DvdCategory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroupCoursework/Models/DvdCopy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Models/DvdCopy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroupCoursework/Models/DvdTitle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Models/DvdTitle.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroupCoursework/Models/Loan.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Models/Loan.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroupCoursework/Models/LoanType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Models/LoanType.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroupCoursework/Models/Member.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Models/Member.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroupCoursework/Models/MembershipCategory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Models/MembershipCategory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroupCoursework/Models/Producer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Models/Producer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroupCoursework/Models/Studio.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Models/Studio.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroupCoursework/Services/IMembershipCategoryService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Services/IMembershipCategoryService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GroupCoursework/Services/MembershipCategoryService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Services/MembershipCategoryService.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -114,7 +120,7 @@
       <workItem from="1651285855606" duration="4000" />
       <workItem from="1651286044305" duration="26359000" />
       <workItem from="1651331971184" duration="3801000" />
-      <workItem from="1651379790391" duration="19152000" />
+      <workItem from="1651379790391" duration="24327000" />
     </task>
     <task id="LOCAL-00001" summary="commit 2">
       <created>1651291978314</created>
@@ -144,7 +150,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651397910011</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="commit">
+      <created>1651399888135</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1651399888135</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,7 +185,8 @@
     <MESSAGE value="commit after seeding and migration" />
     <MESSAGE value="View Created for every controller" />
     <MESSAGE value="commit for view" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit for view" />
+    <MESSAGE value="commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

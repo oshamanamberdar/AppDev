@@ -18,8 +18,8 @@ public class MembershipCategoryController : Controller
     // GET
     public IActionResult Index()
     {
-        var data = _service.GetAll();
-        return  View(data);
+        var data = _service.GetAllAsync();
+        return  View(null);
     }
     //Get: MembershipCategory/Create
 
