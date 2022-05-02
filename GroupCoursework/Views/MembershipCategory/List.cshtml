@@ -1,0 +1,34 @@
+﻿@model IEnumerable<GroupCoursework.ViewModel.TestView>
+
+
+<table>
+    <thead></thead>
+    <tbody>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Actor.ActorFirstName</td>
+            <td>@item.Actor.ActorSurname</td>
+            <td>@item.DvdTitle.DateReleased</td>
+            <td>@item.DvdTitle.StandardCharge</td>
+            <td>@item.DvdTitle.PenaltyCharge</td>
+            <td>@item.Producer.ProducerName</td>
+            <td>@item.DvdCategory.AgeRestricted</td>
+        </tr>
+    }
+   
+    </tbody>
+</table>
+
+@section Scripts{
+    <script>
+        function getData(surname){
+              surname = document.getElementById("surname").value;
+              
+            }
+      
+        
+        
+      
+    </script>
+}

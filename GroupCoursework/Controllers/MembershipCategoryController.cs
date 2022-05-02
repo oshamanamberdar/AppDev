@@ -1,6 +1,7 @@
 ﻿using GroupCoursework.DbContext;
 using GroupCoursework.Models;
 using GroupCoursework.Services;
+using GroupCoursework.ViewModel;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GroupCoursework.Controllers;
@@ -8,10 +9,12 @@ namespace GroupCoursework.Controllers;
 public class MembershipCategoryController : Controller
 {
     private readonly IMembershipCategoryService _service;
+    private readonly ApplicationDbContext _context;
 
-    public MembershipCategoryController(IMembershipCategoryService service)
+    public MembershipCategoryController(IMembershipCategoryService service, ApplicationDbContext context)
     {
         _service = service;
+        _context = context;
     }
 
    
@@ -20,7 +23,88 @@ public class MembershipCategoryController : Controller
     {
         var data = await _service.GetAllAsync();
         return  View(data);
+        
+        
     }
+
+    public  ActionResult List(string searchString)
+    {
+        try
+        {
+            List<Actor> actors = _context.Actors.ToList();
+            List<DvdCategory> dvdCategories = _context.DvdCategories.ToList();
+            List<DvdTitle> dvdTitles  = _context.DvdTitles.ToList();
+            List<Producer> producers  = _context.Producers.ToList();
+            List<CastMember> castMembers = _context.CastMembers.ToList();
+            var data = from a in actors 
+                                        join b in castMembers on a.Id equals b.ActorId into table1
+                                        from b in table1.ToList()
+                                        join c in dvdTitles on b.DvdId equals c.Id
+                                        join f in producers on c.ProducerNumber equals f.Id into table2
+                                        from f in table2.ToList()
+                                        join d in dvdCategories on c.CategoryNumber equals d.Id into table3
+                                        from d in table3.ToList()
+
+                                        select new TestView()
+                                        {
+                                            Actor = a,
+                                            DvdTitle = c,
+                                            Producer = f,
+                                            DvdCategory = d
+                                        };
+            if (!string.IsNullOrEmpty(searchString))
+            {
+                data = data.Where(n => string.Equals(n.Actor.ActorSurname, searchString, StringComparison.CurrentCultureIgnoreCase));
+            }
+
+           
+            return View(data);
+
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
+
+      
+    }
+
+    public IActionResult Filter(string searchString)
+    {
+        List<Actor> actors = _context.Actors.ToList();
+        List<DvdCategory> dvdCategories = _context.DvdCategories.ToList();
+        List<DvdTitle> dvdTitles  = _context.DvdTitles.ToList();
+        List<Producer> producers  = _context.Producers.ToList();
+        List<CastMember> castMembers = _context.CastMembers.ToList();
+        var data = from a in actors 
+            join b in castMembers on a.Id equals b.ActorId into table1
+            from b in table1.ToList()
+            join c in dvdTitles on b.DvdId equals c.Id
+            join f in producers on c.ProducerNumber equals f.Id into table2
+            from f in table2.ToList()
+            join d in dvdCategories on c.CategoryNumber equals d.Id into table3
+            from d in table3.ToList()
+
+            select new TestView()
+            {
+                Actor = a,
+                DvdTitle = c,
+                Producer = f,
+                DvdCategory = d
+            };
+        if (!string.IsNullOrEmpty(searchString))
+        {
+            var filteredResultNew = data.Where(n => string.Equals(n.Actor.ActorSurname, searchString, StringComparison.CurrentCultureIgnoreCase) || string.Equals(n.Actor.ActorFirstName, searchString, StringComparison.CurrentCultureIgnoreCase)).ToList();
+            return View("List", filteredResultNew);
+        }
+
+        return View("List", data);
+
+
+    }
+
+    
     //Get: MembershipCategory/Create
 
     public IActionResult Create()
@@ -31,15 +115,10 @@ public class MembershipCategoryController : Controller
     [HttpPost]
     public async Task<IActionResult> Create([Bind("MembershipCategoryTotalLoans,MembershipCategoryDescription")]MembershipCategory membershipCategory)
     {
-        if (!ModelState.IsValid)
-        {
+        
             await _service.AddAsync(membershipCategory);
             return RedirectToAction(nameof(Index));
-        }
-        else
-        {
-            return View(membershipCategory);
-        }
+       
     }
     
     //Get: MembershipCategory/Details/id
@@ -64,17 +143,20 @@ public class MembershipCategoryController : Controller
     }
 
     [HttpPost]
-    public async Task<IActionResult> Edit(int id, [Bind( "MembershipCategoryNumber,MembershipCategoryTotalLoans", "MembershipCategoryDescription")]MembershipCategory membershipCategory)
+    public async Task<IActionResult> Edit(int id, [Bind( "Id,MembershipCategoryDescription,MembershipCategoryTotalLoans")]MembershipCategory membershipCategory)
     {
-        if (!ModelState.IsValid)
-        {
-            return View(membershipCategory);
-        }
-        else
+        try
         {
             await _service.UpdateAsync(id,membershipCategory);
-            return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Index));
+            
         }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
+       
     }
     
     //Get: MembershipCategory/Delete/id
@@ -94,6 +176,13 @@ public class MembershipCategoryController : Controller
         await _service.DeleteAsync(id);
         return RedirectToAction(nameof(Index));
     }
+    
+    [HttpPost]
+    public string List(string searchString, bool notUsed)
+    {
+        return "From [HttpPost]List: filter on " + searchString;
+    }
+    
     
     
 }

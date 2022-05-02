@@ -5,4 +5,5 @@ namespace GroupCoursework.Services;
 
 public interface IMembershipCategoryService: IEntityBaseRepository<MembershipCategory>
 {
+    
 }

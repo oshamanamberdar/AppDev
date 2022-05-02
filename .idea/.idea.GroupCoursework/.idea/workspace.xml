@@ -11,21 +11,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b9f322f9-0743-4820-bead-cbd53c8f1444" name="Changes" comment="Commit for Service">
-      <change afterPath="$PROJECT_DIR$/GroupCoursework/Views/MembershipCategory/Delete.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GroupCoursework/.idea/dataSources/373e6dfb-221e-4fd4-832b-b725011f907b.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GroupCoursework/.idea/dataSources/373e6dfb-221e-4fd4-832b-b725011f907b.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GroupCoursework/.idea/dataSources/373e6dfb-221e-4fd4-832b-b725011f907b/storage_v2/_src_/database/app_dev_db.xgQjMg/schema/dbo.sYMBAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GroupCoursework/.idea/dataSources/373e6dfb-221e-4fd4-832b-b725011f907b/storage_v2/_src_/database/app_dev_db.xgQjMg/schema/dbo.sYMBAA.meta" afterDir="false" />
+    <list default="true" id="b9f322f9-0743-4820-bead-cbd53c8f1444" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/GroupCoursework/ViewModel/MemberView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GroupCoursework/ViewModel/TestView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GroupCoursework/Views/Member/Create.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GroupCoursework/Views/Member/MemberView.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GroupCoursework/Views/MembershipCategory/List.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GroupCoursework/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GroupCoursework/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroupCoursework/Controllers/MemberController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Controllers/MemberController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GroupCoursework/Controllers/MembershipCategoryController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Controllers/MembershipCategoryController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroupCoursework/DbContext/ApplicationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/DbContext/ApplicationDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroupCoursework/Migrations/20220430070541_InitialCreate.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Migrations/20220501123244_InitialCreate.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroupCoursework/Migrations/20220430070541_InitialCreate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Migrations/20220501123244_InitialCreate.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroupCoursework/Migrations/ApplicationDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Migrations/ApplicationDbContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroupCoursework/Models/Actor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Models/Actor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroupCoursework/Models/CastMember.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Models/CastMember.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroupCoursework/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroupCoursework/Services/ProducerService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Services/ProducerService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroupCoursework/Services/StudioService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Services/StudioService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroupCoursework/Services/IMembershipCategoryService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Services/IMembershipCategoryService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroupCoursework/Services/MembershipCategoryService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Services/MembershipCategoryService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroupCoursework/Views/Member/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Views/Member/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroupCoursework/Views/MembershipCategory/Edit.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Views/MembershipCategory/Edit.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GroupCoursework/Views/MembershipCategory/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Views/MembershipCategory/Index.cshtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -43,6 +41,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/GroupCoursework/DbContext/ApplicationDbContext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/575c31ecc35a636b6f962cb71d53992552941a18982aae1c8e6c16305cc3761b/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -63,7 +62,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="XThreadsFramesViewSplitterKey" value="0.5024155" />
+    <property name="XThreadsFramesViewSplitterKey" value="0.12560387" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -117,7 +116,8 @@
       <workItem from="1651286044305" duration="26359000" />
       <workItem from="1651331971184" duration="3801000" />
       <workItem from="1651379790391" duration="28895000" />
-      <workItem from="1651411416293" duration="884000" />
+      <workItem from="1651411416293" duration="26635000" />
+      <workItem from="1651473494504" duration="7270000" />
     </task>
     <task id="LOCAL-00001" summary="commit 2">
       <created>1651291978314</created>
@@ -161,7 +161,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651405947582</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Services and configuration">
+      <created>1651412419947</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1651412419947</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -191,6 +198,7 @@
     <MESSAGE value="commit for view" />
     <MESSAGE value="commit" />
     <MESSAGE value="Commit for Service" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit for Service" />
+    <MESSAGE value="Services and configuration" />
+    <option name="LAST_COMMIT_MESSAGE" value="Services and configuration" />
   </component>
 </project>

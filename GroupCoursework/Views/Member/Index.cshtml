@@ -1,5 +1,5 @@
 ﻿@*Define model*@
-@model List<Member>
+@model IEnumerable<Member>
 @*Define ViewData*@
 @{
     ViewData["Title"] = "List of Member";
@@ -27,6 +27,7 @@
             <td>@Html.DisplayFor(modelItem=> item.MemberLastName) </td>
             <td>@Html.DisplayFor(modelItem=> item.MemberDob) </td>
             <td>@Html.DisplayFor(modelItem=> item.MemberAddress) </td>
+            <td>@item.MembershipCategoryNumber</td>
             <td>
                 <a class="btn btn-outline-primary"><i class="bi bi-pencil-square"></i>Edit</a> |
                 <a class="btn btn-outline-danger"><i class="bi bi-trash"></i>Delete</a>
