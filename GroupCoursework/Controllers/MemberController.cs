@@ -10,18 +10,18 @@ namespace GroupCoursework.Controllers;
 public class MemberController : Controller
 {
     private readonly ApplicationDbContext _context;
-    private readonly IMemberService _memberService;
+    private readonly IMemberService _service;
 
     public MemberController(ApplicationDbContext context, IMemberService service )
     {
         _context = context;
-        _memberService = service;
+        _service = service;
 
     }
     // GET
     public  async Task<IActionResult> Index()
     {
-        var data = await _memberService.GetAllAsync();
+        var data = await _service.GetAllAsync();
         return  View(data);
         
     }
@@ -102,22 +102,40 @@ public class MemberController : Controller
     }
 
     [HttpPost]
-    public async Task<IActionResult> Create(Member member)
+    public async Task<IActionResult> Create([Bind("MemberFirstName,MemberLastName,MemberAddress,MemberDob,MembershipCategoryNumber ")]Member member)
     {
         try
+        { 
+            _context.Members.Add(member);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+
+        }
+        catch (Exception e)
         {
-            if (!ModelState.IsValid)
-            {
-                if (member.Id == 0)
-                {
-                    _context.Members.Add(member);
-                    await _context.SaveChangesAsync();
-                }
+            Console.WriteLine(e);
+            throw;
+        }
+    }
+    
+    
+    public async Task<IActionResult> Edit(int id)
+    {
+        LoadMembershipCategoryList();
+        var memberDetails = await _service.GetByIdAsync(id);
+        if (memberDetails == null) return View("Error");
+        return View(memberDetails);
+        
+    }
 
-                return RedirectToAction("Index");
-            }
-
-            return View(member);
+    [HttpPost]
+    public async Task<IActionResult> Edit(int id, [Bind("Id,MemberFirstName,MemberLastName,MemberAddress,MemberDob,MembershipCategoryNumber ")]Member member)
+    {
+        try
+        { 
+            _context.Members.Add(member);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
 
         }
         catch (Exception e)
@@ -144,6 +162,27 @@ public class MemberController : Controller
         }
     }
     
+    
+    // Delete Loan type
+    
+    public async Task<IActionResult> Delete(int id)
+    {
+        LoadMembershipCategoryList();
+        var memberDetails = await _service.GetByIdAsync(id);
+        if (memberDetails == null) return View("Error");
+        return View(memberDetails);
+    }
+
+    [HttpPost, ActionName("Delete")]
+    public async Task<IActionResult> DeleteConfirmed(int id)
+    {
+        LoadMembershipCategoryList();
+        var memberDetails = await _service.GetByIdAsync(id);
+        if (memberDetails == null) return View("Error");
+        await _service.DeleteAsync(id);
+        return RedirectToAction(nameof(Index));
+    }
+
     
     
 }

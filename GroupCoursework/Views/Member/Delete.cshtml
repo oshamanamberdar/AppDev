@@ -1,0 +1,57 @@
+﻿@model Member
+
+@{
+    ViewData["Title"] = "Delete Membership Category";
+
+}
+<div class="row-text">
+    <div class="col-md-8 offset-2">
+        <p>
+            <h1>Delete Confiramation for @Model.Id</h1>
+        </p>
+        <div class="row">
+            <div class="col-md-8 offset-2">
+               
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div col-md-4>
+                    <div class="form-group">
+                        <label asp-for="MemberFirstName">Total Loan</label>
+                        <input asp-for="MemberFirstName" readonly class="form-control"/>
+                        <span asp-validation-for="MemberFirstName"  class="text-danger"></span>
+                    </div>
+
+                </div>
+                <div class="form-group">
+                    <label asp-for="MemberLastName">Description</label>
+                    <input rows="3" asp-for="MemberLastName" readonly class="form-control">
+                    <span asp-validation-for="MemberLastName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="MemberDob" class="control-label"></label>
+                    <input asp-for="MemberDob" readonly type="date" class="form-control" />
+                    <span asp-validation-for="MemberDob"  class="text-danger"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label asp-for="MembershipCategoryNumber" class="control-label"></label>
+                    <select asp-for="MembershipCategoryNumber" readonly class="form-control" asp-items="@(new SelectList(ViewBag.ListOfMembershipCategory, "Id", "MembershipCategoryDescription"))"></select>
+                </div>
+                
+                <div class="form-group">
+                    <label asp-for="MemberAddress" class="control-label"></label>
+                    <input asp-for="MemberAddress" readonly class="form-control" />
+                    <span asp-validation-for="MemberAddress" class="text-danger"></span>
+                </div>
+                <hr/>
+                <div class="form-group">
+                    <form asp-action="Delete">
+                        <input type="hidden" asp-for="Id" />
+                        <input type="submit" value="Confirm" class="btn btn-danger float-right" />
+                    </form>
+                    <a class="btn btn-outline-secondary" asp-action="Index">Show All</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
