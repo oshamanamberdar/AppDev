@@ -18,4 +18,12 @@ public class DvdCopyController : Controller
         var data = _context.DvdCopies.ToList();
         return  View(data);
     }
+    
+    // Save Dvd Copy
+    
+    
+    
+    
+    
+    
 }

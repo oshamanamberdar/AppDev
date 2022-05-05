@@ -1,0 +1,42 @@
+﻿@model LoanType
+
+@{
+    ViewData["Title"] = "Update  Loan Type";
+}
+<div class="row-text">
+    <div class="col-md-8 offset-2">
+        <p>
+            <h1>Update Loan Type</h1>
+        </p>
+        <div class="row">
+            <div class="col-md-8 offset-2">
+                <form asp-action="Edit">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div col-md-4>
+                        <div class="form-group">
+                            <label asp-for="LoanTypes">Loan Type</label>
+                            <input asp-for="LoanTypes" class="form-control"/>
+                            <span asp-validation-for="LoanTypes" class="text-danger"></span>
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="LoanDurantion">Duration</label>
+                        <input rows="3" asp-for="LoanDurantion" class="form-control">
+                        <span asp-validation-for="LoanDurantion" class="text-danger"></span>
+                    </div>
+                    <hr/>
+                    <div class="form-group">
+                        <div class="col-4">
+                            <input type="submit" value="Update" class="btn btn-outline-success float-right"/>
+                            <a class="btn btn-outline-secondary" asp-action="Index"> Show All</a>
+                        </div>
+                    </div>
+
+                </form>
+
+
+            </div>
+        </div>
+    </div>
+</div>

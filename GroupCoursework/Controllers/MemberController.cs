@@ -3,6 +3,7 @@ using GroupCoursework.Models;
 using GroupCoursework.Services;
 using GroupCoursework.ViewModel;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.VisualBasic.CompilerServices;
 
 namespace GroupCoursework.Controllers;
 
@@ -54,6 +55,44 @@ public class MemberController : Controller
             throw;
         }
     }
+
+    // public IActionResult Data()
+    // {
+    //     var data = from a in _context.Members
+    //                                 select a.MemberDob;
+    //     var data1 = Convert.ToDateTime(data);
+    //     int age = 0;  
+    //     age = DateTime.Now.Subtract(data1).Days;  
+    //     age = age / 365;
+    //
+    //     List<DvdCategory> dvdCategories = _context.DvdCategories.ToList();
+    //     List<DvdTitle> dvdTitles  = _context.DvdTitles.ToList();
+    //     List<Member> members = _context.Members.ToList();
+    //     List<DvdCopy> dvdCopies = _context.DvdCopies.ToList();
+    //     List<Loan> loans = _context.Loans.ToList();
+    //     var data3 = from a in members
+    //         join b in loans on a.Id equals b.MemberNumber into Table1
+    //         from b in Table1.ToList()
+    //         join c in dvdCopies on b.CopyNumber equals c.Id into Table2
+    //         from c in Table2.ToList()
+    //         join d in dvdTitles on c.DvdNumber equals d.Id into Table3
+    //         from d in Table3.ToList()
+    //         select new TestView()
+    //         {
+    //             Member = a,
+    //             Loan = b,
+    //             DvdCopy = c,
+    //             DvdTitle = d,
+    //
+    //
+    //         };
+    //     return View(data);
+    //
+    //
+    //
+    //
+    //
+    // }
 
     public IActionResult Create()
     {
