@@ -13,11 +13,11 @@ public class Actor:IEntityBase
     [Required(ErrorMessage = "Actor Surname is Required")]
     public string ActorSurname { get; set; }
 
+
     [Display(Name = "First Name")]
     [Required(ErrorMessage = "Actor First Name is Required")]
     public string ActorFirstName { get; set; }
-    
-    
+
     //Relationship
     public List<CastMember> CastMembers { get; set; }
 

@@ -1,13 +1,13 @@
-﻿@model LoanType
+﻿@model Actor
 
 @{
-    ViewData["Title"] = "Delete Loan Type Category";
+    ViewData["Title"] = "Delete Actor";
 
 }
 <div class="row-text">
     <div class="col-md-8 offset-2">
         <p>
-            <h1>Delete Confiramation for @Model.Id</h1>
+            <h1>Delete Confiramation for @Model.ActorSurname</h1>
         </p>
         <div class="row">
             <div class="col-md-8 offset-2">
@@ -15,16 +15,16 @@
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <div col-md-4>
                     <div class="form-group">
-                        <label asp-for="LoanTypes">Total Loan</label>
-                        <input asp-for="LoanTypes" readonly class="form-control"/>
-                        <span asp-validation-for="LoanTypes"  class="text-danger"></span>
+                        <label asp-for="ActorFirstName">First Name</label>
+                        <input asp-for="ActorFirstName" readonly class="form-control"/>
+                        <span asp-validation-for="ActorFirstName"  class="text-danger"></span>
                     </div>
 
                 </div>
                 <div class="form-group">
-                    <label asp-for="LoanDurantion">Description</label>
-                    <input rows="3" asp-for="LoanDurantion" readonly class="form-control">
-                    <span asp-validation-for="LoanDurantion" class="text-danger"></span>
+                    <label asp-for="ActorSurname">Last Name</label>
+                    <input rows="3" asp-for="ActorSurname" readonly class="form-control">
+                    <span asp-validation-for="ActorSurname" class="text-danger"></span>
                 </div>
                 <hr/>
                 <div class="form-group">
