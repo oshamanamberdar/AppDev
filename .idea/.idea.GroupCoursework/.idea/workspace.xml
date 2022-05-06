@@ -12,12 +12,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b9f322f9-0743-4820-bead-cbd53c8f1444" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/GroupCoursework/Views/Member/Delete.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GroupCoursework/Views/Member/Edit.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GroupCoursework/Views/DvdCopy/Create.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GroupCoursework/Views/DvdCopy/Delete.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GroupCoursework/Views/DvdCopy/Edit.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GroupCoursework/Views/Loan/Delete.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GroupCoursework/Views/Loan/Edit.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GroupCoursework/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GroupCoursework/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroupCoursework/Controllers/DvdCopyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Controllers/DvdCopyController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroupCoursework/Controllers/LoanController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Controllers/LoanController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GroupCoursework/Controllers/MemberController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Controllers/MemberController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroupCoursework/Views/Member/Create.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Views/Member/Create.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroupCoursework/Views/Member/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Views/Member/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroupCoursework/Views/DvdCopy/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Views/DvdCopy/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroupCoursework/Views/Loan/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Views/Loan/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroupCoursework/Views/Member/Edit.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Views/Member/Edit.cshtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +63,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="XThreadsFramesViewSplitterKey" value="0.5458937" />
+    <property name="XThreadsFramesViewSplitterKey" value="0.26157406" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -116,6 +122,7 @@
       <workItem from="1651595995132" duration="758000" />
       <workItem from="1651683987453" duration="3279000" />
       <workItem from="1651729112043" duration="17847000" />
+      <workItem from="1651815557547" duration="6452000" />
     </task>
     <task id="LOCAL-00001" summary="commit 2">
       <created>1651291978314</created>

@@ -133,8 +133,7 @@ public class MemberController : Controller
     {
         try
         { 
-            _context.Members.Add(member);
-            await _context.SaveChangesAsync();
+            await _service.UpdateAsync(id,member);
             return RedirectToAction(nameof(Index));
 
         }

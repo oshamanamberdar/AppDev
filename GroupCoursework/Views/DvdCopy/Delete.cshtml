@@ -1,0 +1,43 @@
+﻿@model DvdCopy
+
+@{
+    ViewData["Title"] = "Delete Dvd Copy ";
+
+}
+<div class="row-text">
+    <div class="col-md-8 offset-2">
+        <p>
+            <h1>Delete Confiramation for @Model.Id</h1>
+        </p>
+        <div class="row">
+            <div class="col-md-8 offset-2">
+               
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div col-md-4>
+                    <div class="form-group">
+                        <label asp-for="DatePurchased">Total Loan</label>
+                        <input asp-for="DatePurchased" readonly class="form-control"/>
+                        <span asp-validation-for="DatePurchased"  class="text-danger"></span>
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="DvdNumber" class="control-label"></label>
+                    <select asp-for="DvdNumber" readonly class="form-control" asp-items="@(new SelectList(ViewBag.ListOfDvdTitle, "Id", "DateReleased"))"></select>
+                </div>
+                
+               
+                <hr/>
+                <div class="form-group">
+                    <form asp-action="Delete">
+                        <input type="hidden" asp-for="Id" />
+                        <input type="submit" value="Confirm" class="btn btn-danger float-right" />
+                    </form>
+                    <a class="btn btn-outline-secondary" asp-action="Index">Show All</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,16 +1,16 @@
-﻿@*Define model*@
-@model List<DvdCopy>
-@*Define ViewData*@
+﻿
+@model IEnumerable<DvdCopy>
+
 @{
-    ViewData["Title"] = "List of Studio";
+    ViewData["Title"] = "List of Dvd Copy";
 }
-@*Write code*@
+
 
 
 <table class="table table-hover">
     <thead>
     <tr>
-        <th>S.No</th>
+        <th>Id</th>
         <th>Date Purchased</th>
     </tr>
             
@@ -19,14 +19,21 @@
     @foreach (var item in Model)
     {
         <tr>
-            <td>1</td>
+            <td>@Html.DisplayFor(modelItem=> item.Id)</td>
             <td>@Html.DisplayFor(modelItem=> item.DatePurchased) </td>
-            <td>
-                <a class="btn btn-outline-primary"><i class="bi bi-pencil-square"></i>Edit</a> |
-                <a class="btn btn-outline-danger"><i class="bi bi-trash"></i>Delete</a>
+            <td class="align-middle">
+                <a class="btn btn-outline-primary" asp-action="Edit" asp-route-id="@item.Id"><i class="bi bi-pencil-square"></i>Edit </a> |
+                <a class="btn btn-danger text-white" asp-action="Delete" asp-route-id="@item.Id"><i class="bi bi-trash"></i>Delete </a>
             </td>
+            
         </tr>
     }
 
     </tbody>
 </table>
+
+<div>
+    <a asp-controller="DvdCopy" asp-action="Create" class="btn btn-success">
+        <i class="bi bi-plus-circle"></i> Add New
+    </a>
+</div>
