@@ -1,0 +1,37 @@
+﻿
+@model IEnumerable<GroupCoursework.ViewModel.TestView>
+
+<div>
+    
+</div>
+
+    <table class="table-hover table">
+        <thead>
+        <tr>
+            <th>Dvd Title</th>
+            <th>Actor First name</th>
+            <th>Last name</th>
+            <th>Producer Name</th>
+            <th>Studio Name</th>
+            <th>Date Released</th>
+        </tr>
+        </thead>
+        <tbody>
+         @foreach (var item in Model)
+         {
+             <tr>
+
+                 <td>@item.DvdTitle.Title</td>
+                 <td>@item.Actor.ActorFirstName</td>
+                 <td>@item.Actor.ActorSurname</td>
+                 <td>@item.Producer.ProducerName</td>
+                 <td>@item.Studio.StudioName</td>
+                 <td>@item.DvdTitle.DateReleased</td>
+             </tr>
+         }
+        
+       
+        </tbody>
+    </table>
+    
+}

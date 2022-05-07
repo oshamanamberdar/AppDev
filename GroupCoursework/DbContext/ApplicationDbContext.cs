@@ -1,6 +1,7 @@
 ﻿
 using GroupCoursework.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace GroupCoursework.DbContext;
 
@@ -18,6 +19,7 @@ public class ApplicationDbContext: Microsoft.EntityFrameworkCore.DbContext
     {
         modelBuilder.Entity<CastMember>().HasKey(cm => new
         {
+            cm.Id,  
             cm.ActorId,
             cm.DvdId
         });

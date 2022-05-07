@@ -9,5 +9,9 @@ public class TestView
     public DvdCategory DvdCategory { get; set; }
     public Producer Producer { get; set; }
     
+    public CastMember CastMember { get; set; }
+    
+    public Studio Studio { get; set; }
+    
     public string? SearchString { get; set; }
 }

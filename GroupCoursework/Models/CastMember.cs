@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using GroupCoursework.Base;
 
 namespace GroupCoursework.Models;
@@ -6,7 +7,10 @@ namespace GroupCoursework.Models;
 public class CastMember: IEntityBase
 {
 
+    [Key]
+    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public int Id { get; set; }
+    
     public int ActorId { get; set; }
     public Actor Actor { get; set; }
     

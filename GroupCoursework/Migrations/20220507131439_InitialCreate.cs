@@ -157,13 +157,14 @@ namespace GroupCoursework.Migrations
                 name: "CastMembers",
                 columns: table => new
                 {
-                    ActorId = table.Column<int>(type: "int", nullable: false),
-                    DvdId = table.Column<int>(type: "int", nullable: false),
                     Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    ActorId = table.Column<int>(type: "int", nullable: false),
+                    DvdId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_CastMembers", x => new { x.ActorId, x.DvdId });
+                    table.PrimaryKey("PK_CastMembers", x => new { x.Id, x.ActorId, x.DvdId });
                     table.ForeignKey(
                         name: "FK_CastMembers_Actors_ActorId",
                         column: x => x.ActorId,
@@ -233,6 +234,11 @@ namespace GroupCoursework.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_CastMembers_ActorId",
+                table: "CastMembers",
+                column: "ActorId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_CastMembers_DvdId",

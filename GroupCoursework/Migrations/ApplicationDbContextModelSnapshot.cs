@@ -45,16 +45,21 @@ namespace GroupCoursework.Migrations
 
             modelBuilder.Entity("GroupCoursework.Models.CastMember", b =>
                 {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
                     b.Property<int>("ActorId")
                         .HasColumnType("int");
 
                     b.Property<int>("DvdId")
                         .HasColumnType("int");
 
-                    b.Property<int>("Id")
-                        .HasColumnType("int");
+                    b.HasKey("Id", "ActorId", "DvdId");
 
-                    b.HasKey("ActorId", "DvdId");
+                    b.HasIndex("ActorId");
 
                     b.HasIndex("DvdId");
 
