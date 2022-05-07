@@ -3,7 +3,7 @@ using GroupCoursework.Models;
 using GroupCoursework.Services;
 using GroupCoursework.ViewModel;
 using Microsoft.AspNetCore.Mvc;
-
+using PagedList;
 namespace GroupCoursework.Controllers;
 
 public class MembershipCategoryController : Controller
@@ -113,7 +113,7 @@ public class MembershipCategoryController : Controller
     }
 
     [HttpPost]
-    public async Task<IActionResult> Create([Bind("MembershipCategoryTotalLoans,MembershipCategoryDescription")]MembershipCategory membershipCategory)
+    public async Task<IActionResult> Create([Bind("CategoryName, MembershipCategoryTotalLoans,MembershipCategoryDescription")]MembershipCategory membershipCategory)
     {
         
             await _service.AddAsync(membershipCategory);
@@ -143,7 +143,7 @@ public class MembershipCategoryController : Controller
     }
 
     [HttpPost]
-    public async Task<IActionResult> Edit(int id, [Bind( "Id,MembershipCategoryDescription,MembershipCategoryTotalLoans")]MembershipCategory membershipCategory)
+    public async Task<IActionResult> Edit(int id, [Bind( "Id,CategoryName,MembershipCategoryDescription,MembershipCategoryTotalLoans")]MembershipCategory membershipCategory)
     {
         try
         {

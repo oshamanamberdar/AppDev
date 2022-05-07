@@ -1,13 +1,12 @@
 ﻿
 using GroupCoursework.Models;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace GroupCoursework.DbContext;
 
 
 
-public class ApplicationDbContext: IdentityDbContext<ApplicationUser>
+public class ApplicationDbContext: Microsoft.EntityFrameworkCore.DbContext
 {
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
         : base(options)
@@ -41,4 +40,5 @@ public class ApplicationDbContext: IdentityDbContext<ApplicationUser>
     public DbSet<DvdCategory> DvdCategories { get; set; }
     public DbSet<CastMember> CastMembers { get; set; }
     public DbSet<Actor> Actors { get; set; }
+    
 }

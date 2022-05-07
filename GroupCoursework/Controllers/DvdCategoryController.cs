@@ -32,7 +32,7 @@ public class DvdCategoryController : Controller
     }
 
     [HttpPost]
-    public async Task<IActionResult> Create([Bind("CategoryDescription,AgeRestricted")] DvdCategory dvdCategory )
+    public async Task<IActionResult> Create([Bind("DvdCategoryName,CategoryDescription,AgeRestricted")] DvdCategory dvdCategory )
     {
         
         await _service.AddAsync(dvdCategory);
@@ -50,7 +50,7 @@ public class DvdCategoryController : Controller
     }
 
     [HttpPost]
-    public async Task<IActionResult> Edit(int id, [Bind( "Id,CategoryDescription,AgeRestricted")]DvdCategory dvdCategory)
+    public async Task<IActionResult> Edit(int id, [Bind( "Id,DvdCategoryName,CategoryDescription,AgeRestricted")]DvdCategory dvdCategory)
     {
         try
         {

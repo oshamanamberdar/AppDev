@@ -1,8 +1,22 @@
 ﻿@model IEnumerable<GroupCoursework.ViewModel.TestView>
 
 
+@using (Html.BeginForm())
+{
+    <p>
+        Find by name: @Html.TextBox("SearchString")  
+        <input type="submit" value="Search" /></p>
+}
 <table>
-    <thead></thead>
+    <thead>
+    <th>Name</th>
+    <th>Last Name</th>
+    <th>Date Released</th>
+    <th>Date Released</th>
+    <th>Date Released</th>
+    <th>Date Released</th>
+    <th>Date Released</th>
+    </thead>
     <tbody>
     @foreach (var item in Model)
     {
@@ -26,9 +40,5 @@
               surname = document.getElementById("surname").value;
               
             }
-      
-        
-        
-      
     </script>
 }

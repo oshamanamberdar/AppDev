@@ -7,6 +7,8 @@ public class DvdCategory: IEntityBase
 {
     [Key]
     public int Id { get; set; }
+    
+    public string DvdCategoryName { get; set; }
 
     [Display(Name = "Description")]
     [Required(ErrorMessage = "Category Description is Required")]

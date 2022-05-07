@@ -1,0 +1,43 @@
+﻿@model CastMember
+
+@{
+    ViewData["Title"] = "Delete Loan ";
+
+}
+<div class="row-text">
+<div class="col-md-8 offset-2">
+    <p>
+        <h1>Delete Confiramation for @Model.Id</h1>
+    </p>
+    <div class="row">
+        <div class="col-md-8 offset-2">
+               
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div col-md-4>
+             
+                    
+                <div class="form-group">
+                    <label>Actor</label>
+                    <select asp-for="ActorId" class="form-control" asp-items="@(new SelectList(ViewBag.ListOfLoanType, "Id", "ActorFirstName"))"></select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Dvd Title</label>
+                    <select asp-for="DvdId" class="form-control" asp-items="@(new SelectList(ViewBag.ListOfMembers, "Id", "Title"))"></select>
+                </div>
+                
+                    
+                <hr/>
+                <div class="form-group">
+                    <form asp-action="Delete">
+                        <input type="hidden" asp-for="Id" />
+                        <input type="submit" value="Confirm" class="btn btn-danger float-right" />
+                    </form>
+                    <a class="btn btn-outline-secondary" asp-action="Index">Show All</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>

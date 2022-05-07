@@ -7,6 +7,8 @@ public class MembershipCategory : IEntityBase
 {
     [Key]
     public int Id { get; set; }
+    
+    public string CategoryName { get; set; }
 
     [Display(Name = "Description")]
     [Required(ErrorMessage = "Membership Category Description is Required")]

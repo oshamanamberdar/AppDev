@@ -1,0 +1,70 @@
+﻿@model DvdTitle
+
+@{
+    ViewData["Title"] = "Delete Dvd Title ";
+
+}
+<div class="row-text">
+<div class="col-md-8 offset-2">
+    <p>
+        <h1>Delete Confiramation for @Model.Id</h1>
+    </p>
+    <div class="row">
+        <div class="col-md-8 offset-2">
+               
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div col-md-4>
+                <div class="form-group">
+                    <label asp-for="Title" class="control-label"></label>
+                    <input readonly asp-for="Title"  class="form-control" />
+                    <span asp-validation-for="Title" class="text-danger"></span>
+                </div>
+                
+                <div class="form-group">
+                    <input type="hidden" asp-for="Id">
+                    <label asp-for="DateReleased" class="control-label"></label>
+                    <input readonly asp-for="DateReleased" type="date" class="form-control"/>
+                    <span asp-validation-for="DateReleased" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="StandardCharge" class="control-label"></label>
+                    <input readonly asp-for="StandardCharge" class="form-control"/>
+                    <span asp-validation-for="StandardCharge" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="PenaltyCharge" class="control-label"></label>
+                    <input readonly asp-for="PenaltyCharge" class="form-control"/>
+                    <span asp-validation-for="PenaltyCharge" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="ProducerNumber" class="control-label"></label>
+                    <select readonly asp-for="ProducerNumber" class="form-control" asp-items="@(new SelectList(ViewBag.ListOfProducer, "Id", "ProducerName"))"></select>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="CategoryNumber" class="control-label"></label>
+                    <select readonly asp-for="CategoryNumber" class="form-control" asp-items="@(new SelectList(ViewBag.ListOfDvdCategories, "Id", "DvdCategoryName"))"></select>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="StudioNumber" class="control-label"></label>
+                    <select readonly asp-for="StudioNumber" class="form-control" asp-items="@(new SelectList(ViewBag.ListOfStudio, "Id", "StudioName"))"></select>
+                </div>
+
+                <hr/>
+                <div class="form-group">
+                    <form asp-action="Delete">
+                        <input type="hidden" asp-for="Id"/>
+                        <input type="submit" value="Confirm" class="btn btn-danger float-right"/>
+                    </form>
+                    <a class="btn btn-outline-secondary" asp-action="Index">Show All</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>

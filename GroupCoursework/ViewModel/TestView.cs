@@ -10,10 +10,4 @@ public class TestView
     public Producer Producer { get; set; }
     
     public string? SearchString { get; set; }
-    
-    public Member Member { get; set; }
-    
-    public DvdCopy DvdCopy { get; set; }
-    
-    public Loan Loan { get; set; }
 }

@@ -8,9 +8,12 @@ public class DvdTitle: IEntityBase
 {
     [Key]
     public int  Id { get; set; }
+    
+    [Required(ErrorMessage ="Title is Required")]
+    public String Title { get; set; }
 
     [Display(Name = "Date Released")]
-    [Required(ErrorMessage ="Date Relaeased is Required")]
+    [Required(ErrorMessage ="Date Released is Required")]
     [DataType(DataType.Date)]
     [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
     public DateTime DateReleased { get; set; }
