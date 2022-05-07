@@ -5,9 +5,9 @@
 }
 <div class="row-text">
     <div class="col-md-8 offset-2">
-        <p>
-            <h1>Add Actor</h1>
-        </p>
+        <h1>Add New Actor</h1>
+        <hr/>
+        
         <div class="row">
             <div class="col-md-8 offset-2">
                 <form asp-action="Create">
@@ -20,6 +20,7 @@
                         </div>
 
                     </div>
+                    <br/>
                     <div class="form-group">
                         <label asp-for="ActorSurname">Surname</label>
                         <input rows="3" asp-for="ActorSurname" class="form-control">
@@ -28,8 +29,8 @@
                     <hr/>
                     <div class="form-group">
                         <div class="col-4">
-                            <input type="submit" value="Create" class="btn btn-outline-success float-right"/>
-                            <a class="btn btn-outline-secondary" asp-action="Index"> Show All</a>
+                            <input type="submit" value="Create" class="btn btn-success float-right"/>
+                            <a class="btn btn-danger" asp-action="Index"> Cancel</a>
                         </div>
                     </div>
 

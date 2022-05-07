@@ -12,72 +12,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b9f322f9-0743-4820-bead-cbd53c8f1444" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/GroupCoursework/Controllers/CastMemberController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GroupCoursework/Controllers/DashboardController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GroupCoursework/Services/CastMemberService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GroupCoursework/Services/ICastMemberService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GroupCoursework/Views/CastMember/Create.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GroupCoursework/Views/CastMember/Delete.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GroupCoursework/Views/CastMember/Edit.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GroupCoursework/Views/CastMember/Index.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GroupCoursework/Views/Dashboard/Index.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GroupCoursework/Views/DvdTitle/Create.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GroupCoursework/Views/DvdTitle/Delete.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GroupCoursework/Views/DvdTitle/Edit.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GroupCoursework/wwwroot/Logo.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GroupCoursework/wwwroot/css/DashboardStyle.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GroupCoursework/wwwroot/js/DashboardScript.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GroupCoursework/.idea/dataSources/373e6dfb-221e-4fd4-832b-b725011f907b.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GroupCoursework/.idea/dataSources/373e6dfb-221e-4fd4-832b-b725011f907b.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GroupCoursework/.idea/dataSources/373e6dfb-221e-4fd4-832b-b725011f907b/storage_v2/_src_/database/app_dev_db.xgQjMg/schema/dbo.sYMBAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GroupCoursework/.idea/dataSources/373e6dfb-221e-4fd4-832b-b725011f907b/storage_v2/_src_/database/app_dev_db.xgQjMg/schema/dbo.sYMBAA.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GroupCoursework/.idea/dataSources/373e6dfb-221e-4fd4-832b-b725011f907b/storage_v2/_src_/database/app_dev_db.xgQjMg/schema/dbo.sYMBAA.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GroupCoursework/.idea/dataSources/373e6dfb-221e-4fd4-832b-b725011f907b/storage_v2/_src_/database/app_dev_db.xgQjMg/schema/dbo.sYMBAA.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GroupCoursework/Views/Dashboard/Filter.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GroupCoursework/Views/Dashboard/List.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GroupCoursework/Views/Home/Filter.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GroupCoursework/wwwroot/css/card.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.GroupCoursework/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GroupCoursework/.idea/jsLibraryMappings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GroupCoursework/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GroupCoursework/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroupCoursework/Controllers/AccountController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroupCoursework/Controllers/DvdCategoryController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Controllers/DvdCategoryController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroupCoursework/Controllers/DvdTitleController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Controllers/DvdTitleController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroupCoursework/Controllers/MemberController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Controllers/MemberController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroupCoursework/Controllers/DashboardController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Controllers/DashboardController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroupCoursework/Controllers/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Controllers/HomeController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GroupCoursework/Controllers/MembershipCategoryController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Controllers/MembershipCategoryController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroupCoursework/DbContext/AppDbInitializer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/DbContext/AppDbInitializer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroupCoursework/DbContext/ApplicationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/DbContext/ApplicationDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroupCoursework/DbContext/Static/UserRoles.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroupCoursework/GroupCoursework.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/GroupCoursework.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroupCoursework/Migrations/20220502172751_InitialCreate.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Migrations/20220507101709_InitialCreate.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroupCoursework/Migrations/20220502172751_InitialCreate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Migrations/20220507101709_InitialCreate.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroupCoursework/Migrations/ApplicationDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Migrations/ApplicationDbContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroupCoursework/Models/CastMember.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Models/CastMember.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroupCoursework/Models/DvdCategory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Models/DvdCategory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroupCoursework/Models/DvdTitle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Models/DvdTitle.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroupCoursework/Models/MembershipCategory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Models/MembershipCategory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroupCoursework/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroupCoursework/ViewModel/LoginVM.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroupCoursework/ViewModel/MemberView.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroupCoursework/ViewModel/RegisterVM.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroupCoursework/ViewModel/TestView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/ViewModel/TestView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroupCoursework/Views/Account/AccessDenied.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroupCoursework/Views/Account/Login.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroupCoursework/Views/Account/Register.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroupCoursework/Views/Account/RegisterCompleted.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroupCoursework/Views/Account/Users.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroupCoursework/Views/DvdCategory/Create.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Views/DvdCategory/Create.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroupCoursework/Views/DvdCategory/Delete.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Views/DvdCategory/Delete.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroupCoursework/Views/DvdCategory/Edit.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Views/DvdCategory/Edit.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroupCoursework/Views/DvdCopy/Create.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Views/DvdCopy/Create.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroupCoursework/Views/DvdTitle/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Views/DvdTitle/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroupCoursework/Views/Loan/Create.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Views/Loan/Create.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroupCoursework/Views/Member/Create.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Views/Member/Create.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroupCoursework/Views/Member/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Views/Member/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroupCoursework/Views/Member/MemberView.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroupCoursework/Views/MembershipCategory/Create.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Views/MembershipCategory/Create.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroupCoursework/Views/MembershipCategory/Delete.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Views/MembershipCategory/Delete.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroupCoursework/Views/MembershipCategory/Edit.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Views/MembershipCategory/Edit.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroupCoursework/Views/Actor/Create.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Views/Actor/Create.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroupCoursework/Views/Actor/Delete.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Views/Actor/Delete.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroupCoursework/Views/Actor/Edit.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Views/Actor/Edit.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroupCoursework/Views/Actor/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Views/Actor/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroupCoursework/Views/Home/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Views/Home/Index.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GroupCoursework/Views/MembershipCategory/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Views/MembershipCategory/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroupCoursework/Views/MembershipCategory/List.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Views/MembershipCategory/List.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroupCoursework/Views/Shared/_Identity.cshtml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/GroupCoursework/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Views/Shared/_Layout.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroupCoursework/wwwroot/css/DashboardStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/wwwroot/css/DashboardStyle.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -92,6 +55,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/575c31ecc35a636b6f962cb71d53992552941a18982aae1c8e6c16305cc3761b/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f4708639776589f5ac2739f6fcbfc67343b1f9dac51cc1dbfdb003eef77cc1c/Monitor.CoreCLR.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1af51483c9bf18871cce649b9f966dd7be686536f998c33bba3c5fc4adea4a0/Task.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/GroupCoursework/GroupCoursework/Controllers/MembershipCategoryController.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -113,6 +77,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="XThreadsFramesViewSplitterKey" value="0.6315789" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -173,7 +138,7 @@
       <workItem from="1651729112043" duration="17847000" />
       <workItem from="1651815557547" duration="13795000" />
       <workItem from="1651857191807" duration="602000" />
-      <workItem from="1651891302512" duration="24452000" />
+      <workItem from="1651891302512" duration="30126000" />
     </task>
     <task id="LOCAL-00001" summary="commit 2">
       <created>1651291978314</created>
@@ -252,7 +217,21 @@
       <option name="project" value="LOCAL" />
       <updated>1651832819358</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="commit">
+      <created>1651918906109</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1651918906109</updated>
+    </task>
+    <task id="LOCAL-00013" summary="comit">
+      <created>1651918983799</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1651918983799</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -282,10 +261,11 @@
     <MESSAGE value="commit for view" />
     <MESSAGE value="Commit for Service" />
     <MESSAGE value="Services and configuration" />
-    <MESSAGE value="commit" />
     <MESSAGE value="Commit" />
     <MESSAGE value="commmit" />
-    <option name="LAST_COMMIT_MESSAGE" value="commmit" />
+    <MESSAGE value="commit" />
+    <MESSAGE value="comit" />
+    <option name="LAST_COMMIT_MESSAGE" value="comit" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
