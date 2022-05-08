@@ -12,20 +12,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b9f322f9-0743-4820-bead-cbd53c8f1444" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/GroupCoursework/Views/Home/SortData.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GroupCoursework/Controllers/AuthenticationController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GroupCoursework/Migrations/20220508042410_InitialCreate2.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GroupCoursework/Migrations/20220508042410_InitialCreate2.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GroupCoursework/Models/Response.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GroupCoursework/Models/UserLoginModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GroupCoursework/Models/UserRegisterModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GroupCoursework/Models/UserRoles.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GroupCoursework/Views/Authentication/Index.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GroupCoursework/Views/Authentication/Login.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GroupCoursework/Views/Authentication/Register.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GroupCoursework/Views/Authentication/RegisterAdmin.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GroupCoursework/Views/Authentication/UnauthorizedAccess.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GroupCoursework/Views/Home/ShowDvdTitleNotLoaned.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GroupCoursework/wwwroot/Login.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GroupCoursework/wwwroot/Login1.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GroupCoursework/.idea/dataSources/373e6dfb-221e-4fd4-832b-b725011f907b.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GroupCoursework/.idea/dataSources/373e6dfb-221e-4fd4-832b-b725011f907b.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GroupCoursework/.idea/dataSources/373e6dfb-221e-4fd4-832b-b725011f907b/storage_v2/_src_/database/app_dev_db.xgQjMg/schema/dbo.sYMBAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GroupCoursework/.idea/dataSources/373e6dfb-221e-4fd4-832b-b725011f907b/storage_v2/_src_/database/app_dev_db.xgQjMg/schema/dbo.sYMBAA.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GroupCoursework/.idea/dataSources/373e6dfb-221e-4fd4-832b-b725011f907b/storage_v2/_src_/database/app_dev_db.xgQjMg/schema/dbo.sYMBAA.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GroupCoursework/.idea/dataSources/373e6dfb-221e-4fd4-832b-b725011f907b/storage_v2/_src_/database/app_dev_db.xgQjMg/schema/dbo.sYMBAA.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GroupCoursework/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GroupCoursework/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroupCoursework/Controllers/CastMemberController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Controllers/CastMemberController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroupCoursework/Controllers/DvdTitleController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Controllers/DvdTitleController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GroupCoursework/Controllers/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Controllers/HomeController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroupCoursework/Controllers/LoanController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Controllers/LoanController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GroupCoursework/DbContext/ApplicationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/DbContext/ApplicationDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroupCoursework/Migrations/20220507101709_InitialCreate.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Migrations/20220507131439_InitialCreate.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroupCoursework/Migrations/20220507101709_InitialCreate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Migrations/20220507131439_InitialCreate.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroupCoursework/GroupCoursework.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/GroupCoursework.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroupCoursework/Migrations/20220507131439_InitialCreate.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Migrations/20220507153057_InitialCreate1.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroupCoursework/Migrations/20220507131439_InitialCreate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Migrations/20220507153057_InitialCreate1.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GroupCoursework/Migrations/ApplicationDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Migrations/ApplicationDbContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroupCoursework/Models/CastMember.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Models/CastMember.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroupCoursework/Models/Loan.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Models/Loan.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroupCoursework/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GroupCoursework/ViewModel/TestView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/ViewModel/TestView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroupCoursework/Views/CastMember/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Views/CastMember/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroupCoursework/Views/DvdCategory/Create.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Views/DvdCategory/Create.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroupCoursework/Views/DvdCategory/Delete.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Views/DvdCategory/Delete.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroupCoursework/Views/DvdCategory/Edit.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Views/DvdCategory/Edit.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroupCoursework/Views/DvdCategory/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Views/DvdCategory/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroupCoursework/Views/Home/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Views/Home/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroupCoursework/Views/Home/SortData.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Views/Home/SortData.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroupCoursework/Views/Member/Create.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/Views/Member/Create.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroupCoursework/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/GroupCoursework/appsettings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,11 +71,14 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/198a6261cebc324728dcc4c178edc5f2894123f711722c80e8557cbfd27651/ThrowHelper.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/GroupCoursework/DbContext/ApplicationDbContext.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/575c31ecc35a636b6f962cb71d53992552941a18982aae1c8e6c16305cc3761b/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f4708639776589f5ac2739f6fcbfc67343b1f9dac51cc1dbfdb003eef77cc1c/Monitor.CoreCLR.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/7d9a41d47547e1fe7fe548b21ab4de12cc2671170a023bc8c629017837eb5f4/ActionMethodExecutor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1af51483c9bf18871cce649b9f966dd7be686536f998c33bba3c5fc4adea4a0/Task.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/GroupCoursework/GroupCoursework/Controllers/MembershipCategoryController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/0b5567882521e02aa3d40a7bce81b7235ccac4db588866e3498e614c3bc/CastHelpers.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1e8feaadf5c3fa14d36ea2a638c432a2e1a47b7837d8b83d88303c5d9c15cf/AsyncValueTaskMethodBuilderT.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -135,7 +161,8 @@
       <workItem from="1651729112043" duration="17847000" />
       <workItem from="1651815557547" duration="13795000" />
       <workItem from="1651857191807" duration="602000" />
-      <workItem from="1651891302512" duration="38528000" />
+      <workItem from="1651891302512" duration="49003000" />
+      <workItem from="1651982414980" duration="18047000" />
     </task>
     <task id="LOCAL-00001" summary="commit 2">
       <created>1651291978314</created>
@@ -235,7 +262,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651925185251</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="commmit">
+      <created>1651933644624</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1651933644624</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -266,12 +300,29 @@
     <MESSAGE value="Commit for Service" />
     <MESSAGE value="Services and configuration" />
     <MESSAGE value="Commit" />
-    <MESSAGE value="commmit" />
     <MESSAGE value="comit" />
     <MESSAGE value="commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit" />
+    <MESSAGE value="commmit" />
+    <option name="LAST_COMMIT_MESSAGE" value="commmit" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/GroupCoursework/Controllers/AuthenticationController.cs</url>
+          <line>76</line>
+          <properties documentPath="D:\GroupCoursework\GroupCoursework\Controllers\AuthenticationController.cs" initialLine="76" containingFunctionPresentation="method 'Register'">
+            <startOffsets>
+              <option value="2361" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2429" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="Type#System.Linq.SystemCore_EnumerableDebugViewEmptyException" memberName="Empty" />

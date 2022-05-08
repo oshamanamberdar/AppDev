@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using GroupCoursework.Base;
 
@@ -9,7 +10,7 @@ public class Loan: IEntityBase
     [Key]
     public int  Id { get; set; }
 
-
+    
     [Display(Name = "Date Out")]
     [Required(ErrorMessage = "Date Out is Required")]
     [DataType(DataType.Date)]

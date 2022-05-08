@@ -4,38 +4,47 @@
     ViewData["Title"] = "Add a new Dvd Category";
 }
 <div class="row-text">
-    <div class="col-md-8 offset-2">
-        <p>
-            <h1>Add Dvd Category</h1>
-        </p>
-        <div class="row">
-            <div class="col-md-8 offset-2">
-                <form asp-action="Create">
-                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                    <div col-md-4>
+    <div>
+        <h1>Add DVD Category</h1>
+        <hr/>
+       
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="row">
+                    <div class="col-md-4">
                         <div class="form-group">
-                            <label asp-for="DvdCategoryName">Category Description</label>
+                            <label asp-for="DvdCategoryName">Name</label>
                             <input asp-for="DvdCategoryName" class="form-control"/>
                             <span asp-validation-for="DvdCategoryName" class="text-danger"></span>
                         </div>
-                        
+                    </div>
+                    <div class="col-md-6">
                         <div class="form-group">
                             <label asp-for="CategoryDescription">Category Description</label>
-                            <input asp-for="CategoryDescription" class="form-control"/>
+                            <textarea rows="3" asp-for="CategoryDescription" class="form-control"></textarea>
                             <span asp-validation-for="CategoryDescription" class="text-danger"></span>
                         </div>
-
                     </div>
-                    <div class="form-group">
-                        <label asp-for="AgeRestricted">Age Restricted</label>
-                        <input rows="3" asp-for="AgeRestricted" class="form-control">
-                        <span asp-validation-for="AgeRestricted" class="text-danger"></span>
+                    <div class="col-md-3 mt-2">
+                        <div class="form-group">
+                            <label asp-for="AgeRestricted">Age Restricted</label>
+                            <select asp-for="AgeRestricted" class="form-control">
+                                <option>Yes</option>
+                                <option>No</option>
+                            </select>
+                            <span asp-validation-for="AgeRestricted" class="text-danger"></span>
+                        </div>
                     </div>
+                    
+                </div>
+                <br/>
+              
+                   
                     <hr/>
                     <div class="form-group">
                         <div class="col-4">
-                            <input type="submit" value="Create" class="btn btn-outline-success float-right"/>
-                            <a class="btn btn-outline-secondary" asp-action="Index"> Show All</a>
+                            <input type="submit" value="Create" class="btn btn-success"/>
+                            <a class="btn btn-danger" asp-action="Index"> Cancel</a>
                         </div>
                     </div>
 
@@ -44,5 +53,4 @@
 
             </div>
         </div>
-    </div>
-</div>
+

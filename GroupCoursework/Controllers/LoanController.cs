@@ -1,7 +1,9 @@
 ﻿using GroupCoursework.DbContext;
 using GroupCoursework.Models;
 using GroupCoursework.Services;
+using GroupCoursework.ViewModel;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace GroupCoursework.Controllers;
 
@@ -34,10 +36,58 @@ public class LoanController : Controller
     [HttpPost]
     public async Task<IActionResult> Create(Loan loan)
     {
+        int membercategoryId = 0;
+        var categoryList = _context.Members.Include("MembershipCategory").Where(x =>
+            x.Id == loan.MemberNumber).Select(
+            x => x.MembershipCategoryNumber).ToList();
+        foreach (var val in categoryList)
+        {
+            membercategoryId = val;
+        }
+
+        var dob = loan.Member.MemberDob;
+        int age = 18;
+
+        var loanedCopiesCount = int.Parse(_context.Loans.Include("Member").Where(
+            x => x.Member.Id == loan.MemberNumber).Where(
+            x => x.DateReturned == null).Count().ToString());
+
+        var categoryLimitList = _context.Members.Include("MembershipCategory").Where(
+            x => x.MembershipCategory.Id == membercategoryId).Select(
+            x => x.MembershipCategory.MembershipCategoryTotalLoans).ToList();
+        
+        int totalLimit = 0;
+        
+        foreach (var val in categoryLimitList)
+        {
+            totalLimit = int.Parse(val.ToString());
+        }
+
+        if (loanedCopiesCount >= totalLimit)
+        {
+            ViewBag.Message = String.Format("Member not eligible to loan more DVD");
+            LoadLoanType();
+            LoadMemberList();
+            LoadDvdCopy();
+            return View(loan);
+            
+        }
+
+        string agerestricted = "yes";
+
+        if (age < 18 && agerestricted == "yes" )
+        {
+            Console.WriteLine("You a");
+        }
+            
         _context.Loans.Add(loan);
         await _context.SaveChangesAsync();
         return RedirectToAction("Index");
-    }
+        
+    
+
+
+}
     
     
     

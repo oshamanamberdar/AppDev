@@ -1,5 +1,7 @@
 ﻿
 using GroupCoursework.Models;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
@@ -7,7 +9,7 @@ namespace GroupCoursework.DbContext;
 
 
 
-public class ApplicationDbContext: Microsoft.EntityFrameworkCore.DbContext
+public class ApplicationDbContext: IdentityDbContext<IdentityUser>
 {
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
         : base(options)

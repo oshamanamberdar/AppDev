@@ -13,5 +13,11 @@ public class TestView
     
     public Studio Studio { get; set; }
     
+    public Member Member { get; set; }
+    
+    public Loan Loan { get; set; }
+    
+    public DvdCopy DvdCopy { get; set; }
+    
     public string? SearchString { get; set; }
 }

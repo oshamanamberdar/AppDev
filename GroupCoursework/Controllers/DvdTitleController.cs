@@ -107,7 +107,7 @@ public class DvdTitleController : Controller
         return View(dvdTitleDetails);
     }
     [HttpPost]
-    public async Task<IActionResult> Edit(int id, [Bind("Id,DateReleased,StandardCharge,PenaltyCharge,ProducerNumber,StudioNumber,CategoryNumber  ")] DvdTitle dvdTitle )
+    public async Task<IActionResult> Edit(int id, [Bind("Id,Title,DateReleased,StandardCharge,PenaltyCharge,ProducerNumber,StudioNumber,CategoryNumber  ")] DvdTitle dvdTitle )
     {
         try
         { 

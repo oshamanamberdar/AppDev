@@ -1,0 +1,49 @@
+﻿@model UserLoginModel
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+
+<div class="row">
+    <div class="col-md-3">
+        <img src="Login1.png"  />
+    </div>
+    <div class="col-md-2">
+        
+    </div>
+    <div class="col-md-7">
+        <form asp-action="Login">
+            <div class="row">
+                <div class="col-md-6">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="Username" class="control-label"></label>
+                        <input asp-for="Username" class="form-control"/>
+                        <span asp-validation-for="Username" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>  
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="Password" class="control-label"></label>
+                        <input asp-for="Password" type="password" class="form-control"/>
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+                
+            <p>
+                &nbsp;
+            </p>
+            <input type="submit" class="btn btn-success" value="Login"/>
+            <a class="btn btn-info" asp-action="RegisterAdmin">Register</a>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

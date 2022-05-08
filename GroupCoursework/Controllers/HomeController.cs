@@ -60,6 +60,7 @@ public class HomeController : Controller
     {
         try
         {
+            
             List<Actor> actors = _context.Actors.ToList();
             List<DvdCategory> dvdCategories = _context.DvdCategories.ToList();
             List<DvdTitle> dvdTitles = _context.DvdTitles.ToList();
@@ -81,11 +82,11 @@ public class HomeController : Controller
                     Producer = f,
                     DvdCategory = d
                 };
-            if (!string.IsNullOrEmpty(searchString))
-            {
-                data = data.Where(n =>
-                    string.Equals(n.Actor.ActorSurname, searchString, StringComparison.CurrentCultureIgnoreCase));
-            }
+                if (!string.IsNullOrEmpty(searchString))
+                {
+                    data = data.Where(n =>
+                        string.Equals(n.Actor.ActorSurname, searchString, StringComparison.CurrentCultureIgnoreCase));
+                }
 
 
             return View(data);
@@ -121,7 +122,7 @@ public class HomeController : Controller
             List<Producer> producers = _context.Producers.ToList();
             List<CastMember> castMembers = _context.CastMembers.ToList();
             List<Studio> studios = _context.Studios.ToList();
-            var data = from a in actors orderby a.ActorSurname ascending 
+            var data = from a in actors 
                 join b in castMembers on a.Id equals b.ActorId into table1
                 from b in table1.ToList()
                 join c in dvdTitles on b.DvdId equals c.Id orderby c.DateReleased ascending 
@@ -152,4 +153,34 @@ public class HomeController : Controller
             throw;
         }
     }
+    
+    public ActionResult ShowDvdTitleNotLoaned()
+    {
+        try
+        {
+            List<DvdTitle> dvdTitles = _context.DvdTitles.ToList();
+           List<Loan> loans = _context.Loans.ToList();
+            List<DvdCopy> dvdCopies = _context.DvdCopies.ToList();
+            var data = from a in loans
+                join b in dvdCopies on a.LoanTypeNumber equals b.Id into table1
+                from b in table1.ToList()
+                join c in dvdTitles on b.DvdNumber equals c.Id into table2
+                from c in table2.ToList()
+                select new TestView()
+                {
+                    Loan = a,
+                    DvdCopy = b,
+                    DvdTitle = c
+                };
+
+
+            return View(data);
+        }
+        catch(Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
+    }
+    
 }
