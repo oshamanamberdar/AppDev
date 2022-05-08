@@ -1,22 +1,33 @@
-﻿@*Define model*@
+﻿
 @model IEnumerable<Member>
-@*Define ViewData*@
+
 @{
     ViewData["Title"] = "List of Member";
 }
-@*Write code*@
 
+<h1>Add New</h1>
+<hr/>
+<div>
+    <a asp-controller="Member" asp-action="Create" class="btn btn-success">
+        <i class="bi bi-plus-circle"></i> Add New
+    </a>
+    <a asp-controller="Home" asp-action="SearchMemberWithNoCurrentLoans" class="btn btn-success">
+            <i class="bi bi-filter"></i> Get Members with raised Loan
+    </a>
+    
+</div>
 
-<table class="table table-hover">
+<br/>
+
+<table class="table table-hover  table-bordered  table-responsive-md text-center sb-small">
     <thead>
     <tr>
-        <th>S.No</th>
         <th>First Name</th>
         <th>Last Name</th>
         <th>Date of Birth</th>
         <th>Address</th>
-        <th>Category</th>
-        <th>Action</th>
+        <th>Edit</th>
+        <th>Delete</th>
     </tr>
             
     </thead> 
@@ -24,14 +35,14 @@
     @foreach (var item in Model)
     {
         <tr>
-            <td><asp:Label ID="lblRowNumber" Text='<%# Container.ItemIndex + 1 %>' runat="server" /></td>
             <td>@Html.DisplayFor(modelItem=> item.MemberFirstName) </td>
             <td>@Html.DisplayFor(modelItem=> item.MemberLastName) </td>
             <td>@Html.DisplayFor(modelItem=> item.MemberDob) </td>
             <td>@Html.DisplayFor(modelItem=> item.MemberAddress) </td>
-            <td>@item.MembershipCategoryNumber</td>
             <td class="align-middle">
-                <a class="btn btn-outline-primary" asp-action="Edit" asp-route-id="@item.Id"><i class="bi bi-pencil-square"></i>Edit </a> |
+                <a class="btn btn-outline-primary" asp-action="Edit" asp-route-id="@item.Id"><i class="bi bi-pencil-square"></i>Edit </a> 
+            </td>
+            <td>
                 <a class="btn btn-danger text-white" asp-action="Delete" asp-route-id="@item.Id"><i class="bi bi-trash"></i>Delete </a>
             </td>
             
@@ -41,8 +52,3 @@
     </tbody>
 </table>
 
-<div>
-    <a asp-controller="Member" asp-action="Create" class="btn btn-success">
-        <i class="bi bi-plus-circle"></i> Add New
-    </a>
-</div>

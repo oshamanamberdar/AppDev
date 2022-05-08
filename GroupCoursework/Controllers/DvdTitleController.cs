@@ -92,7 +92,8 @@ public class DvdTitleController : Controller
     {
         _context.DvdTitles.Add(dvdTitle);
         await _context.SaveChangesAsync();
-        return RedirectToAction("Index");
+        return RedirectToRoute("default", 
+            new { controller = "CastMember", action = "Create" });
     }
     
     

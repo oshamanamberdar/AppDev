@@ -1,0 +1,26 @@
+﻿@model IEnumerable<GroupCoursework.ViewModel.TestView>
+
+<h1>Expired Dvd</h1>
+<table class="table table-hover  table-bordered  table-responsive-md text-center sb-small ">
+    <thead>
+    <tr class="text-white sb-bg-dark">
+        <th>DVD Title</th>
+        <th>Date Released</th>
+        <th>Dvd Copy Purchased Date</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    @foreach (var item in Model)
+    {
+        <tbody>
+        <tr>
+            <td>@item.DvdTitle.Title</td>
+            <td>@item.DvdTitle.DateReleased</td>
+            <td>@item.DvdCopy.DatePurchased</td>
+            <td><a class="btn btn-danger" asp-controller="DvdTitle" asp-action="Delete" asp-route-id="@item.DvdTitle.Id"><i class="bi bi-trash"></i>Delete</a></td>
+        </tr>
+
+        </tbody>
+    }
+   
+</table>

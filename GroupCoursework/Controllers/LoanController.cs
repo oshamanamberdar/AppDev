@@ -21,8 +21,40 @@ public class LoanController : Controller
     // GET
     public  async Task<IActionResult> Index()
     {
-        var data = await _service.GetAllAsync();
-        return  View(data);
+        try
+        {
+            List<Actor> actors = _context.Actors.ToList();
+            List<DvdCategory> dvdCategories = _context.DvdCategories.ToList();
+            List<DvdTitle> dvdTitles = _context.DvdTitles.ToList();
+            List<Producer> producers = _context.Producers.ToList();
+            List<CastMember> castMembers = _context.CastMembers.ToList();
+            List<Loan> loans = _context.Loans.ToList();
+            List<DvdCopy> dvdCopies = _context.DvdCopies.ToList();
+            List<Member> members = _context.Members.ToList();
+            var data = from a in members
+                join b in loans on a.Id equals  b.MemberNumber into table1
+                from b in table1.ToList()
+                join c in dvdCopies on b.CopyNumber equals c.Id into table2
+                from c in table2.ToList()
+                join d in dvdTitles on c.DvdNumber equals d.Id into table3
+                from d in table3.ToList()
+                select new TestView()
+                {
+                    Member = a,
+                    Loan = b,
+                    DvdCopy = c,
+                    DvdTitle = d
+
+                };
+            return View(data);
+
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
+        
         
     }
 
@@ -36,62 +68,18 @@ public class LoanController : Controller
     [HttpPost]
     public async Task<IActionResult> Create(Loan loan)
     {
-        int membercategoryId = 0;
-        var categoryList = _context.Members.Include("MembershipCategory").Where(x =>
-            x.Id == loan.MemberNumber).Select(
-            x => x.MembershipCategoryNumber).ToList();
-        foreach (var val in categoryList)
-        {
-            membercategoryId = val;
-        }
-
-        var dob = loan.Member.MemberDob;
-        int age = 18;
-
-        var loanedCopiesCount = int.Parse(_context.Loans.Include("Member").Where(
-            x => x.Member.Id == loan.MemberNumber).Where(
-            x => x.DateReturned == null).Count().ToString());
-
-        var categoryLimitList = _context.Members.Include("MembershipCategory").Where(
-            x => x.MembershipCategory.Id == membercategoryId).Select(
-            x => x.MembershipCategory.MembershipCategoryTotalLoans).ToList();
-        
-        int totalLimit = 0;
-        
-        foreach (var val in categoryLimitList)
-        {
-            totalLimit = int.Parse(val.ToString());
-        }
-
-        if (loanedCopiesCount >= totalLimit)
-        {
-            ViewBag.Message = String.Format("Member not eligible to loan more DVD");
-            LoadLoanType();
-            LoadMemberList();
-            LoadDvdCopy();
-            return View(loan);
-            
-        }
-
-        string agerestricted = "yes";
-
-        if (age < 18 && agerestricted == "yes" )
-        {
-            Console.WriteLine("You a");
-        }
-            
         _context.Loans.Add(loan);
         await _context.SaveChangesAsync();
         return RedirectToAction("Index");
-        
-    
+    }
 
 
-}
-    
-    
-    
-    
+
+
+
+
+
+
     
     
     

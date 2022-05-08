@@ -2,6 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using GroupCoursework.Base;
+using Microsoft.AspNetCore.Mvc;
 
 namespace GroupCoursework.Models;
 
@@ -26,10 +27,9 @@ public class Loan: IEntityBase
 
 
     [Display(Name = "Date Returned")]
-    [Required(ErrorMessage = "Date Returned is Required")]
     [DataType(DataType.Date)]
     [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
-    public DateTime DateReturned { get; set; }
+    public DateTime? DateReturned { get; set; }
     
     
     
@@ -48,5 +48,7 @@ public class Loan: IEntityBase
     public int CopyNumber { get; set; }
     [ForeignKey("CopyNumber")]
     public DvdCopy DvdCopy { get; set; }
+
     
+
 }

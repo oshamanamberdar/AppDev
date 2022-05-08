@@ -22,3 +22,11 @@ label {
   font-weight: bold;
   font-family: "Times New Roman";
 }
+
+.sb-bg-dark {
+  background-color: #0E63AE !important;
+}
+.sb-small {
+  font-size: 85%;
+  font-weight: 500;
+}

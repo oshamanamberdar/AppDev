@@ -1,0 +1,27 @@
+﻿@model IEnumerable<GroupCoursework.ViewModel.TestView>
+
+<h1>Dvd Not Loan for Last 31 Days</h1>
+<hr/>
+<table class="table table-hover  table-bordered  table-responsive-md text-center sb-small ">
+    <thead>
+    <tr class="text-white sb-bg-dark">
+        <th>Dvd Title</th>
+        <th>Standard Charge</th>
+        <th>Penalty Charge</th>
+        <th>Date Out</th>
+    </tr>
+    </thead>
+    @foreach (var item in Model)
+    {
+        <tbody>
+        <tr>
+            <td>@item.DvdTitle.Title</td>
+            <td>@item.DvdTitle.StandardCharge</td>
+            <td>@item.DvdTitle.PenaltyCharge</td>
+            <td>@item.Loan.DateOut</td>
+        </tr>
+        
+        </tbody>
+    }
+   
+</table>

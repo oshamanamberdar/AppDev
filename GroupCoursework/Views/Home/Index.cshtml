@@ -5,14 +5,41 @@
         <div class="col-md-4">
             <input class="form-control" type="text" name="SearchString" placeholder="Search by Actor Surname"/>
         </div>
-         <div class="col-md-4">
-                <span></span>
-                 <input class="btn btn-primary btn-outline-dark "  type="submit" value="Search" />
-            </div>
-        
+        <div class="col-md-4">
+            <span></span>
+            <input class="btn btn-primary btn-outline-dark "  type="submit" value="Search" />
+        </div>
+
     </div>
    
    
+</form>
+<hr/>
+
+<form asp-controller="Home" asp-action="ViewMemberByMemberLastName" method="get">
+    <div class="row">
+        <div class="col-md-4">
+            <input class="form-control" type="text" name="SearchString" placeholder="Search by Member Surname"/>
+        </div>
+        <div class="col-md-4">
+            <span></span>
+            <input class="btn btn-primary btn-outline-dark "  type="submit" value="Search" />
+        </div>
+
+    </div>
+</form>
+<hr/>
+<form asp-controller="Home" asp-action="SearchByCopyNumber" method="get">
+    <div class="row">
+        <div class="col-md-4">
+            <input class="form-control" type="text" name="copyNumber" placeholder="Search by Copy Number "/>
+        </div>
+        <div class="col-md-4">
+            <span></span>
+            <input class="btn btn-primary btn-outline-dark "  type="submit" value="Search" />
+        </div>
+
+    </div>
 </form>
 
 
@@ -29,7 +56,15 @@
                 </div>
             </div>
         </div>
-        <a class="btn btn-info btn-lg" asp-action="SortData"><i class="bi bi-funnel-fill"></i>&nbsp;Sort Data</a>
+        <a class="btn btn-info btn-lg" asp-action="SortData"><i class="bi bi-funnel-fill"></i>&nbsp;Sort Data By Release Date</a>
+        <a class="btn btn-info btn-lg" asp-action="FilterByAlphabeticalOrder"><i class="bi bi-funnel-fill"></i>&nbsp;Alphabetical Data</a>
+        <a class="btn btn-info btn-lg" asp-action="SearchMemberWithNoCurrentLoans"><i class="bi bi-funnel-fill"></i>&nbsp;Member with No current loans</a>
+        <a class="btn btn-info btn-lg" asp-action="ListOfAllDvdsExpiredCopy"><i class="bi bi-funnel-fill"></i>&nbsp;Expired Dvd</a>
+        <a class="btn btn-info btn-lg" asp-action="DvdCopyOnLoan"><i class="bi bi-funnel-fill"></i>&nbsp;Dvd Copy On Loan</a>
+        <hr/>
+        <a class="btn btn-info btn-lg" asp-action="LoanNotRaisedByMemberInPresentMonth"><i class="bi bi-funnel-fill"></i>&nbsp;Loan Not Raised By Member in Present Month</a>
+        <a class="btn btn-info btn-lg" asp-action="DvdTitleNotListedOnLoanForInPresentMonth"><i class="bi bi-funnel-fill"></i>&nbsp;Dvd Not Rented In Present Month</a>
+       
         <div class="row">
             <!-- feaure box -->
              @foreach (var item in Model)

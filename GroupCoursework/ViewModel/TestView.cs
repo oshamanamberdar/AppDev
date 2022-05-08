@@ -19,5 +19,7 @@ public class TestView
     
     public DvdCopy DvdCopy { get; set; }
     
+    public MembershipCategory MembershipCategory { get; set; }
+    
     public string? SearchString { get; set; }
 }

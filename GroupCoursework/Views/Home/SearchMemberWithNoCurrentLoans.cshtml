@@ -1,0 +1,38 @@
+﻿@model IEnumerable<GroupCoursework.ViewModel.TestView>
+
+<h1>Raised Loan Member List</h1>
+<table class="table table-hover  table-bordered  table-responsive-md text-center sb-small ">
+    <thead>
+    <tr class="text-white sb-bg-dark">
+        <th>Member First Name</th>
+        <th>Member Last Name</th>
+        <th>Loan Date Out</th>
+        <th>Loan Date Due</th>
+        <th>Loan Date Retured</th>
+        <th>Category Name</th>
+    </tr>
+    </thead>
+    @foreach (var item in Model)
+    {
+        <tbody>
+        <tr>
+            <td>@item.Member.MemberFirstName</td>
+            <td>@item.Member.MemberLastName</td>
+            <td>@item.Loan.DateOut</td>
+            <td>@item.Loan.DateDue</td>
+            @if (@item.Loan.DateReturned == null)
+            {
+                <td>Not Returned</td>
+            }
+            else
+            {
+                <td>@item.Loan.DateReturned</td>
+            }
+            <td>@item.MembershipCategory.CategoryName</td>
+
+        </tr>
+        
+        </tbody>
+    }
+   
+</table>
