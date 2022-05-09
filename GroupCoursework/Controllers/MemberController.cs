@@ -3,7 +3,6 @@ using GroupCoursework.Models;
 using GroupCoursework.Services;
 using Microsoft.AspNetCore.Mvc;
 
-
 namespace GroupCoursework.Controllers;
 
 public class MemberController : Controller
@@ -11,36 +10,34 @@ public class MemberController : Controller
     private readonly ApplicationDbContext _context;
     private readonly IMemberService _service;
 
-    public MemberController(ApplicationDbContext context, IMemberService service )
+    public MemberController(ApplicationDbContext context, IMemberService service)
     {
         _context = context;
         _service = service;
-
     }
+
     // GET
-    public  async Task<IActionResult> Index()
+    public async Task<IActionResult> Index()
     {
         var data = await _service.GetAllAsync();
-        return  View(data);
-        
+        return View(data);
     }
 
     public IActionResult Create()
     {
         LoadMembershipCategoryList();
         return View();
-        
     }
 
     [HttpPost]
-    public async Task<IActionResult> Create([Bind("MemberFirstName,MemberLastName,MemberAddress,MemberDob,MembershipCategoryNumber ")]Member member)
+    public async Task<IActionResult> Create(
+        [Bind("MemberFirstName,MemberLastName,MemberAddress,MemberDob,MembershipCategoryNumber ")] Member member)
     {
         try
-        { 
+        {
             _context.Members.Add(member);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
-
         }
         catch (Exception e)
         {
@@ -48,25 +45,24 @@ public class MemberController : Controller
             throw;
         }
     }
-    
-    
+
+
     public async Task<IActionResult> Edit(int id)
     {
         LoadMembershipCategoryList();
         var memberDetails = await _service.GetByIdAsync(id);
         if (memberDetails == null) return View("Error");
         return View(memberDetails);
-        
     }
 
     [HttpPost]
-    public async Task<IActionResult> Edit(int id, [Bind("Id,MemberFirstName,MemberLastName,MemberAddress,MemberDob,MembershipCategoryNumber ")]Member member)
+    public async Task<IActionResult> Edit(int id,
+        [Bind("Id,MemberFirstName,MemberLastName,MemberAddress,MemberDob,MembershipCategoryNumber ")] Member member)
     {
         try
-        { 
-            await _service.UpdateAsync(id,member);
+        {
+            await _service.UpdateAsync(id, member);
             return RedirectToAction(nameof(Index));
-
         }
         catch (Exception e)
         {
@@ -79,11 +75,11 @@ public class MemberController : Controller
     {
         try
         {
-            List<MembershipCategory> membershipCategories = new List<MembershipCategory>();
+            var membershipCategories = new List<MembershipCategory>();
             membershipCategories = _context.MembershipCategories.ToList();
-            membershipCategories.Insert(0, new MembershipCategory {Id = 0, MembershipCategoryDescription = "Please Select"});
+            membershipCategories.Insert(0,
+                new MembershipCategory {Id = 0, MembershipCategoryDescription = "Please Select"});
             ViewBag.ListOfMembershipCategory = membershipCategories;
-
         }
         catch (Exception e)
         {
@@ -91,10 +87,10 @@ public class MemberController : Controller
             throw;
         }
     }
-    
-    
+
+
     // Delete Loan type
-    
+
     public async Task<IActionResult> Delete(int id)
     {
         LoadMembershipCategoryList();
@@ -103,7 +99,8 @@ public class MemberController : Controller
         return View(memberDetails);
     }
 
-    [HttpPost, ActionName("Delete")]
+    [HttpPost]
+    [ActionName("Delete")]
     public async Task<IActionResult> DeleteConfirmed(int id)
     {
         LoadMembershipCategoryList();
@@ -112,7 +109,4 @@ public class MemberController : Controller
         await _service.DeleteAsync(id);
         return RedirectToAction(nameof(Index));
     }
-
-    
-    
 }

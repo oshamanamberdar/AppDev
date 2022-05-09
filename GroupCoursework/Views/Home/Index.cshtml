@@ -7,12 +7,12 @@
         </div>
         <div class="col-md-4">
             <span></span>
-            <input class="btn btn-primary btn-outline-dark "  type="submit" value="Search" />
+            <input class="btn btn-primary btn-outline-dark " type="submit" value="Search"/>
         </div>
 
     </div>
-   
-   
+
+
 </form>
 <hr/>
 
@@ -23,7 +23,7 @@
         </div>
         <div class="col-md-4">
             <span></span>
-            <input class="btn btn-primary btn-outline-dark "  type="submit" value="Search" />
+            <input class="btn btn-primary btn-outline-dark " type="submit" value="Search"/>
         </div>
 
     </div>
@@ -36,7 +36,7 @@
         </div>
         <div class="col-md-4">
             <span></span>
-            <input class="btn btn-primary btn-outline-dark "  type="submit" value="Search" />
+            <input class="btn btn-primary btn-outline-dark " type="submit" value="Search"/>
         </div>
 
     </div>
@@ -48,7 +48,7 @@
 <section class="section services-section" id="services">
     <div class="container">
         <div class="row">
-           
+
             <div class="col-lg-6">
                 <div class="section-title">
                     <h2>DVD</h2>
@@ -64,31 +64,31 @@
         <hr/>
         <a class="btn btn-info btn-lg" asp-action="LoanNotRaisedByMemberInPresentMonth"><i class="bi bi-funnel-fill"></i>&nbsp;Loan Not Raised By Member in Present Month</a>
         <a class="btn btn-info btn-lg" asp-action="DvdTitleNotListedOnLoanForInPresentMonth"><i class="bi bi-funnel-fill"></i>&nbsp;Dvd Not Rented In Present Month</a>
-       
+
         <div class="row">
             <!-- feaure box -->
-             @foreach (var item in Model)
-                        {
-                            <div class="col-sm-6 col-lg-4">
-                                <div class="feature-box-1">
-                                    <div class="icon">
-                                        <i class="fa fa-desktop"></i>
-                                    </div>
-                                    <div class="feature-content">
-                                        <h1>@item.DvdTitle.Title</h1>
-                                        <h5>@item.Actor.ActorFirstName &nbsp; @item.Actor.ActorSurname</h5>
-                                        <ul>
-                                            <li>Producer name : @item.Producer.ProducerName</li>
-                                            <li>Age Restricted : @item.DvdCategory.AgeRestricted</li>
-                                            <li>Date Released : @item.DvdTitle.DateReleased</li>
-                                            <li>Standard Charge : @item.DvdTitle.StandardCharge</li>
-                                            <li>Penalty Charge : @item.DvdTitle.PenaltyCharge</li>
-                                        </ul>
+            @foreach (var item in Model)
+            {
+                <div class="col-sm-6 col-lg-4">
+                    <div class="feature-box-1">
+                        <div class="icon">
+                            <i class="fa fa-desktop"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h1>@item.DvdTitle.Title</h1>
+                            <h5>@item.Actor.ActorFirstName &nbsp; @item.Actor.ActorSurname</h5>
+                            <ul>
+                                <li>Producer name : @item.Producer.ProducerName</li>
+                                <li>Age Restricted : @item.DvdCategory.AgeRestricted</li>
+                                <li>Date Released : @item.DvdTitle.DateReleased</li>
+                                <li>Standard Charge : @item.DvdTitle.StandardCharge</li>
+                                <li>Penalty Charge : @item.DvdTitle.PenaltyCharge</li>
+                            </ul>
 
-                                    </div>
-                                </div>
-                            </div>
-                        }
+                        </div>
+                    </div>
+                </div>
+            }
         </div>
     </div>
 </section>

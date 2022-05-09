@@ -6,13 +6,13 @@
 }
 <div class="row-text">
     <div class="col-md-8 offset-2">
-        
+
         <h1 style="color: red">Are you Sure Wanted to Delete @Model.DvdCategoryName</h1>
         <hr/>
-        
+
         <div class="row">
             <div class="col-md-8 offset-2">
-               
+
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <div col-md-4>
                     <div class="form-group">
@@ -20,7 +20,7 @@
                         <input readonly asp-for="DvdCategoryName" class="form-control"/>
                         <span asp-validation-for="DvdCategoryName" class="text-danger"></span>
                     </div>
-                    
+
                     <div class="form-group">
                         <label asp-for="CategoryDescription">Description</label>
                         <textarea rows="3" asp-for="CategoryDescription" readonly class="form-control"></textarea>
@@ -30,18 +30,18 @@
                 </div>
                 <div class="form-group">
                     <label asp-for="AgeRestricted">Age Restricted</label>
-                    <input  asp-for="AgeRestricted" readonly class="form-control">
+                    <input asp-for="AgeRestricted" readonly class="form-control">
                     <span asp-validation-for="AgeRestricted" class="text-danger"></span>
                 </div>
                 <hr/>
                 <div class="form-group">
                     <form asp-action="Delete">
-                        <input type="hidden" asp-for="Id" />
-                        <input type="submit" value="Confirm" class="btn btn-danger float-right" />
+                        <input type="hidden" asp-for="Id"/>
+                        <input type="submit" value="Confirm" class="btn btn-danger float-right"/>
                         <a class="btn btn-outline-info" asp-action="Index">Cancel</a>
                     </form>
                 </div>
-                
+
 
             </div>
         </div>

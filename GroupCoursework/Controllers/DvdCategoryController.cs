@@ -14,17 +14,15 @@ public class DvdCategoryController : Controller
     {
         _context = context;
         _service = service;
-
     }
+
     // GET
     public async Task<IActionResult> Index()
     {
         var data = await _service.GetAllAsync();
-        return  View(data);
-        
-        
+        return View(data);
     }
-    
+
     // Add DVD Category
     public IActionResult Create()
     {
@@ -32,17 +30,16 @@ public class DvdCategoryController : Controller
     }
 
     [HttpPost]
-    public async Task<IActionResult> Create([Bind("DvdCategoryName,CategoryDescription,AgeRestricted")] DvdCategory dvdCategory )
+    public async Task<IActionResult> Create(
+        [Bind("DvdCategoryName,CategoryDescription,AgeRestricted")] DvdCategory dvdCategory)
     {
-        
         await _service.AddAsync(dvdCategory);
         return RedirectToAction(nameof(Index));
-       
     }
-    
+
     // Edit Dvd Category
-    
-    public async  Task<IActionResult> Edit(int id)
+
+    public async Task<IActionResult> Edit(int id)
     {
         var categoryDetails = await _service.GetByIdAsync(id);
         if (categoryDetails == null) return View("Error");
@@ -50,24 +47,23 @@ public class DvdCategoryController : Controller
     }
 
     [HttpPost]
-    public async Task<IActionResult> Edit(int id, [Bind( "Id,DvdCategoryName,CategoryDescription,AgeRestricted")]DvdCategory dvdCategory)
+    public async Task<IActionResult> Edit(int id,
+        [Bind("Id,DvdCategoryName,CategoryDescription,AgeRestricted")] DvdCategory dvdCategory)
     {
         try
         {
-            await _service.UpdateAsync(id,dvdCategory);
+            await _service.UpdateAsync(id, dvdCategory);
             return RedirectToAction(nameof(Index));
-            
         }
         catch (Exception e)
         {
             Console.WriteLine(e);
             throw;
         }
-       
     }
-    
+
     // Delete DVD Category
-    
+
     public async Task<IActionResult> Delete(int id)
     {
         var categoryDetails = await _service.GetByIdAsync(id);
@@ -75,7 +71,8 @@ public class DvdCategoryController : Controller
         return View(categoryDetails);
     }
 
-    [HttpPost, ActionName("Delete")]
+    [HttpPost]
+    [ActionName("Delete")]
     public async Task<IActionResult> DeleteConfirmed(int id)
     {
         var categoryDetails = await _service.GetByIdAsync(id);

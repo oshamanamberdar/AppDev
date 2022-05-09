@@ -4,12 +4,8 @@ using GroupCoursework.Base;
 
 namespace GroupCoursework.Models;
 
-public class DvdCopy: IEntityBase
+public class DvdCopy : IEntityBase
 {
-    [Key]
-    public int Id { get; set; }
-
-
     [Display(Name = "Date Purchased")]
     [Required(ErrorMessage = "Purchased Date is Required")]
     [DataType(DataType.Date)]
@@ -19,9 +15,10 @@ public class DvdCopy: IEntityBase
 
     // Relationship
     public List<Loan> Loans { get; set; }
-    
+
     public int DvdNumber { get; set; }
-    [ForeignKey("DvdNumber")]
-    public DvdTitle DvdTitle { get; set; }
-    
+
+    [ForeignKey("DvdNumber")] public DvdTitle DvdTitle { get; set; }
+
+    [Key] public int Id { get; set; }
 }

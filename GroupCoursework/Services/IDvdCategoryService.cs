@@ -3,7 +3,6 @@ using GroupCoursework.Models;
 
 namespace GroupCoursework.Services;
 
-public interface IDvdCategoryService:IEntityBaseRepository<DvdCategory>
+public interface IDvdCategoryService : IEntityBaseRepository<DvdCategory>
 {
-    
 }

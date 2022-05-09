@@ -1,5 +1,4 @@
-﻿
-using GroupCoursework.Models;
+﻿using GroupCoursework.Models;
 
 namespace GroupCoursework.DbContext;
 
@@ -11,24 +10,20 @@ public class AppDbInitializer
         {
             var context = serviceScope.ServiceProvider.GetService<ApplicationDbContext>();
             context.Database.EnsureCreated();
-            
+
             //Actor
             if (!context.Actors.Any())
             {
-                context.Actors.AddRange(new List<Actor>()
+                context.Actors.AddRange(new List<Actor>
                 {
-                    new Actor()
+                    new()
                     {
                         ActorSurname = "Namberdar",
                         ActorFirstName = "Oshama"
                     }
-                    
                 });
                 context.SaveChanges();
-
             }
-            
-
         }
     }
 }

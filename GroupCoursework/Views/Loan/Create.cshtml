@@ -13,31 +13,31 @@
             <div class="form-group">
                 <input type="hidden" asp-for="Id">
                 <label asp-for="DateOut" class="control-label"></label>
-                <input asp-for="DateOut" type="date" class="form-control" />
+                <input asp-for="DateOut" type="date" class="form-control"/>
                 <span asp-validation-for="DateOut" class="text-danger"></span>
             </div>
-            
+
         </div>
         <div class="col-md-4">
             <div class="form-group">
                 <label asp-for="DateDue" class="control-label"></label>
-                <input asp-for="DateDue" type="date" class="form-control" />
+                <input asp-for="DateDue" type="date" class="form-control"/>
                 <span asp-validation-for="DateDue" class="text-danger"></span>
             </div>
         </div>
         <div class="col-md-4">
             <div class="form-group">
                 <label asp-for="DateReturned" class="control-label"></label>
-                <input asp-for="DateReturned" type="date" class="form-control" />
+                <input asp-for="DateReturned" type="date" class="form-control"/>
             </div>
-            
+
         </div>
         <div class="col-md-4">
             <div class="form-group">
                 <label>Loan Type</label>
                 <select asp-for="LoanTypeNumber" class="form-control" asp-items="@(new SelectList(ViewBag.ListOfLoanType, "Id", "LoanTypes"))"></select>
             </div>
-            
+
         </div>
         <div class="col-4">
             <div class="form-group">
@@ -53,14 +53,13 @@
         </div>
         <hr/>
         <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-                <a asp-action="Index" class="btn btn-danger">Loan List</a>
-            </div>
-        </form>
-    </div>
-
+            <input type="submit" value="Save" class="btn btn-primary"/>
+            <a asp-action="Index" class="btn btn-danger">Loan List</a>
+        </div>
+    </form>
+</div>
 
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
 }

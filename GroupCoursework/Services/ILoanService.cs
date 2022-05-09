@@ -3,7 +3,6 @@ using GroupCoursework.Models;
 
 namespace GroupCoursework.Services;
 
-public interface ILoanService: IEntityBaseRepository<Loan>
+public interface ILoanService : IEntityBaseRepository<Loan>
 {
-    
 }

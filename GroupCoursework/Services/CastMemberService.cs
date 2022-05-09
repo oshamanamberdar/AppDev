@@ -4,7 +4,9 @@ using GroupCoursework.Models;
 
 namespace GroupCoursework.Services;
 
-public class CastMemberService: EntityBaseRepository<CastMember>, ICastMemberService
+public class CastMemberService : EntityBaseRepository<CastMember>, ICastMemberService
 {
-    public CastMemberService(ApplicationDbContext context) : base(context) { }
+    public CastMemberService(ApplicationDbContext context) : base(context)
+    {
+    }
 }

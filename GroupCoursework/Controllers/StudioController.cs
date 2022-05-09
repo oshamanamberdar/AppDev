@@ -14,17 +14,15 @@ public class StudioController : Controller
     {
         _context = context;
         _service = service;
-
     }
+
     // GET
     public async Task<IActionResult> Index()
     {
         var data = await _service.GetAllAsync();
-        return  View(data);
-        
-        
+        return View(data);
     }
-    
+
     // Add Producer 
     public IActionResult Create()
     {
@@ -32,18 +30,16 @@ public class StudioController : Controller
     }
 
     [HttpPost]
-    public async Task<IActionResult> Create([Bind("StudioName")] Studio studio )
+    public async Task<IActionResult> Create([Bind("StudioName")] Studio studio)
     {
-        
         await _service.AddAsync(studio);
         return RedirectToAction(nameof(Index));
-       
     }
-    
-    
+
+
     // Edit Loan Type
-    
-    public async  Task<IActionResult> Edit(int id)
+
+    public async Task<IActionResult> Edit(int id)
     {
         var studioDetail = await _service.GetByIdAsync(id);
         if (studioDetail == null) return View("Error");
@@ -51,20 +47,18 @@ public class StudioController : Controller
     }
 
     [HttpPost]
-    public async Task<IActionResult> Edit(int id, [Bind( "Id,StudioName")]Studio studio)
+    public async Task<IActionResult> Edit(int id, [Bind("Id,StudioName")] Studio studio)
     {
         try
         {
-            await _service.UpdateAsync(id,studio);
+            await _service.UpdateAsync(id, studio);
             return RedirectToAction(nameof(Index));
-            
         }
         catch (Exception e)
         {
             Console.WriteLine(e);
             throw;
         }
-       
     }
 
     // Delete Producer 
@@ -76,7 +70,8 @@ public class StudioController : Controller
         return View(studioDetail);
     }
 
-    [HttpPost, ActionName("Delete")]
+    [HttpPost]
+    [ActionName("Delete")]
     public async Task<IActionResult> DeleteConfirmed(int id)
     {
         var studioDetail = await _service.GetByIdAsync(id);

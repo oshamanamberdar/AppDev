@@ -14,19 +14,15 @@ public class ActorController : Controller
     {
         _context = context;
         _service = service;
-
-
     }
-     
+
     // GET
     public async Task<IActionResult> Index()
     {
         var data = await _service.GetAllAsync();
-        return  View(data);
-        
-        
+        return View(data);
     }
-    
+
     // Add Loan Type
     public IActionResult Create()
     {
@@ -34,17 +30,15 @@ public class ActorController : Controller
     }
 
     [HttpPost]
-    public async Task<IActionResult> Create([Bind("ActorFirstName,ActorSurname")] Actor actor )
+    public async Task<IActionResult> Create([Bind("ActorFirstName,ActorSurname")] Actor actor)
     {
-        
         await _service.AddAsync(actor);
         return RedirectToAction(nameof(Index));
-       
     }
-    
+
     // Edit Loan Type
-    
-    public async  Task<IActionResult> Edit(int id)
+
+    public async Task<IActionResult> Edit(int id)
     {
         var actorDetails = await _service.GetByIdAsync(id);
         if (actorDetails == null) return View("Error");
@@ -52,24 +46,22 @@ public class ActorController : Controller
     }
 
     [HttpPost]
-    public async Task<IActionResult> Edit(int id, [Bind( "Id,ActorSurname,ActorFirstName")]Actor actor)
+    public async Task<IActionResult> Edit(int id, [Bind("Id,ActorSurname,ActorFirstName")] Actor actor)
     {
         try
         {
-            await _service.UpdateAsync(id,actor);
+            await _service.UpdateAsync(id, actor);
             return RedirectToAction(nameof(Index));
-            
         }
         catch (Exception e)
         {
             Console.WriteLine(e);
             throw;
         }
-       
     }
-    
+
     // Delete Loan type
-    
+
     public async Task<IActionResult> Delete(int id)
     {
         var actorDetails = await _service.GetByIdAsync(id);
@@ -77,7 +69,8 @@ public class ActorController : Controller
         return View(actorDetails);
     }
 
-    [HttpPost, ActionName("Delete")]
+    [HttpPost]
+    [ActionName("Delete")]
     public async Task<IActionResult> DeleteConfirmed(int id)
     {
         var actorDetails = await _service.GetByIdAsync(id);
@@ -86,6 +79,4 @@ public class ActorController : Controller
         await _service.DeleteAsync(id);
         return RedirectToAction(nameof(Index));
     }
-
-
 }

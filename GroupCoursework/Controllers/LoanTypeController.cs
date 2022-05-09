@@ -14,18 +14,15 @@ public class LoanTypeController : Controller
     {
         _context = context;
         _service = service;
-
     }
-    
+
     // GET
     public async Task<IActionResult> Index()
     {
         var data = await _service.GetAllAsync();
-        return  View(data);
-        
-        
+        return View(data);
     }
-    
+
     // Add Loan Type
     public IActionResult Create()
     {
@@ -33,17 +30,15 @@ public class LoanTypeController : Controller
     }
 
     [HttpPost]
-    public async Task<IActionResult> Create([Bind("LoanTypes,LoanDurantion")] LoanType loanType )
+    public async Task<IActionResult> Create([Bind("LoanTypes,LoanDurantion")] LoanType loanType)
     {
-        
         await _service.AddAsync(loanType);
         return RedirectToAction(nameof(Index));
-       
     }
-    
+
     // Edit Loan Type
-    
-    public async  Task<IActionResult> Edit(int id)
+
+    public async Task<IActionResult> Edit(int id)
     {
         var loanTypeDetails = await _service.GetByIdAsync(id);
         if (loanTypeDetails == null) return View("Error");
@@ -51,24 +46,22 @@ public class LoanTypeController : Controller
     }
 
     [HttpPost]
-    public async Task<IActionResult> Edit(int id, [Bind( "Id,LoanTypes,LoanDurantion")]LoanType loanType)
+    public async Task<IActionResult> Edit(int id, [Bind("Id,LoanTypes,LoanDurantion")] LoanType loanType)
     {
         try
         {
-            await _service.UpdateAsync(id,loanType);
+            await _service.UpdateAsync(id, loanType);
             return RedirectToAction(nameof(Index));
-            
         }
         catch (Exception e)
         {
             Console.WriteLine(e);
             throw;
         }
-       
     }
-    
+
     // Delete Loan type
-    
+
     public async Task<IActionResult> Delete(int id)
     {
         var loanTypeDetails = await _service.GetByIdAsync(id);
@@ -76,7 +69,8 @@ public class LoanTypeController : Controller
         return View(loanTypeDetails);
     }
 
-    [HttpPost, ActionName("Delete")]
+    [HttpPost]
+    [ActionName("Delete")]
     public async Task<IActionResult> DeleteConfirmed(int id)
     {
         var loanTypeDetails = await _service.GetByIdAsync(id);
@@ -85,6 +79,4 @@ public class LoanTypeController : Controller
         await _service.DeleteAsync(id);
         return RedirectToAction(nameof(Index));
     }
-    
-    
 }

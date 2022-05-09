@@ -1,5 +1,4 @@
-﻿
-@model IEnumerable<GroupCoursework.ViewModel.TestView>
+﻿@model IEnumerable<GroupCoursework.ViewModel.TestView>
 
 @{
     ViewData["Title"] = "List of Loan";
@@ -22,8 +21,8 @@
         <th>Edit</th>
         <th>Delete</th>
     </tr>
-            
-    </thead> 
+
+    </thead>
     <tbody>
     @foreach (var item in Model)
     {
@@ -36,12 +35,11 @@
                 <a class="btn btn-outline-primary" asp-action="Edit" asp-route-id="@item.CastMember.Id"><i class="bi bi-pencil-square"></i>Edit </a>
             </td>
             <td>
-                <a class="btn btn-danger text-white" asp-action="Delete" asp-route-id="@item.CastMember.Id"><i class="bi bi-trash"></i>Delete </a> </td>
+                <a class="btn btn-danger text-white" asp-action="Delete" asp-route-id="@item.CastMember.Id"><i class="bi bi-trash"></i>Delete </a>
+            </td>
 
         </tr>
     }
 
     </tbody>
 </table>
-
-

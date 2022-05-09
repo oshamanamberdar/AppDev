@@ -4,7 +4,9 @@ using GroupCoursework.Models;
 
 namespace GroupCoursework.Services;
 
-public class DvdCategoryService: EntityBaseRepository<DvdCategory>, IDvdCategoryService
+public class DvdCategoryService : EntityBaseRepository<DvdCategory>, IDvdCategoryService
 {
-    public DvdCategoryService(ApplicationDbContext context) : base(context) { }
+    public DvdCategoryService(ApplicationDbContext context) : base(context)
+    {
+    }
 }

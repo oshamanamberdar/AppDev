@@ -4,7 +4,9 @@ using GroupCoursework.Models;
 
 namespace GroupCoursework.Services;
 
-public class LoanTypeService: EntityBaseRepository<LoanType>, ILoanTypeService
+public class LoanTypeService : EntityBaseRepository<LoanType>, ILoanTypeService
 {
-    public LoanTypeService(ApplicationDbContext context) : base(context) { }
+    public LoanTypeService(ApplicationDbContext context) : base(context)
+    {
+    }
 }

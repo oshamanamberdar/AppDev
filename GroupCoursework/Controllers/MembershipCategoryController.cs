@@ -3,13 +3,13 @@ using GroupCoursework.Models;
 using GroupCoursework.Services;
 using GroupCoursework.ViewModel;
 using Microsoft.AspNetCore.Mvc;
-using PagedList;
+
 namespace GroupCoursework.Controllers;
 
 public class MembershipCategoryController : Controller
 {
-    private readonly IMembershipCategoryService _service;
     private readonly ApplicationDbContext _context;
+    private readonly IMembershipCategoryService _service;
 
     public MembershipCategoryController(IMembershipCategoryService service, ApplicationDbContext context)
     {
@@ -17,26 +17,23 @@ public class MembershipCategoryController : Controller
         _context = context;
     }
 
-   
+
     // GET
-    public  async Task<IActionResult> Index()
+    public async Task<IActionResult> Index()
     {
         var data = await _service.GetAllAsync();
-        return  View(data);
-        
-        
+        return View(data);
     }
 
-  
 
     public IActionResult Filter(string searchString)
     {
-        List<Actor> actors = _context.Actors.ToList();
-        List<DvdCategory> dvdCategories = _context.DvdCategories.ToList();
-        List<DvdTitle> dvdTitles  = _context.DvdTitles.ToList();
-        List<Producer> producers  = _context.Producers.ToList();
-        List<CastMember> castMembers = _context.CastMembers.ToList();
-        var data = from a in actors 
+        var actors = _context.Actors.ToList();
+        var dvdCategories = _context.DvdCategories.ToList();
+        var dvdTitles = _context.DvdTitles.ToList();
+        var producers = _context.Producers.ToList();
+        var castMembers = _context.CastMembers.ToList();
+        var data = from a in actors
             join b in castMembers on a.Id equals b.ActorId into table1
             from b in table1.ToList()
             join c in dvdTitles on b.DvdId equals c.Id
@@ -44,8 +41,7 @@ public class MembershipCategoryController : Controller
             from f in table2.ToList()
             join d in dvdCategories on c.CategoryNumber equals d.Id into table3
             from d in table3.ToList()
-
-            select new TestView()
+            select new TestView
             {
                 Actor = a,
                 DvdTitle = c,
@@ -54,16 +50,17 @@ public class MembershipCategoryController : Controller
             };
         if (!string.IsNullOrEmpty(searchString))
         {
-            var filteredResultNew = data.Where(n => string.Equals(n.Actor.ActorSurname, searchString, StringComparison.CurrentCultureIgnoreCase) || string.Equals(n.Actor.ActorFirstName, searchString, StringComparison.CurrentCultureIgnoreCase)).ToList();
+            var filteredResultNew = data.Where(n =>
+                    string.Equals(n.Actor.ActorSurname, searchString, StringComparison.CurrentCultureIgnoreCase) ||
+                    string.Equals(n.Actor.ActorFirstName, searchString, StringComparison.CurrentCultureIgnoreCase))
+                .ToList();
             return View("List", filteredResultNew);
         }
 
         return View("List", data);
-
-
     }
 
-    
+
     //Get: MembershipCategory/Create
 
     public IActionResult Create()
@@ -72,14 +69,14 @@ public class MembershipCategoryController : Controller
     }
 
     [HttpPost]
-    public async Task<IActionResult> Create([Bind("CategoryName, MembershipCategoryTotalLoans,MembershipCategoryDescription")]MembershipCategory membershipCategory)
+    public async Task<IActionResult> Create(
+        [Bind("CategoryName, MembershipCategoryTotalLoans,MembershipCategoryDescription")]
+        MembershipCategory membershipCategory)
     {
-        
-            await _service.AddAsync(membershipCategory);
-            return RedirectToAction(nameof(Index));
-       
+        await _service.AddAsync(membershipCategory);
+        return RedirectToAction(nameof(Index));
     }
-    
+
     //Get: MembershipCategory/Details/id
 
     public async Task<IActionResult> Details(int id)
@@ -87,14 +84,11 @@ public class MembershipCategoryController : Controller
         var membershipCategoryDetails = await _service.GetByIdAsync(id);
         if (membershipCategoryDetails == null) return View("Error");
         return View(membershipCategoryDetails);
-        
-      
     }
-    
-    
-    
+
+
     //Get: MembershipCategory/Edit/id
-    public async  Task<IActionResult> Edit(int id)
+    public async Task<IActionResult> Edit(int id)
     {
         var membershipCategoryDetails = await _service.GetByIdAsync(id);
         if (membershipCategoryDetails == null) return View("Error");
@@ -102,22 +96,22 @@ public class MembershipCategoryController : Controller
     }
 
     [HttpPost]
-    public async Task<IActionResult> Edit(int id, [Bind( "Id,CategoryName,MembershipCategoryDescription,MembershipCategoryTotalLoans")]MembershipCategory membershipCategory)
+    public async Task<IActionResult> Edit(int id,
+        [Bind("Id,CategoryName,MembershipCategoryDescription,MembershipCategoryTotalLoans")]
+        MembershipCategory membershipCategory)
     {
         try
         {
-            await _service.UpdateAsync(id,membershipCategory);
-                return RedirectToAction(nameof(Index));
-            
+            await _service.UpdateAsync(id, membershipCategory);
+            return RedirectToAction(nameof(Index));
         }
         catch (Exception e)
         {
             Console.WriteLine(e);
             throw;
         }
-       
     }
-    
+
     //Get: MembershipCategory/Delete/id
     public async Task<IActionResult> Delete(int id)
     {
@@ -126,7 +120,8 @@ public class MembershipCategoryController : Controller
         return View(membershipCategoryDetails);
     }
 
-    [HttpPost, ActionName("Delete")]
+    [HttpPost]
+    [ActionName("Delete")]
     public async Task<IActionResult> DeleteConfirmed(int id)
     {
         var membershipCategoryDetails = await _service.GetByIdAsync(id);
@@ -135,13 +130,10 @@ public class MembershipCategoryController : Controller
         await _service.DeleteAsync(id);
         return RedirectToAction(nameof(Index));
     }
-    
+
     [HttpPost]
     public string List(string searchString, bool notUsed)
     {
         return "From [HttpPost]List: filter on " + searchString;
     }
-    
-    
-    
 }

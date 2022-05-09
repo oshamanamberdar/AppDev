@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"/>
-    
+
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
     <link href="~/css/DashboardStyle.css" asp-append-version="true" rel="stylesheet" type="text/css">
     <link href="~/css/card.css" asp-append-version="true" rel="stylesheet" type="text/css">
@@ -17,56 +17,81 @@
 </head>
 <body>
 <div id="wrapper">
-   <div class="overlay"></div>
+    <div class="overlay"></div>
     <nav class="navbar navbar-light bg-light">
         <a class="navbar-brand" href="#">
-            <span> &nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp; &nbsp; &nbsp; </span>
+            <span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>
             <img src="Logo.jpg" width="70" height="50" alt="">
         </a>
     </nav>
-        <!-- Sidebar -->
+    <!-- Sidebar -->
     <nav class="navbar navbar-inverse fixed-top" id="sidebar-wrapper" role="navigation">
-     <ul class="nav sidebar-nav">
-         <div class="sidebar-header">
-             <div class="sidebar-brand">
-                 <a class="text-white">GroupCoursework</a></div>
-         </div>
-           <li><a asp-controller="Home" asp-action="Index"><i class="bi bi-house-fill"></i>&nbsp;Dashboard</a></li>
-       <li><a asp-controller="Member" asp-action="Index"><i class="bi bi-arrows-move"></i>&nbsp;Member</a></li>
-       <li><a asp-controller="MembershipCategory" asp-action="Index"><i class="bi bi-arrows-move"></i>&nbsp;Category</a></li>
-         <li><a asp-controller="Loan" asp-action="Index"><i class="bi bi-award-fill"></i>&nbsp;Loan</a></li>
-       <li><a asp-controller="LoanType" asp-action="Index"><i class="bi bi-bag"></i>&nbsp;Loan Type</a></li>
-         <li><a asp-controller="Actor" asp-action="Index"><i class="bi bi-balloon"></i>&nbsp;Actor</a></li>
-         <li><a asp-controller="Producer" asp-action="Index"><i class="bi bi-box-arrow-in-right">&nbsp;</i>Producer</a></li>
-         <li><a asp-controller="CastMember" asp-action="Index"><i class="bi bi-box2"></i>&nbsp;Cast Member</a></li>
-         <li><a asp-controller="DvdTitle" asp-action="Index"><i class="bi bi-boxes"></i>&nbsp;Dvd Title</a></li>
-      <li><a asp-controller="DvdCategory" asp-action="Index"><i class="bi bi-bullseye"></i>&nbsp; Dvd Category</a></li>
-      <li><a asp-controller="Studio" asp-action="Index"><i class="bi bi-boombox-fill"></i>&nbsp;Studio</a></li>
-      <li><a asp-controller="DvdCopy" asp-action="Index"><i class="bi bi-clipboard-fill"></i>&nbsp;Dvd Copy</a></li>
-      
-      </ul>
-  </nav>
-        <!-- /#sidebar-wrapper -->
-
-        <!-- Page Content -->
-        <div id="page-content-wrapper">
-            <button type="button" class="hamburger animated fadeInLeft is-closed" data-toggle="offcanvas">
-                <span class="hamb-top"></span>
-    			<span class="hamb-middle"></span>
-				<span class="hamb-bottom"></span>
-            </button>
-            <div class="container">
-                <div class="container-fluid">
-                           <main role="main" class="pb-3">
-                               @RenderBody()
-                           </main>
+        <ul class="nav sidebar-nav">
+            <div class="sidebar-header">
+                <div class="sidebar-brand">
+                    <a class="text-white">GroupCoursework</a>
                 </div>
             </div>
-        </div>
-        <!-- /#page-content-wrapper -->
+            <li>
+                <a asp-controller="Home" asp-action="Index"><i class="bi bi-house-fill"></i>&nbsp;Dashboard</a>
+            </li>
+            <li>
+                <a asp-controller="Member" asp-action="Index"><i class="bi bi-arrows-move"></i>&nbsp;Member</a>
+            </li>
+            <li>
+                <a asp-controller="MembershipCategory" asp-action="Index"><i class="bi bi-arrows-move"></i>&nbsp;Category</a>
+            </li>
+            <li>
+                <a asp-controller="Loan" asp-action="Index"><i class="bi bi-award-fill"></i>&nbsp;Loan</a>
+            </li>
+            <li>
+                <a asp-controller="LoanType" asp-action="Index"><i class="bi bi-bag"></i>&nbsp;Loan Type</a>
+            </li>
+            <li>
+                <a asp-controller="Actor" asp-action="Index"><i class="bi bi-balloon"></i>&nbsp;Actor</a>
+            </li>
+            <li>
+                <a asp-controller="Producer" asp-action="Index"><i class="bi bi-box-arrow-in-right">&nbsp;</i>Producer</a>
+            </li>
+            <li>
+                <a asp-controller="CastMember" asp-action="Index"><i class="bi bi-box2"></i>&nbsp;Cast Member</a>
+            </li>
+            <li>
+                <a asp-controller="DvdTitle" asp-action="Index"><i class="bi bi-boxes"></i>&nbsp;Dvd Title</a>
+            </li>
+            <li>
+                <a asp-controller="DvdCategory" asp-action="Index"><i class="bi bi-bullseye"></i>&nbsp; Dvd Category</a>
+            </li>
+            <li>
+                <a asp-controller="Studio" asp-action="Index"><i class="bi bi-boombox-fill"></i>&nbsp;Studio</a>
+            </li>
+            <li>
+                <a asp-controller="DvdCopy" asp-action="Index"><i class="bi bi-clipboard-fill"></i>&nbsp;Dvd Copy</a>
+            </li>
 
+        </ul>
+    </nav>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+        <button type="button" class="hamburger animated fadeInLeft is-closed" data-toggle="offcanvas">
+            <span class="hamb-top"></span>
+            <span class="hamb-middle"></span>
+            <span class="hamb-bottom"></span>
+        </button>
+        <div class="container">
+            <div class="container-fluid">
+                <main role="main" class="pb-3">
+                    @RenderBody()
+                </main>
+            </div>
+        </div>
     </div>
-    <!-- /#wrapper -->
+    <!-- /#page-content-wrapper -->
+
+</div>
+<!-- /#wrapper -->
 <script src="~/lib/jquery/dist/jquery.min.js"></script>
 <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script src="~/js/site.js" asp-append-version="true"></script>

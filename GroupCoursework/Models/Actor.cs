@@ -3,12 +3,8 @@ using GroupCoursework.Base;
 
 namespace GroupCoursework.Models;
 
-public class Actor:IEntityBase
+public class Actor : IEntityBase
 {
-    
-    [Key]
-    public int Id { get; set; }
-
     [Display(Name = "Last Name")]
     [Required(ErrorMessage = "Actor Surname is Required")]
     public string ActorSurname { get; set; }
@@ -21,5 +17,5 @@ public class Actor:IEntityBase
     //Relationship
     public List<CastMember> CastMembers { get; set; }
 
-   
+    [Key] public int Id { get; set; }
 }

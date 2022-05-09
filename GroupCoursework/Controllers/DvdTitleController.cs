@@ -2,7 +2,6 @@
 using GroupCoursework.Models;
 using GroupCoursework.Services;
 using Microsoft.AspNetCore.Mvc;
-using NuGet.LibraryModel;
 
 namespace GroupCoursework.Controllers;
 
@@ -15,28 +14,25 @@ public class DvdTitleController : Controller
     {
         _context = context;
         _service = service;
-
     }
     // GET
-    
-    public  async Task<IActionResult> Index()
+
+    public async Task<IActionResult> Index()
     {
         var data = await _service.GetAllAsync();
-        return  View(data);
-        
+        return View(data);
     }
-    
-    
+
+
     // Load  Producer
 
     private void LoadProducer()
     {
         try
         {
-            List<Producer> producers = new List<Producer>();
+            var producers = new List<Producer>();
             producers = _context.Producers.ToList();
             ViewBag.ListOfProducer = producers;
-
         }
         catch (Exception e)
         {
@@ -49,10 +45,9 @@ public class DvdTitleController : Controller
     {
         try
         {
-            List<DvdCategory> categories = new List<DvdCategory>();
+            var categories = new List<DvdCategory>();
             categories = _context.DvdCategories.ToList();
             ViewBag.ListOfDvdCategories = categories;
-
         }
         catch (Exception e)
         {
@@ -60,15 +55,14 @@ public class DvdTitleController : Controller
             throw;
         }
     }
-    
+
     private void LoadStudio()
     {
         try
         {
-            List<Studio> studios = new List<Studio>();
+            var studios = new List<Studio>();
             studios = _context.Studios.ToList();
             ViewBag.ListOfStudio = studios;
-
         }
         catch (Exception e)
         {
@@ -76,10 +70,10 @@ public class DvdTitleController : Controller
             throw;
         }
     }
-    
-    
+
+
     // Add New Dvd Title
-    
+
     public IActionResult Create()
     {
         LoadProducer();
@@ -87,17 +81,17 @@ public class DvdTitleController : Controller
         LoadDvdCategory();
         return View();
     }
+
     [HttpPost]
     public async Task<IActionResult> Create(DvdTitle dvdTitle)
     {
         _context.DvdTitles.Add(dvdTitle);
         await _context.SaveChangesAsync();
-        return RedirectToRoute("default", 
-            new { controller = "CastMember", action = "Create" });
+        return RedirectToRoute("default",
+            new {controller = "CastMember", action = "Create"});
     }
-    
-    
-    
+
+
     public async Task<IActionResult> Edit(int id)
     {
         LoadProducer();
@@ -107,14 +101,16 @@ public class DvdTitleController : Controller
         if (dvdTitleDetails == null) return View("Error");
         return View(dvdTitleDetails);
     }
+
     [HttpPost]
-    public async Task<IActionResult> Edit(int id, [Bind("Id,Title,DateReleased,StandardCharge,PenaltyCharge,ProducerNumber,StudioNumber,CategoryNumber  ")] DvdTitle dvdTitle )
+    public async Task<IActionResult> Edit(int id,
+        [Bind("Id,Title,DateReleased,StandardCharge,PenaltyCharge,ProducerNumber,StudioNumber,CategoryNumber  ")]
+        DvdTitle dvdTitle)
     {
         try
-        { 
-            await _service.UpdateAsync(id,dvdTitle);
+        {
+            await _service.UpdateAsync(id, dvdTitle);
             return RedirectToAction(nameof(Index));
-
         }
         catch (Exception e)
         {
@@ -122,8 +118,8 @@ public class DvdTitleController : Controller
             throw;
         }
     }
-    
-    
+
+
     public async Task<IActionResult> Delete(int id)
     {
         LoadProducer();
@@ -134,7 +130,8 @@ public class DvdTitleController : Controller
         return View(dvdTitleDetails);
     }
 
-    [HttpPost, ActionName("Delete")]
+    [HttpPost]
+    [ActionName("Delete")]
     public async Task<IActionResult> DeleteConfirmed(int id)
     {
         LoadProducer();
@@ -145,9 +142,4 @@ public class DvdTitleController : Controller
         await _service.DeleteAsync(id);
         return RedirectToAction(nameof(Index));
     }
-
-   
-    
-    
-    
 }

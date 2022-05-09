@@ -1,32 +1,33 @@
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
 }
 
 label {
-  font-size: 20px;
-  font-weight: bold;
-  font-family: "Times New Roman";
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Times New Roman";
 }
 
 .sb-bg-dark {
-  background-color: #0E63AE !important;
+    background-color: #0E63AE !important;
 }
+
 .sb-small {
-  font-size: 85%;
-  font-weight: 500;
+    font-size: 85%;
+    font-weight: 500;
 }

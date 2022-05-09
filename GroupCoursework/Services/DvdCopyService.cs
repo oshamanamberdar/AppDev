@@ -4,7 +4,9 @@ using GroupCoursework.Models;
 
 namespace GroupCoursework.Services;
 
-public class DvdCopyService: EntityBaseRepository<DvdCopy>, IDvdCopyService
+public class DvdCopyService : EntityBaseRepository<DvdCopy>, IDvdCopyService
 {
-    public DvdCopyService(ApplicationDbContext context) : base(context) { }
+    public DvdCopyService(ApplicationDbContext context) : base(context)
+    {
+    }
 }

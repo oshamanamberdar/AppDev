@@ -3,11 +3,8 @@ using GroupCoursework.Base;
 
 namespace GroupCoursework.Models;
 
-public class DvdCategory: IEntityBase
+public class DvdCategory : IEntityBase
 {
-    [Key]
-    public int Id { get; set; }
-    
     public string DvdCategoryName { get; set; }
 
     [Display(Name = "Description")]
@@ -18,10 +15,10 @@ public class DvdCategory: IEntityBase
     [Display(Name = "Age Restricted")]
     [Required(ErrorMessage = "Age Restricted is Required")]
     public string AgeRestricted { get; set; }
-    
-    
+
+
     // Relationship
     public List<DvdTitle> DvdTitles { get; set; }
-    
-    
+
+    [Key] public int Id { get; set; }
 }

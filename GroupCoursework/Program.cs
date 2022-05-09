@@ -1,4 +1,3 @@
-
 using System.Text;
 using GroupCoursework.DbContext;
 using GroupCoursework.Services;
@@ -8,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 
 var builder = WebApplication.CreateBuilder(args);
-ConfigurationManager configuration = builder.Configuration;
+var configuration = builder.Configuration;
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
@@ -22,25 +21,25 @@ builder.Services.AddIdentity<IdentityUser, IdentityRole>()
 
 // Adding Authentication
 builder.Services.AddAuthentication(options =>
-{
-    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-    options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
-})
+    {
+        options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+        options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+        options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+    })
 // Adding Jwt Bearer
     .AddJwtBearer(options =>
-{
-    options.SaveToken = true;
-    options.RequireHttpsMetadata = false;
-    options.TokenValidationParameters = new TokenValidationParameters()
     {
-        ValidateIssuer = true,
-        ValidateAudience = true,
-        ValidAudience = configuration["JWT:ValidAudience"],
-        ValidIssuer = configuration["JWT:ValidIssuer"],
-        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["JWT:Secret"]))
-    };
-});
+        options.SaveToken = true;
+        options.RequireHttpsMetadata = false;
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidAudience = configuration["JWT:ValidAudience"],
+            ValidIssuer = configuration["JWT:ValidIssuer"],
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["JWT:Secret"]))
+        };
+    });
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 
@@ -67,6 +66,7 @@ if (!app.Environment.IsDevelopment())
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
+
 app.UseHttpsRedirection();
 app.UseHttpsRedirection();
 app.UseStaticFiles();
@@ -75,8 +75,8 @@ app.UseRouting();
 app.UseAuthorization();
 
 app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Authentication}/{action=Login}/{id?}");
+    "default",
+    "{controller=Authentication}/{action=Login}/{id?}");
 
 AppDbInitializer.Seed(app);
 

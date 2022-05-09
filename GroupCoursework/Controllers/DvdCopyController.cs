@@ -8,25 +8,23 @@ namespace GroupCoursework.Controllers;
 public class DvdCopyController : Controller
 {
     private readonly ApplicationDbContext _context;
-    private readonly IDvdCopyService _service ;
+    private readonly IDvdCopyService _service;
 
     public DvdCopyController(ApplicationDbContext context, IDvdCopyService service)
     {
         _context = context;
         _service = service;
-
     }
+
     // GET
-    public  async Task<IActionResult> Index()
+    public async Task<IActionResult> Index()
     {
         var data = await _service.GetAllAsync();
-        return  View(data);
-        
-        
+        return View(data);
     }
-    
+
     // Save Dvd Copy
-    
+
     public IActionResult Create()
     {
         LoadDvdTitleList();
@@ -34,42 +32,37 @@ public class DvdCopyController : Controller
     }
 
     [HttpPost]
-    public async Task<IActionResult> Create([Bind("DatePurchased, DvdNumber")]DvdCopy dvdCopy)
+    public async Task<IActionResult> Create([Bind("DatePurchased, DvdNumber")] DvdCopy dvdCopy)
     {
-        
         try
-        { 
+        {
             _context.DvdCopies.Add(dvdCopy);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
-
         }
         catch (Exception e)
         {
             Console.WriteLine(e);
             throw;
         }
-       
     }
-    
-    
+
+
     public async Task<IActionResult> Edit(int id)
     {
         LoadDvdTitleList();
         var dvdCopyDetails = await _service.GetByIdAsync(id);
         if (dvdCopyDetails == null) return View("Error");
         return View(dvdCopyDetails);
-        
     }
 
     [HttpPost]
-    public async Task<IActionResult> Edit(int id, [Bind("Id, DatePurchased, DvdNumber ")]DvdCopy dvdCopy)
+    public async Task<IActionResult> Edit(int id, [Bind("Id, DatePurchased, DvdNumber ")] DvdCopy dvdCopy)
     {
         try
-        { 
-            await _service.UpdateAsync(id,dvdCopy);
+        {
+            await _service.UpdateAsync(id, dvdCopy);
             return RedirectToAction(nameof(Index));
-
         }
         catch (Exception e)
         {
@@ -77,16 +70,15 @@ public class DvdCopyController : Controller
             throw;
         }
     }
-    
+
     private void LoadDvdTitleList()
     {
         try
         {
-            List<DvdTitle> dvdTitles = new List<DvdTitle>();
+            var dvdTitles = new List<DvdTitle>();
             dvdTitles = _context.DvdTitles.ToList();
             dvdTitles.Insert(0, new DvdTitle {Id = 0, StandardCharge = 0});
             ViewBag.ListOfDvdTitle = dvdTitles;
-
         }
         catch (Exception e)
         {
@@ -94,7 +86,7 @@ public class DvdCopyController : Controller
             throw;
         }
     }
-    
+
     public async Task<IActionResult> Delete(int id)
     {
         LoadDvdTitleList();
@@ -103,7 +95,8 @@ public class DvdCopyController : Controller
         return View(dvdCopyDetails);
     }
 
-    [HttpPost, ActionName("Delete")]
+    [HttpPost]
+    [ActionName("Delete")]
     public async Task<IActionResult> DeleteConfirmed(int id)
     {
         LoadDvdTitleList();
@@ -112,10 +105,4 @@ public class DvdCopyController : Controller
         await _service.DeleteAsync(id);
         return RedirectToAction(nameof(Index));
     }
-    
-    
-    
-    
-    
-    
 }

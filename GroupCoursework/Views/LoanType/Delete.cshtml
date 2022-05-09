@@ -17,7 +17,7 @@
                     <div class="form-group">
                         <label asp-for="LoanTypes">Total Loan</label>
                         <input asp-for="LoanTypes" readonly class="form-control"/>
-                        <span asp-validation-for="LoanTypes"  class="text-danger"></span>
+                        <span asp-validation-for="LoanTypes" class="text-danger"></span>
                     </div>
 
                 </div>
@@ -29,11 +29,11 @@
                 <hr/>
                 <div class="form-group">
                     <form asp-action="Delete">
-                        <input type="hidden" asp-for="Id" />
-                        <input type="submit" value="Confirm" class="btn btn-danger float-right" />
+                        <input type="hidden" asp-for="Id"/>
+                        <input type="submit" value="Confirm" class="btn btn-danger float-right"/>
                         <a class="btn btn-outline-secondary" asp-action="Index">Show All</a>
                     </form>
-                    
+
                 </div>
 
             </div>

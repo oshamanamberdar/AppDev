@@ -4,7 +4,9 @@ using GroupCoursework.Models;
 
 namespace GroupCoursework.Services;
 
-public class MemberService: EntityBaseRepository<Member>, IMemberService
+public class MemberService : EntityBaseRepository<Member>, IMemberService
 {
-    public MemberService(ApplicationDbContext context) : base(context) { }
+    public MemberService(ApplicationDbContext context) : base(context)
+    {
+    }
 }

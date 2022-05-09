@@ -5,7 +5,7 @@
 }
 
 <h1>Update Cast Member</h1>
-<hr />
+<hr/>
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
@@ -18,9 +18,9 @@
                 <label>Dvd Title</label>
                 <select asp-for="DvdId" class="form-control" asp-items="@(new SelectList(ViewBag.ListOfDvdTitle, "Id", "Title"))"></select>
             </div>
-<hr/>
+            <hr/>
             <div class="form-group">
-                <input type="submit" value="Update" class="btn btn-primary" />
+                <input type="submit" value="Update" class="btn btn-primary"/>
                 <a asp-action="Index" class="btn btn-info">Cancel</a>
             </div>
         </form>
@@ -29,5 +29,5 @@
 
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
 }

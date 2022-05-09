@@ -3,9 +3,7 @@ using Microsoft.AspNetCore.Identity;
 
 namespace GroupCoursework.Models;
 
-public class ApplicationUser:IdentityUser
+public class ApplicationUser : IdentityUser
 {
-    
-    [Display(Name = "Full name")]
-    public string FullName { get; set; }
+    [Display(Name = "Full name")] public string FullName { get; set; }
 }

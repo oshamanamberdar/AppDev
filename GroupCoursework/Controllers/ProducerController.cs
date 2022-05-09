@@ -9,23 +9,21 @@ public class ProducerController : Controller
 {
     private readonly ApplicationDbContext _context;
     private readonly IProducerService _service;
-    
+
 
     public ProducerController(ApplicationDbContext context, IProducerService service)
     {
         _context = context;
         _service = service;
-
     }
+
     // GET
     public async Task<IActionResult> Index()
     {
         var data = await _service.GetAllAsync();
-        return  View(data);
-        
-        
+        return View(data);
     }
-    
+
     // Add Producer 
     public IActionResult Create()
     {
@@ -33,18 +31,16 @@ public class ProducerController : Controller
     }
 
     [HttpPost]
-    public async Task<IActionResult> Create([Bind("ProducerName")] Producer producer )
+    public async Task<IActionResult> Create([Bind("ProducerName")] Producer producer)
     {
-        
         await _service.AddAsync(producer);
         return RedirectToAction(nameof(Index));
-       
     }
-    
-    
+
+
     // Edit Loan Type
-    
-    public async  Task<IActionResult> Edit(int id)
+
+    public async Task<IActionResult> Edit(int id)
     {
         var producerDetail = await _service.GetByIdAsync(id);
         if (producerDetail == null) return View("Error");
@@ -52,20 +48,18 @@ public class ProducerController : Controller
     }
 
     [HttpPost]
-    public async Task<IActionResult> Edit(int id, [Bind( "Id,ProducerName")]Producer producer)
+    public async Task<IActionResult> Edit(int id, [Bind("Id,ProducerName")] Producer producer)
     {
         try
         {
-            await _service.UpdateAsync(id,producer);
+            await _service.UpdateAsync(id, producer);
             return RedirectToAction(nameof(Index));
-            
         }
         catch (Exception e)
         {
             Console.WriteLine(e);
             throw;
         }
-       
     }
 
     // Delete Producer 
@@ -77,7 +71,8 @@ public class ProducerController : Controller
         return View(producerDetail);
     }
 
-    [HttpPost, ActionName("Delete")]
+    [HttpPost]
+    [ActionName("Delete")]
     public async Task<IActionResult> DeleteConfirmed(int id)
     {
         var producerDetail = await _service.GetByIdAsync(id);
@@ -86,5 +81,4 @@ public class ProducerController : Controller
         await _service.DeleteAsync(id);
         return RedirectToAction(nameof(Index));
     }
-
 }

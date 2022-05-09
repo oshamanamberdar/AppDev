@@ -3,7 +3,6 @@ using GroupCoursework.Models;
 
 namespace GroupCoursework.Services;
 
-public interface IProducerService: IEntityBaseRepository<Producer>
+public interface IProducerService : IEntityBaseRepository<Producer>
 {
-    
 }

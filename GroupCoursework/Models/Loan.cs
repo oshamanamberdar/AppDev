@@ -1,17 +1,11 @@
-﻿using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using GroupCoursework.Base;
-using Microsoft.AspNetCore.Mvc;
 
 namespace GroupCoursework.Models;
 
-public class Loan: IEntityBase
+public class Loan : IEntityBase
 {
-    [Key]
-    public int  Id { get; set; }
-
-    
     [Display(Name = "Date Out")]
     [Required(ErrorMessage = "Date Out is Required")]
     [DataType(DataType.Date)]
@@ -30,25 +24,23 @@ public class Loan: IEntityBase
     [DataType(DataType.Date)]
     [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
     public DateTime? DateReturned { get; set; }
-    
-    
-    
+
+
     // Relationship
-    
+
     public int MemberNumber { get; set; }
-    [ForeignKey("MemberNumber")]
-    public Member Member { get; set; }
-    
-    
+
+    [ForeignKey("MemberNumber")] public Member Member { get; set; }
+
+
     public int LoanTypeNumber { get; set; }
-    [ForeignKey("LoanTypeNumber")]
-    public LoanType LoanType { get; set; }
-    
-    
+
+    [ForeignKey("LoanTypeNumber")] public LoanType LoanType { get; set; }
+
+
     public int CopyNumber { get; set; }
-    [ForeignKey("CopyNumber")]
-    public DvdCopy DvdCopy { get; set; }
 
-    
+    [ForeignKey("CopyNumber")] public DvdCopy DvdCopy { get; set; }
 
+    [Key] public int Id { get; set; }
 }

@@ -1,11 +1,7 @@
 ﻿using GroupCoursework.DbContext;
-using GroupCoursework.Models;
-using GroupCoursework.ViewModel;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GroupCoursework.Controllers;
-
 
 public class DashboardController : Controller
 {
@@ -15,12 +11,10 @@ public class DashboardController : Controller
     {
         _context = context;
     }
+
     // GET
     public IActionResult Index()
     {
         return View();
     }
-    
-
-
 }

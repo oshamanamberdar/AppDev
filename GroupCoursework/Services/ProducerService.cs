@@ -4,7 +4,9 @@ using GroupCoursework.Models;
 
 namespace GroupCoursework.Services;
 
-public class ProducerService:  EntityBaseRepository<Producer>, IProducerService
+public class ProducerService : EntityBaseRepository<Producer>, IProducerService
 {
-    public ProducerService(ApplicationDbContext context) : base(context) { }
+    public ProducerService(ApplicationDbContext context) : base(context)
+    {
+    }
 }

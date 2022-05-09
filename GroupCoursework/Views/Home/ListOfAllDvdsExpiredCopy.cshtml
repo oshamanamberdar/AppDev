@@ -17,10 +17,12 @@
             <td>@item.DvdTitle.Title</td>
             <td>@item.DvdTitle.DateReleased</td>
             <td>@item.DvdCopy.DatePurchased</td>
-            <td><a class="btn btn-danger" asp-controller="DvdTitle" asp-action="Delete" asp-route-id="@item.DvdTitle.Id"><i class="bi bi-trash"></i>Delete</a></td>
+            <td>
+                <a class="btn btn-danger" asp-controller="DvdTitle" asp-action="Delete" asp-route-id="@item.DvdTitle.Id"><i class="bi bi-trash"></i>Delete</a>
+            </td>
         </tr>
 
         </tbody>
     }
-   
+
 </table>

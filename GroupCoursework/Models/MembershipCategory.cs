@@ -5,9 +5,6 @@ namespace GroupCoursework.Models;
 
 public class MembershipCategory : IEntityBase
 {
-    [Key]
-    public int Id { get; set; }
-    
     public string CategoryName { get; set; }
 
     [Display(Name = "Description")]
@@ -18,11 +15,11 @@ public class MembershipCategory : IEntityBase
     [Display(Name = "Total Loans")]
     [Required(ErrorMessage = "Membership Category Total Loans is Required")]
     public int MembershipCategoryTotalLoans { get; set; }
-    
-    
+
+
     // Relationship
 
     public List<Member> Members { get; set; }
 
-   
+    [Key] public int Id { get; set; }
 }
