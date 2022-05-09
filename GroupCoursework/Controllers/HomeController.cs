@@ -2,6 +2,7 @@
 using GroupCoursework.DbContext;
 using GroupCoursework.Models;
 using GroupCoursework.ViewModel;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GroupCoursework.Controllers;
@@ -91,7 +92,7 @@ public class HomeController : Controller
             throw;
         }
     }
-
+    
     public ActionResult Filter(string searchString)
     {
         try

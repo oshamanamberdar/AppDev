@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GroupCoursework.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220509043852_InitialCreate7")]
-    partial class InitialCreate7
+    [Migration("20220509092410_InitialCreate8")]
+    partial class InitialCreate8
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

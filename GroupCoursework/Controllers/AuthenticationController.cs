@@ -2,6 +2,7 @@
 using System.Security.Claims;
 using System.Text;
 using GroupCoursework.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
@@ -127,7 +128,7 @@ public class AuthenticationController : Controller
             await _userManager.AddToRoleAsync(user, UserRoles.Admin);
         if (await _roleManager.RoleExistsAsync(UserRoles.Admin))
             await _userManager.AddToRoleAsync(user, UserRoles.User);
-        return RedirectToAction("Index", "Home");
+        return RedirectToAction("RegisterAdmin", "Authentication");
     }
 
     public IActionResult UnauthorizedAccess()
@@ -149,5 +150,83 @@ public class AuthenticationController : Controller
         );
 
         return token;
+    }
+    
+    public IActionResult RegisterUser()
+    {
+        return View();
+    }
+
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> RegisterUser(UserRegisterModel model)
+    {
+        var userExists = await _userManager.FindByNameAsync(model.Username);
+        if (userExists != null)
+            return StatusCode(StatusCodes.Status500InternalServerError,
+                new Response {Status = "Error", Message = "User already exists!"});
+
+        IdentityUser user = new()
+        {
+            Email = model.Email,
+            SecurityStamp = Guid.NewGuid().ToString(),
+            UserName = model.Username
+        };
+        var result = await _userManager.CreateAsync(user, model.Password);
+        if (!result.Succeeded)
+            return StatusCode(StatusCodes.Status500InternalServerError,
+                new Response
+                    {Status = "Error", Message = "User creation failed! Please check user details and try again."});
+
+        if (!await _roleManager.RoleExistsAsync(UserRoles.User))
+            await _roleManager.CreateAsync(new IdentityRole(UserRoles.User));
+        if (!await _roleManager.RoleExistsAsync(UserRoles.User))
+            await _roleManager.CreateAsync(new IdentityRole(UserRoles.User));
+
+        if (await _roleManager.RoleExistsAsync(UserRoles.User))
+            await _userManager.AddToRoleAsync(user, UserRoles.User);
+        if (await _roleManager.RoleExistsAsync(UserRoles.User))
+            await _userManager.AddToRoleAsync(user, UserRoles.User);
+        return RedirectToAction("Login", "Authentication");
+    }
+    
+    
+   
+    public IActionResult RegisterAssistant()
+    {
+        return View();
+    }
+
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> RegisterAssistant(UserRegisterModel model)
+    {
+        var userExists = await _userManager.FindByNameAsync(model.Username);
+        if (userExists != null)
+            return StatusCode(StatusCodes.Status500InternalServerError,
+                new Response {Status = "Error", Message = "User already exists!"});
+
+        IdentityUser user = new()
+        {
+            Email = model.Email,
+            SecurityStamp = Guid.NewGuid().ToString(),
+            UserName = model.Username
+        };
+        var result = await _userManager.CreateAsync(user, model.Password);
+        if (!result.Succeeded)
+            return StatusCode(StatusCodes.Status500InternalServerError,
+                new Response
+                    {Status = "Error", Message = "User creation failed! Please check user details and try again."});
+
+        if (!await _roleManager.RoleExistsAsync(UserRoles.Assistant))
+            await _roleManager.CreateAsync(new IdentityRole(UserRoles.Assistant));
+        if (!await _roleManager.RoleExistsAsync(UserRoles.User))
+            await _roleManager.CreateAsync(new IdentityRole(UserRoles.User));
+
+        if (await _roleManager.RoleExistsAsync(UserRoles.Assistant))
+            await _userManager.AddToRoleAsync(user, UserRoles.Assistant);
+        if (await _roleManager.RoleExistsAsync(UserRoles.Assistant))
+            await _userManager.AddToRoleAsync(user, UserRoles.User);
+        return RedirectToAction("Login", "Authentication");
     }
 }

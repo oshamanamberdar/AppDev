@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace GroupCoursework.Migrations
 {
-    public partial class InitialCreate3 : Migration
+    public partial class InitialCreate8 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -267,7 +267,7 @@ namespace GroupCoursework.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Title = table.Column<string>(type: "nvarchar(60)", maxLength: 60, nullable: false),
                     DateReleased = table.Column<DateTime>(type: "datetime2", nullable: false),
                     StandardCharge = table.Column<decimal>(type: "money", nullable: false),
                     PenaltyCharge = table.Column<decimal>(type: "money", nullable: false),
@@ -302,10 +302,10 @@ namespace GroupCoursework.Migrations
                 name: "CastMembers",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
                     ActorId = table.Column<int>(type: "int", nullable: false),
-                    DvdId = table.Column<int>(type: "int", nullable: false)
+                    DvdId = table.Column<int>(type: "int", nullable: false),
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1")
                 },
                 constraints: table =>
                 {
@@ -352,7 +352,7 @@ namespace GroupCoursework.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     DateOut = table.Column<DateTime>(type: "datetime2", nullable: false),
                     DateDue = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    DateReturned = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    DateReturned = table.Column<DateTime>(type: "datetime2", nullable: true),
                     MemberNumber = table.Column<int>(type: "int", nullable: false),
                     LoanTypeNumber = table.Column<int>(type: "int", nullable: false),
                     CopyNumber = table.Column<int>(type: "int", nullable: false)
