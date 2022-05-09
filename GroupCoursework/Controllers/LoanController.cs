@@ -60,6 +60,7 @@ public class LoanController : Controller
 
     public IActionResult Create()
     {
+        LoadDvdTitle();
         LoadLoanType();
         LoadMemberList();
         LoadDvdCopy();
@@ -146,6 +147,7 @@ public class LoanController : Controller
     
     public async Task<IActionResult> Edit(int id)
     {
+        LoadDvdTitle();
         LoadLoanType();
         LoadMemberList();
         LoadDvdCopy();
@@ -171,6 +173,7 @@ public class LoanController : Controller
     
     public async Task<IActionResult> Delete(int id)
     {
+        LoadDvdTitle();
         LoadLoanType();
         LoadMemberList();
         LoadDvdCopy();
@@ -182,6 +185,7 @@ public class LoanController : Controller
     [HttpPost, ActionName("Delete")]
     public async Task<IActionResult> DeleteConfirmed(int id)
     {
+        LoadDvdTitle();
         LoadLoanType();
         LoadMemberList();
         LoadDvdCopy();
@@ -192,6 +196,12 @@ public class LoanController : Controller
     }
 
 
+    public void LoadDvdTitle()
+    {
+        List<DvdTitle> dvdTitles = new List<DvdTitle>();
+        dvdTitles = _context.DvdTitles.ToList();
+        ViewBag.ListOfDvdTitle = dvdTitles;
+    }
 
     
 }

@@ -1,8 +1,10 @@
 ﻿@model GroupCoursework.Models.Member
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Update";
 }
+<h1>Update Member</h1>
+<hr/>
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Edit">
@@ -25,8 +27,8 @@
                 <span asp-validation-for="MemberDob" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="MembershipCategoryNumber" class="control-label"></label>
-                <select asp-for="MembershipCategoryNumber" class="form-control" asp-items="@(new SelectList(ViewBag.ListOfMembershipCategory, "Id", "MembershipCategoryDescription"))"></select>
+                <label>Category Name</label>
+                <select asp-for="MembershipCategoryNumber" class="form-control" asp-items="@(new SelectList(ViewBag.ListOfMembershipCategory, "Id", "CategoryName"))"></select>
             </div>
             <div class="form-group">
                 <label asp-for="MemberAddress" class="control-label"></label>
@@ -34,7 +36,7 @@
                 <span asp-validation-for="MemberAddress" class="text-danger"></span>
             </div>
          
-            
+            <hr/>
             <div class="form-group">
                 <input type="submit" value="Update" class="btn btn-primary" />
                 <a asp-action="Index" class="btn btn-info">Member List</a>
@@ -43,13 +45,10 @@
     </div>
 </div>
 
-<div>
-    <a asp-controller="Member" asp-action="Create" class="btn btn-success">
-        <i class="bi bi-plus-circle"></i> Add New
-    </a>
-</div>
+
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
+
 

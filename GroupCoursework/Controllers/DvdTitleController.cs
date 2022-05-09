@@ -145,6 +145,8 @@ public class DvdTitleController : Controller
         await _service.DeleteAsync(id);
         return RedirectToAction(nameof(Index));
     }
+
+   
     
     
     

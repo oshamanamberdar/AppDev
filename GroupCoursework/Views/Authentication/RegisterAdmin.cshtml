@@ -3,12 +3,13 @@
 @{
     ViewData["Title"] = "RegisterAdmin";
 }
+<h3>Register New User</h3>
+<hr/>
 <div class="row">
     <div class="col-md-3">
         <img src="images/Register.png" ID="Image1" runat="server" alt="Register"/>
     </div>
     <div class="col-md-1">
-        
     </div>
     <div class="col-md-8">
         <form asp-action="RegisterAdmin">
@@ -41,7 +42,8 @@
             </div>
             <hr/>
             <div class="form-group">
-                <input type="submit" value="Register Admin" class="btn btn-primary" />
+                <input type="submit" value="Register" class="btn btn-primary" />
+                    <a class="btn btn-info" asp-action="Login">Back To Login</a>
             </div>
         </form>
     </div>
@@ -51,9 +53,7 @@
 
 
 
-<div>
-    <a asp-action="Login">Login</a>
-</div>
+
 
 
 @section Scripts {

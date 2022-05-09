@@ -3,6 +3,9 @@
 @{
     ViewData["Title"] = "Create";
 }
+<h1>Update Dvd Copy</h1>
+<hr/>
+
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Edit">
@@ -19,9 +22,8 @@
                 <label asp-for="DvdNumber" class="control-label"></label>
                 <select asp-for="DvdNumber" class="form-control" asp-items="@(new SelectList(ViewBag.ListOfDvdTitle, "Id", "StandardCharge"))"></select>
             </div>
-          
-         
-            
+            <hr/>
+
             <div class="form-group">
                 <input type="submit" value="Update" class="btn btn-primary" />
                 <a asp-action="Index" class="btn btn-info">Dvd copy List</a>
@@ -30,11 +32,6 @@
     </div>
 </div>
 
-<div>
-    <a asp-controller="DvdCopy" asp-action="Create" class="btn btn-success">
-        <i class="bi bi-plus-circle"></i> Add New
-    </a>
-</div>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

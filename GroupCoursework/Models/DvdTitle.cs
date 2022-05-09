@@ -9,6 +9,7 @@ public class DvdTitle: IEntityBase
     [Key]
     public int  Id { get; set; }
     
+    [StringLength(60, MinimumLength = 3)]
     [Required(ErrorMessage ="Title is Required")]
     public String Title { get; set; }
 

@@ -6,8 +6,9 @@
 <div class="row-text">
     <div class="col-md-8 offset-2">
         <p>
-            <h1>Add Loan Type</h1>
+            <h2>Add New Loan Type</h2>
         </p>
+        <hr/>
         <div class="row">
             <div class="col-md-8 offset-2">
                 <form asp-action="Create">
@@ -22,7 +23,7 @@
                     </div>
                     <div class="form-group">
                         <label asp-for="LoanDurantion">Duration</label>
-                        <input rows="3" asp-for="LoanDurantion" class="form-control">
+                        <input  asp-for="LoanDurantion" type="number" class="form-control">
                         <span asp-validation-for="LoanDurantion" class="text-danger"></span>
                     </div>
                     <hr/>

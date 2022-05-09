@@ -7,8 +7,9 @@
 <div class="row-text">
 <div class="col-md-8 offset-2">
     <p>
-        <h1>Delete Confiramation for @Model.Id</h1>
+        <h1 style="color: red">@Model.Title is Veing Deleted :\</h1>
     </p>
+    <hr/>
     <div class="row">
         <div class="col-md-8 offset-2">
                
@@ -59,8 +60,9 @@
                     <form asp-action="Delete">
                         <input type="hidden" asp-for="Id"/>
                         <input type="submit" value="Confirm" class="btn btn-danger float-right"/>
+                         <a class="btn btn-outline-secondary" asp-action="Index">Show All</a>
                     </form>
-                    <a class="btn btn-outline-secondary" asp-action="Index">Show All</a>
+                   
                 </div>
 
             </div>

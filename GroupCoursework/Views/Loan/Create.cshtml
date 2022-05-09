@@ -34,23 +34,24 @@
         </div>
         <div class="col-md-4">
             <div class="form-group">
-                <label asp-for="LoanTypeNumber" class="control-label"></label>
+                <label>Loan Type</label>
                 <select asp-for="LoanTypeNumber" class="form-control" asp-items="@(new SelectList(ViewBag.ListOfLoanType, "Id", "LoanTypes"))"></select>
             </div>
             
         </div>
         <div class="col-4">
             <div class="form-group">
-                <label asp-for="CopyNumber" class="control-label"></label>
+                <label>Dvd Copy</label>
                 <select asp-for="CopyNumber" class="form-control" asp-items="@(new SelectList(ViewBag.ListOfDvdCopy, "Id", "Id"))"></select>
             </div>
         </div>
         <div class="col-md-4">
             <div class="form-group">
-                <label asp-for="MemberNumber" class="control-label"></label>
+                <label>Member</label>
                 <select asp-for="MemberNumber" class="form-control" asp-items="@(new SelectList(ViewBag.ListOfMembers, "Id", "MemberLastName"))"></select>
             </div>
         </div>
+        <hr/>
         <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
                 <a asp-action="Index" class="btn btn-danger">Loan List</a>

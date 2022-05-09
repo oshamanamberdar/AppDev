@@ -4,7 +4,7 @@
     ViewData["Title"] = "Create";
 }
 
-
+<h1>Assign DVD Title</h1>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -18,10 +18,11 @@
                 <label>Dvd Title</label>
                 <select asp-for="DvdId" class="form-control" asp-items="@(new SelectList(ViewBag.ListOfDvdTitle, "Id", "Title"))"></select>
             </div>
+            <hr/>
 
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
-                <a asp-action="Index" class="btn btn-info">Loan List</a>
+                <a asp-action="Index" class="btn btn-info">Cancel</a>
             </div>
         </form>
     </div>

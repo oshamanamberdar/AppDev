@@ -4,8 +4,14 @@
 @{
     ViewData["Title"] = "List of Loan";
 }
-
-
+<h1>Cast Member Details</h1>
+<hr/>
+<div>
+    <a asp-controller="CastMember" asp-action="Create" class="btn btn-success">
+        <i class="bi bi-plus-circle"></i> Add New
+    </a>
+</div>
+<br/>
 <table class="table table-hover">
     <thead>
     <tr>
@@ -39,8 +45,3 @@
 </table>
 
 
-<div>
-    <a asp-controller="CastMember" asp-action="Create" class="btn btn-success">
-        <i class="bi bi-plus-circle"></i> Add New
-    </a>
-</div>
